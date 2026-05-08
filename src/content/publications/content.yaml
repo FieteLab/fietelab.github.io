@@ -93,17 +93,17 @@ duan2025synapses:
   title: "From Synapses to Dynamics: Obtaining Function from Structure in a Connectome-Constrained Model of the Head Direction Circuit"
   authors: "Sunny Duan*, Ling Liang Dong*, Ila Fiete"
   year: 2025
-  venue: "bioRxiv"
-  citation: "bioRxiv 2025.05.26.655406 (2025)"
-  link: "https://www.biorxiv.org/content/10.1101/2025.05.26.655406v1"
+  venue: "NeurIPS"
+  citation: "bioRxiv 10.1101/2025.05.26.655406 (2025) and NeurIPS 38, 128293-128320 (2025)"
+  link: "https://openreview.net/forum?id=zn4F6os6cq"
   annotation: "* co-first authors"
 
 eisen2025characterizing:
   title: "Characterizing control between interacting subsystems with deep Jacobian estimation"
   authors: "Adam Joseph Eisen, Mitchell Ostrow, Sarthak Chandra, Leo Kozachkov, Earl Miller, Ila Fiete"
   year: 2025
-  venue: "arXiv preprint"
-  citation: "arXiv:2507.01946 (2025)"
+  venue: "NeurIPS"
+  citation: "arXiv:2507.01946 (2025) and NeurIPS 38, 51361-51406 (2025)"
   link: "https://arxiv.org/abs/2507.01946"
 
 zahorodnii2025neuroprobe:

@@ -125,6 +125,34 @@ papers.
 
 A paper can be tagged with as many topics as fit (or none).
 
+### Adding a new topic
+
+Adding a never-seen-before topic requires **one small edit** in
+[`src/lib/topics.ts`](src/lib/topics.ts) — otherwise the tag is
+accepted on the paper but won't get its own filter pill or color.
+
+```ts
+// src/lib/topics.ts
+
+const TOPIC_COLORS: Record<string, ...> = {
+  // ... existing topics ...
+  'Reinforcement learning': { bg: '#ddd6fe', text: '#5b21b6', ring: '#a78bfa' },  // ← add the color
+}
+
+export const TOPIC_ORDER = [
+  // ... existing topics ...
+  'Reinforcement learning',                                                       // ← add the order
+]
+```
+
+Pick a color triplet that doesn't clash visually with the existing
+ones. Tailwind's 100 / 700 / 300 trio (bg / text / ring) gives clean
+WCAG-AA contrast — see <https://tailwindcss.com/docs/customizing-colors>.
+
+This guard exists on purpose: typos like `"Memorry"` or
+`"theoretical ml"` (lowercase) would otherwise silently create
+phantom categories that fragment the filter row.
+
 ---
 
 ### Pull new papers automatically (OpenAlex sync)
