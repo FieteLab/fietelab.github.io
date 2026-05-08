@@ -60,7 +60,7 @@ qian2025modular:
 
 huangostrow2025inputdsa:
   title: "InputDSA: Demixing then Comparing Recurrent and Externally Driven Dynamics"
-  topics: ["Theoretical ML_Claude"]
+  topics: ["Neural Dynamics", "Altered Brain States"]
   authors: "A. Huang*, Mitchell Ostrow*, S. H. Singh, Leo Kozachkov, Ila Fiete, K. Rajan"
   year: 2025
   venue: "ICLR"
@@ -109,7 +109,7 @@ duan2025synapses:
 
 eisen2025characterizing:
   title: "Characterizing control between interacting subsystems with deep Jacobian estimation"
-  topics: ["Theoretical ML_Claude"]
+  topics: ["Neural Dynamics"]
   authors: "Adam Joseph Eisen, Mitchell Ostrow, Sarthak Chandra, Leo Kozachkov, Earl Miller, Ila Fiete"
   year: 2025
   venue: "NeurIPS"
@@ -230,7 +230,7 @@ noel2025common:
 
 behrad2025fast:
   title: "Fast dynamical similarity analysis"
-  topics: ["Theoretical ML"]
+  topics: ["Neural Dynamics"]
   authors: "A. Behrad, Mitchell Ostrow, M. T. Fakharian, Ila Fiete, C. Beste, S. Safavi"
   year: 2025
   venue: "arXiv preprint"
@@ -409,7 +409,7 @@ dong2024grid:
 
 eisen2024propofol:
   title: "Propofol anesthesia destabilizes neural dynamics across cortex"
-  topics: ["Altered brain states_Claude"]
+  topics: ["Neural Dynamics", "Altered Brain States"]
   authors: "Adam Joseph Eisen, Leo Kozachkov, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, Sarthak Chandra, E. N. Brown, Ila Fiete+, Earl Miller+"
   year: 2024
   venue: "Neuron"
@@ -490,7 +490,7 @@ liu2023growing:
 
 ostrow2023beyond:
   title: "Beyond Geometry: Comparing the Temporal Structure of Computation in Neural Circuits with Dynamical Similarity Analysis"
-  topics: ["Theoretical ML_Claude"]
+  topics: ["Neural Dynamics"]
   authors: "Mitchell Ostrow, Adam Joseph Eisen, Leo Kozachkov, Ila Fiete"
   year: 2023
   venue: "NeurIPS"
