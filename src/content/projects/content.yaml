@@ -2,6 +2,19 @@
 # To add a project, copy a block below and edit. `paperLink`, `paperTitle`,
 # `githubUrl`, and `otherLinks` are all optional.
 
+dsa:
+  name: "Dynamical Similarity Analysis"
+  description: |
+       Code for comparing dynamical systems using Koopman Operators.
+       Input-driven (InputDSA) variants are also included. Code can be
+       used freely on arbitrary time series datasets, with or without
+       input. Please cite the associated papers.
+  paperLink: "https://openreview.net/forum?id=7blSUMwe7R"
+  paperTitle: "M. Ostrow, A. Eisen, L. Kozachkov, I.R. Fiete. Beyond Geometry: Comparing the Temporal Structure of Computation in Neural Circuits with Dynamical Similarity Analysis. NeurIPS (2023)."
+  otherLinks:
+    - { label: "code (git)", url: "https://github.com/mitchellostrow/DSA" }
+    - { label: "inputDSA paper", url: "https://openreview.net/forum?id=2FrAvRz1E7" }
+  
 spud:
   name: "SPUD — Manifold structure in head direction data"
   description: |
