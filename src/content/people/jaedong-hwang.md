@@ -2,6 +2,7 @@
 name: "Jaedong Hwang"
 role: "Graduate Student"
 title: "PhD, EECS"
+coAdvisor: "Paul Liang"
 avatar: "./images/jaedong-hwang.png"
 website: "https://jd730.github.io"
 scholar: "https://scholar.google.com/citations?user=bITgqEUAAAAJ"

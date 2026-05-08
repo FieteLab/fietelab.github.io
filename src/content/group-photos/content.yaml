@@ -1,0 +1,8 @@
+# Group photos shown on the homepage carousel.
+# To add a new photo: drop the file into images/ and append a block below.
+# The most recent photo (top of the list) becomes the hero on the home page.
+
+lab-outing-2025-07:
+  image: "./images/lab-outing-2025-07.jpg"
+  caption: "Fiete Lab outing — July 2025"
+  date: "2025-07"

@@ -85,4 +85,14 @@ const news = defineCollection({
   }),
 })
 
-export const collections = { people, undergrads, alumni, publications, projects, news }
+const groupPhotos = defineCollection({
+  loader: file('src/content/group-photos/content.yaml'),
+  schema: ({ image }) =>
+    z.object({
+      image: image(),
+      caption: z.string(),
+      date: z.string().optional(),
+    }),
+})
+
+export const collections = { people, undergrads, alumni, publications, projects, news, groupPhotos }

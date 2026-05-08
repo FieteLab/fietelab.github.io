@@ -39,10 +39,21 @@ export function formatAuthors(authors: string): string {
 }
 
 /**
+ * Frequent external collaborators we want to surface as clickable author
+ * names — even though they're not lab members or alumni. Keep this list
+ * small; everyone here gets the "external" link styling.
+ */
+const EXTERNAL_AUTHOR_LINKS: Record<string, string> = {
+  'Paul Liang': 'https://pliang279.github.io/',
+  'P. P. Liang': 'https://pliang279.github.io/',
+  'Paul Pu Liang': 'https://pliang279.github.io/',
+}
+
+/**
  * Build a map from canonical author full-name to a link target. Includes
- * both current lab members (→ /people/<slug>/) and alumni who have a
- * personal website on record (→ external URL). Used to render clickable
- * author bylines in publications.
+ * (1) current lab members (→ /people/<slug>/), (2) alumni who have a
+ * personal website on record (→ external URL), and (3) named external
+ * collaborators from EXTERNAL_AUTHOR_LINKS.
  */
 export async function getAuthorLinkMap(): Promise<
   Map<string, { href: string; external: boolean }>
@@ -61,6 +72,9 @@ export async function getAuthorLinkMap(): Promise<
     if (target) {
       map.set(a.data.name, { href: target, external: true })
     }
+  }
+  for (const [name, href] of Object.entries(EXTERNAL_AUTHOR_LINKS)) {
+    if (!map.has(name)) map.set(name, { href, external: true })
   }
   return map
 }

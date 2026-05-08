@@ -40,14 +40,21 @@ const tokens = authors.split(',').map((t) => t.trim())
         ? display.slice(0, display.length - trailing.length)
         : display
 
+      // Style differs by link type so a reader can scan for lab members:
+      //   internal (current member)  → maroon accent, no decoration
+      //   external (alumni, etc.)    → standard gray with hover underline
+      //   plain (unknown coauthor)   → just text
       let inner: any
       if (link) {
+        const cls = link.external
+          ? 'text-[color:var(--color-text-muted)] no-underline hover:text-[color:var(--color-text)] hover:underline'
+          : 'text-[color:var(--color-accent)] no-underline hover:underline'
         inner = (
           <a
             href={link.href}
             target={link.external ? '_blank' : undefined}
             rel={link.external ? 'noopener' : undefined}
-            class="text-[color:var(--color-text)] no-underline hover:text-[color:var(--color-accent)] hover:underline"
+            class={cls}
           >
             {isHighlight ? <strong>{displayCore}</strong> : displayCore}
           </a>

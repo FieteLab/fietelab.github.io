@@ -87,12 +87,6 @@ const years = [...byYear.keys()].sort((a, b) => b - a)
         })
       }
     </div>
-    <p class="mt-3 text-xs text-[color:var(--color-text-soft)]">
-      Topics follow the original
-      <a href="https://fietelab.mit.edu/publications/" target="_blank" rel="noopener">fietelab.mit.edu</a>
-      categorization. Papers without a topic show only when "All" is selected.
-    </p>
-
     {
       years.map((year) => (
         <div class="year-section mt-12" data-year={year}>

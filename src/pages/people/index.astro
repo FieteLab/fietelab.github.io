@@ -3,6 +3,7 @@ import Layout from '@/layouts/Layout.astro'
 import PersonCard from '@/components/PersonCard.astro'
 import { getPeopleByRole } from '@/lib/data'
 import { getCollection } from 'astro:content'
+import { Image } from 'astro:assets'
 
 const peopleByRole = await getPeopleByRole()
 const pi = peopleByRole.get('PI') ?? []
@@ -15,6 +16,9 @@ const undergrads = (await getCollection('undergrads')).sort((a, b) =>
   a.data.years === b.data.years ? a.data.name.localeCompare(b.data.name) : b.data.years.localeCompare(a.data.years),
 )
 const alumni = (await getCollection('alumni')).sort((a, b) => a.data.name.localeCompare(b.data.name))
+const groupPhotos = (await getCollection('groupPhotos')).sort((a, b) =>
+  (b.data.date ?? '').localeCompare(a.data.date ?? ''),
+)
 ---
 
 <Layout title="People">
@@ -24,6 +28,21 @@ const alumni = (await getCollection('alumni')).sort((a, b) => a.data.name.locale
       The Fiete Lab brings together researchers from neuroscience, physics,
       mathematics, and computer science.
     </p>
+
+    {groupPhotos.length > 0 && (
+      <figure class="mt-8 overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-white shadow-sm">
+        <Image
+          src={groupPhotos[0].data.image}
+          alt={groupPhotos[0].data.caption}
+          width={1600}
+          height={900}
+          class="w-full object-cover"
+        />
+        <figcaption class="border-t border-[color:var(--color-border)] bg-[color:var(--color-bg-alt)] px-5 py-3 text-sm italic text-[color:var(--color-text-muted)]">
+          {groupPhotos[0].data.caption}
+        </figcaption>
+      </figure>
+    )}
 
     {pi.length > 0 && (
       <div class="mt-12">
@@ -90,11 +109,14 @@ const alumni = (await getCollection('alumni')).sort((a, b) => a.data.name.locale
         {alumni.map((a) => (
           <li class="rounded-lg border border-[color:var(--color-border)] bg-white p-4 text-sm">
             <div class="font-semibold text-[color:var(--color-text)]">
-              {a.data.website ? (
-                <a href={a.data.website} target="_blank" rel="noopener">{a.data.name}</a>
-              ) : (
-                a.data.name
-              )}
+              {(() => {
+                const primary = a.data.website ?? a.data.scholar
+                return primary ? (
+                  <a href={primary} target="_blank" rel="noopener">{a.data.name}</a>
+                ) : (
+                  a.data.name
+                )
+              })()}
             </div>
             <div class="text-xs text-[color:var(--color-text-soft)]">
               {a.data.wasA}{a.data.now && <> → {a.data.now}</>}

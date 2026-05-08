@@ -81,7 +81,27 @@ const initials = data.name
         </div>
         <h1 class="text-3xl font-semibold leading-tight">{data.name}</h1>
         <div class="text-sm font-medium text-[color:var(--color-accent)]">
-          {data.title}{data.coAdvisor && <span class="font-normal text-[color:var(--color-text-soft)]"> · co-advised with {data.coAdvisor}</span>}
+          {data.title}
+          {data.coAdvisor && (() => {
+            const link = linkMap.get(data.coAdvisor)
+            return (
+              <span class="font-normal text-[color:var(--color-text-soft)]">
+                {' · co-advised with '}
+                {link ? (
+                  <a
+                    href={link.href}
+                    target={link.external ? '_blank' : undefined}
+                    rel={link.external ? 'noopener' : undefined}
+                    class="text-[color:var(--color-text-soft)] hover:text-[color:var(--color-accent)] hover:underline"
+                  >
+                    {data.coAdvisor}
+                  </a>
+                ) : (
+                  data.coAdvisor
+                )}
+              </span>
+            )
+          })()}
         </div>
         <div class="mt-2 flex flex-wrap gap-2 text-xs">
           {data.website && (
