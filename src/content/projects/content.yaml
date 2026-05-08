@@ -3,7 +3,7 @@
 # `githubUrl`, and `otherLinks` are all optional.
 
 farmap:
-  name: "FARMap — Grid Cell-Inspired Fragmentation and Recall for Map Building"
+  name: "FARMap"
   description: |
     Reference implementation of the Fragmentation-and-Recall (FAR) map
     for efficient exploration of large spaces, drawing on observed
@@ -13,7 +13,7 @@ farmap:
   paperTitle: "J. Hwang, Z. W. Hong, E. Chen, A. Boopathy, P. Agrawal, I. R. Fiete. Grid Cell-Inspired Fragmentation and Recall for Efficient Map Building. TMLR (2024)."
 
 farcuriosity:
-  name: "FARCuriosity — Fragmentation and Recall for Curiosity-Driven RL"
+  name: "FARCuriosity"
   description: |
     Companion code applying the FAR fragmentation-and-recall idea to
     curiosity-driven exploration in reinforcement learning, mitigating
@@ -23,7 +23,7 @@ farcuriosity:
   paperTitle: "J. D. Hwang, Z. W. Hong, E. Chen, A. Boopathy, P. Agrawal, I. R. Fiete. Neuro-Inspired Fragmentation and Recall to Overcome Catastrophic Forgetting in Curiosity (2023)."
 
 m2a:
-  name: "M2A — Bridging the Gap in Multilingual Reasoning"
+  name: "M2A"
   description: |
     Implementation of the Multi-step Multilingual Adaptation method that
     closes the reasoning-quality gap between an LLM's training language
@@ -33,7 +33,7 @@ m2a:
   paperTitle: "J. D. Hwang, T. Kumar, S. J. Lee, A. Agrawal, H. Palangi, A. Kumar, I. R. Fiete, P. P. Liang. Learn globally, speak locally: Bridging the gaps in multilingual reasoning (2025)."
 
 multiregion-brain-model:
-  name: "Multi-Region Brain Model — Hippocampus in Spatial Decision-Making"
+  name: "Multi-Region Brain Model"
   description: |
     PyTorch model of multiple interacting brain regions used to study
     how the hippocampus supports spatially-embedded decision making in
@@ -43,7 +43,7 @@ multiregion-brain-model:
   paperTitle: "Y. Xie, J. Hwang, C. Brody, D. Tank, I. R. Fiete. A Multi-Region Brain Model to Elucidate the Role of Hippocampus in Spatially Embedded Decision-Making. ICML (2025)."
 
 seq-wm:
-  name: "seq-WM — Sequential Morris Water Maze"
+  name: "seq-WM"
   description: |
     A sequential variant of the Morris water-maze task for studying rapid
     learning without catastrophic forgetting in artificial agents,
@@ -53,7 +53,7 @@ seq-wm:
   paperTitle: "R. L. Wang, J. Hwang, A. Boopathy, I. R. Fiete. Rapid Learning without Catastrophic Forgetting in the Morris Water Maze. ICML (2024)."
 
 inductive-bias-complexity:
-  name: "Inductive Bias Complexity — Generalization-difficulty measure"
+  name: "Inductive Bias Complexity"
   description: |
     Reference code for a model-agnostic measure of how hard a learning
     task is for a given hypothesis class, derived from the Kolmogorov
@@ -63,7 +63,7 @@ inductive-bias-complexity:
   paperTitle: "A. Boopathy, K. Liu, J. Hwang, S. Ge, A. Mohammedsaleh, I. R. Fiete. Model-agnostic measure of generalization difficulty. ICML (2023)."
 
 exact-inductive-bias:
-  name: "Exact Inductive Bias — Closed-form computation"
+  name: "Exact Inductive Bias"
   description: |
     Companion code computing the exact inductive bias of common ML
     architectures, building on the Boopathy & Fiete generalization-
@@ -86,7 +86,7 @@ dsa:
     - { label: "inputDSA paper", url: "https://openreview.net/forum?id=2FrAvRz1E7" }
   
 spud:
-  name: "SPUD — Manifold structure in head direction data"
+  name: "SPUD"
   description: |
     Code to characterize manifolds and perform unsupervised decoding in the
     head direction system, as described in Chaudhuri et al. (2019). Code may
