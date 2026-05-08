@@ -171,9 +171,81 @@ duan2025uncovering:
   venue: "ICLR"
   link: "https://openreview.net/forum?id=KSBx6FBZpE"
 
+noel2025common:
+  title: "A common computational and neural anomaly across mouse models of autism"
+  authors: "J.-P. Noel, E. Balzani, L. Acerbi, J. Benson, D. E. Angelaki, et al. (International Brain Laboratory; Ila Fiete)"
+  year: 2025
+  venue: "Nature Neuroscience"
+  link: "https://doi.org/10.1038/s41593-025-01965-8"
+
+behrad2025fast:
+  title: "Fast dynamical similarity analysis"
+  topics: ["Theoretical ML"]
+  authors: "A. Behrad, Mitchell Ostrow, M. T. Fakharian, Ila Fiete, C. Beste, S. Safavi"
+  year: 2025
+  venue: "arXiv preprint"
+  citation: "arXiv:2511.22828 (2025)"
+  link: "https://arxiv.org/abs/2511.22828"
+
 # ============================================================
 # 2024
 # ============================================================
+
+biderman2024lightning:
+  title: "Lightning Pose: improved animal pose estimation via semi-supervised learning, Bayesian ensembling and cloud-native open-source tools"
+  authors: "D. Biderman, M. R. Whiteway, et al., Ling Liang Dong, Ari Liu, Leenoy Meshulam, Ila Fiete, et al. (International Brain Laboratory)"
+  year: 2024
+  venue: "Nature Methods"
+  link: "https://doi.org/10.1038/s41592-024-02319-1"
+
+witten2024future:
+  title: "Future views on neuroscience and AI"
+  authors: "I. B. Witten, D. Yamins, C. Clopath, M. Bethge, Y. Zeng, A. R. Kennedy, A. Birhane, D. Y. Tsao, B. Kim, Ila Fiete"
+  year: 2024
+  venue: "Cell"
+  link: "https://doi.org/10.1016/j.cell.2024.09.031"
+
+ostrow2024how:
+  title: "How the human brain creates cognitive maps of related concepts"
+  topics: ["Memory"]
+  authors: "Mitchell Ostrow, Ila Fiete"
+  year: 2024
+  venue: "Nature"
+  citation: "Nature News & Views (2024)"
+  link: "https://doi.org/10.1038/d41586-024-02433-2"
+
+schaeffer2024bridging:
+  title: "Bridging Associative Memory and Probabilistic Modeling"
+  topics: ["Memory"]
+  authors: "Rylan Schaeffer, N. Zahedi, Mikail Khona, D. Pai, S. Truong, Y. Du, Mitchell Ostrow, Sarthak Chandra, A. Carranza Carranza, Ila Fiete, A. Gromov, S. Koyejo"
+  year: 2024
+  venue: "arXiv preprint"
+  citation: "arXiv:2402.10202 (2024)"
+  link: "https://arxiv.org/abs/2402.10202"
+
+ostrow2024delay:
+  title: "Delay Embedding Theory of Neural Sequence Models"
+  topics: ["Theoretical ML"]
+  authors: "Mitchell Ostrow, Adam Joseph Eisen, Ila Fiete"
+  year: 2024
+  venue: "arXiv preprint"
+  citation: "arXiv:2406.11993 (2024)"
+  link: "https://arxiv.org/abs/2406.11993"
+
+chandra2024flexible:
+  title: "Flexible mapping of abstract domains by grid cells via self-supervised extraction"
+  topics: ["Navigation circuits and spatial cognition"]
+  authors: "Sarthak Chandra, Ila Fiete, Abhi Iyer, Sugandha Sharma"
+  year: 2024
+  venue: "NeurReps Workshop"
+  link: "https://doi.org/10.52202/079017-2713"
+
+fiete2024flexible:
+  title: "Flexible Context-Driven Sensory Processing in Dynamical Vision Models"
+  authors: "Ila Fiete, Lakshmi Govindarajan, Abhi Iyer, V. Kothare"
+  year: 2024
+  venue: "NeurReps Workshop"
+  link: "https://doi.org/10.52202/079017-0125"
 
 chandra2024selforganized:
   title: "Self-organized emergence of modularity, hierarchy, and mirror reversals from competitive synaptic growth in a developmental model of the visual pathway"

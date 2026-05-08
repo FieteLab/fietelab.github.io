@@ -9,77 +9,75 @@ seen:
     doi: 10.1038/s41592-024-02319-1
     arxiv: null
     year: 2024
-    status: pending
+    status: imported
     slug: biderman2024lightning
   W4410974143:
     title: A common computational and neural anomaly across mouse models of autism
     doi: 10.1038/s41593-025-01965-8
     arxiv: null
     year: 2025
-    status: pending
+    status: imported
     slug: noel2025common
   W4401583252:
     title: How the human brain creates cognitive maps of related concepts
     doi: 10.1038/d41586-024-02433-2
     arxiv: null
     year: 2024
-    status: pending
+    status: imported
     slug: ostrow2024how
   W4403483246:
     title: Future views on neuroscience and AI
     doi: 10.1016/j.cell.2024.09.031
     arxiv: null
     year: 2024
-    status: pending
+    status: imported
     slug: witten2024future
   W4391901228:
     title: Bridging Associative Memory and Probabilistic Modeling
     doi: 10.48550/arxiv.2402.10202
     arxiv: '2402.10202'
     year: 2024
-    status: pending
+    status: imported
     slug: schaeffer2024bridging
   W4399836730:
     title: Delay Embedding Theory of Neural Sequence Models
     doi: 10.48550/arxiv.2406.11993
     arxiv: '2406.11993'
     year: 2024
-    status: pending
+    status: imported
     slug: ostrow2024delay
   W4391591541:
     title: Do Diffusion Models Learn Semantically Meaningful and Efficient Representations?
     doi: 10.48550/arxiv.2402.03305
     arxiv: '2402.03305'
     year: 2024
-    status: pending
-    slug: liang2024diffusion
+    status: dropped
   W4399912927:
     title: 'Uncovering Latent Memories: Assessing Data Leakage and Memorization Patterns
       in Frontier AI Models'
     doi: 10.48550/arxiv.2406.14549
     arxiv: '2406.14549'
     year: 2024
-    status: pending
-    slug: duan2024uncovering
+    status: dropped
   W4415796726:
     title: Flexible mapping of abstract domains by grid cells via self-supervised
       extraction and projection of generalized velocity signals
     doi: 10.52202/079017-2713
     arxiv: null
     year: 2024
-    status: pending
+    status: imported
     slug: chandra2024flexible
   W4415799018:
     title: Flexible Context-Driven Sensory Processing in Dynamical Vision Models
     doi: 10.52202/079017-0125
     arxiv: null
     year: 2024
-    status: pending
+    status: imported
     slug: fiete2024flexible
   W4416949410:
     title: Fast dynamical similarity analysis
     doi: 10.48550/arxiv.2511.22828
     arxiv: '2511.22828'
     year: 2025
-    status: pending
+    status: imported
     slug: behrad2025fast

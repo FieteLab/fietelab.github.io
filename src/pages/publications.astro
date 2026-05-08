@@ -39,6 +39,15 @@ for (const p of allPubs) {
   byYear.get(p.data.year)!.push(p)
 }
 const years = [...byYear.keys()].sort((a, b) => b - a)
+
+// Year filter: each of the 5 most recent years individually,
+// then "Earlier" rolls everything older into one bucket.
+const RECENT_N = 5
+const recentYears = years.slice(0, RECENT_N).filter((y) => (byYear.get(y)?.length ?? 0) > 0)
+const earlierYears = years.slice(RECENT_N)
+const earlierCount = earlierYears.reduce((n, y) => n + (byYear.get(y)?.length ?? 0), 0)
+const earliestYear = earlierYears.length ? Math.min(...earlierYears) : 0
+const latestEarlier = earlierYears.length ? Math.max(...earlierYears) : 0
 ---
 
 <Layout title="Papers">
@@ -56,8 +65,8 @@ const years = [...byYear.keys()].sort((a, b) => b - a)
 
     <!-- Topic filter -->
     <div class="mt-8 flex flex-wrap items-center gap-2" id="topic-filter">
-      <span class="mr-1 text-xs font-semibold uppercase tracking-wide text-[color:var(--color-text-soft)]">
-        Filter by topic:
+      <span class="mr-1 w-16 shrink-0 text-xs font-semibold uppercase tracking-wide text-[color:var(--color-text-soft)]">
+        Topic:
       </span>
       <button
         type="button"
@@ -87,6 +96,44 @@ const years = [...byYear.keys()].sort((a, b) => b - a)
         })
       }
     </div>
+
+    <!-- Year filter -->
+    <div class="mt-3 flex flex-wrap items-center gap-2" id="year-filter">
+      <span class="mr-1 w-16 shrink-0 text-xs font-semibold uppercase tracking-wide text-[color:var(--color-text-soft)]">
+        Year:
+      </span>
+      <button
+        type="button"
+        data-year="__all"
+        class="year-pill rounded-full border border-[color:var(--color-accent)] bg-[color:var(--color-accent)] px-3 py-1 text-xs font-medium text-white transition"
+        aria-pressed="true"
+      >
+        All ({allPubs.length})
+      </button>
+      {
+        recentYears.map((y) => (
+          <button
+            type="button"
+            data-year={String(y)}
+            class="year-pill rounded-full border border-[color:var(--color-border)] bg-white px-3 py-1 text-xs font-medium text-[color:var(--color-text)] transition hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
+            aria-pressed="false"
+          >
+            {y} ({byYear.get(y)!.length})
+          </button>
+        ))
+      }
+      {earlierCount > 0 && (
+        <button
+          type="button"
+          data-year="__earlier"
+          class="year-pill rounded-full border border-[color:var(--color-border)] bg-white px-3 py-1 text-xs font-medium text-[color:var(--color-text)] transition hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
+          aria-pressed="false"
+        >
+          {earliestYear}–{latestEarlier} ({earlierCount})
+        </button>
+      )}
+    </div>
+
     {
       years.map((year) => (
         <div class="year-section mt-12" data-year={year}>
@@ -182,46 +229,67 @@ const years = [...byYear.keys()].sort((a, b) => b - a)
 
 <script>
   const filterBar = document.getElementById('topic-filter')
-  const pills = document.querySelectorAll<HTMLButtonElement>('.topic-pill')
+  const topicPills = document.querySelectorAll<HTMLButtonElement>('.topic-pill')
+  const yearPills = document.querySelectorAll<HTMLButtonElement>('.year-pill')
   const tagButtons = document.querySelectorAll<HTMLButtonElement>('.topic-tag')
   const items = document.querySelectorAll<HTMLLIElement>('.pub-item')
   const yearSections = document.querySelectorAll<HTMLDivElement>('.year-section')
   const emptyState = document.getElementById('empty-state')
 
-  function setActive(topic: string) {
-    pills.forEach((p) => {
-      const isActive = p.dataset.topic === topic
-      p.setAttribute('aria-pressed', String(isActive))
-      // Topic-specific pills carry their own colors via data-* + inline style.
-      // For active state, bump opacity to 100% + add a 2-px ring; otherwise
-      // keep them at 60% so the active one is obvious.
-      if (p.dataset.topic === '__all') {
-        // Special case: the "All" button has no topic color
-        if (isActive) {
-          p.style.background = 'var(--color-accent)'
-          p.style.color = '#fff'
-          p.style.borderColor = 'var(--color-accent)'
-          p.style.opacity = '1'
-        } else {
-          p.style.background = '#fff'
-          p.style.color = 'var(--color-text)'
-          p.style.borderColor = 'var(--color-border)'
-          p.style.opacity = '1'
-        }
-      } else {
-        p.style.opacity = isActive ? '1' : '0.55'
-        p.style.boxShadow = isActive
-          ? `inset 0 0 0 2px ${p.dataset.colorText}`
-          : 'none'
-      }
-    })
+  let activeTopic = '__all'
+  let activeYear = '__all' // '__all' | '__earlier' | a 4-digit year string
+
+  // Read every section's data-year once so we can resolve "earlier" quickly.
+  const allYears = [...yearSections].map((s) => Number(s.dataset.year))
+  const RECENT_N = 5
+  const recentSet = new Set(
+    [...allYears].sort((a, b) => b - a).slice(0, RECENT_N).map(String),
+  )
+
+  function styleTopicPill(p: HTMLButtonElement, isActive: boolean) {
+    p.setAttribute('aria-pressed', String(isActive))
+    if (p.dataset.topic === '__all') {
+      p.style.background = isActive ? 'var(--color-accent)' : '#fff'
+      p.style.color = isActive ? '#fff' : 'var(--color-text)'
+      p.style.borderColor = isActive ? 'var(--color-accent)' : 'var(--color-border)'
+      p.style.opacity = '1'
+    } else {
+      p.style.opacity = isActive ? '1' : '0.55'
+      p.style.boxShadow = isActive
+        ? `inset 0 0 0 2px ${p.dataset.colorText}`
+        : 'none'
+    }
   }
 
-  function applyFilter(topic: string) {
+  function styleYearPill(p: HTMLButtonElement, isActive: boolean) {
+    p.setAttribute('aria-pressed', String(isActive))
+    p.style.background = isActive ? 'var(--color-accent)' : '#fff'
+    p.style.color = isActive ? '#fff' : 'var(--color-text)'
+    p.style.borderColor = isActive ? 'var(--color-accent)' : 'var(--color-border)'
+  }
+
+  function setActiveTopic(topic: string) {
+    activeTopic = topic
+    topicPills.forEach((p) => styleTopicPill(p, p.dataset.topic === topic))
+  }
+
+  function setActiveYear(year: string) {
+    activeYear = year
+    yearPills.forEach((p) => styleYearPill(p, p.dataset.year === year))
+  }
+
+  function applyFilter() {
     let visibleCount = 0
     items.forEach((item) => {
       const topics: string[] = JSON.parse(item.dataset.topics || '[]')
-      const show = topic === '__all' || topics.includes(topic)
+      const passesTopic = activeTopic === '__all' || topics.includes(activeTopic)
+      // Year section parent contains the year; walk up to find it
+      const sec = item.closest<HTMLDivElement>('.year-section')
+      const itemYear = sec?.dataset.year || ''
+      const passesYear =
+        activeYear === '__all' ||
+        (activeYear === '__earlier' ? !recentSet.has(itemYear) : itemYear === activeYear)
+      const show = passesTopic && passesYear
       item.style.display = show ? '' : 'none'
       if (show) visibleCount++
     })
@@ -232,40 +300,56 @@ const years = [...byYear.keys()].sort((a, b) => b - a)
       })
       sec.style.display = visibleInYear > 0 ? '' : 'none'
     })
-    if (emptyState) {
-      emptyState.classList.toggle('hidden', visibleCount > 0)
-    }
-    // Sync URL hash for shareable links
-    if (topic === '__all') {
+    emptyState?.classList.toggle('hidden', visibleCount > 0)
+    syncHash()
+  }
+
+  function syncHash() {
+    const parts: string[] = []
+    if (activeTopic !== '__all') parts.push('topic=' + encodeURIComponent(activeTopic))
+    if (activeYear !== '__all') parts.push('year=' + encodeURIComponent(activeYear))
+    if (parts.length === 0) {
       history.replaceState(null, '', location.pathname + location.search)
     } else {
-      history.replaceState(null, '', '#' + encodeURIComponent(topic))
+      history.replaceState(null, '', '#' + parts.join('&'))
     }
   }
 
-  pills.forEach((p) => {
+  topicPills.forEach((p) => {
     p.addEventListener('click', () => {
-      const t = p.dataset.topic || '__all'
-      setActive(t)
-      applyFilter(t)
+      setActiveTopic(p.dataset.topic || '__all')
+      applyFilter()
       window.scrollTo({ top: filterBar?.offsetTop ?? 0, behavior: 'smooth' })
     })
   })
-
-  // Click on a topic tag inside a paper → filter to that topic
+  yearPills.forEach((p) => {
+    p.addEventListener('click', () => {
+      setActiveYear(p.dataset.year || '__all')
+      applyFilter()
+      window.scrollTo({ top: filterBar?.offsetTop ?? 0, behavior: 'smooth' })
+    })
+  })
   tagButtons.forEach((b) => {
     b.addEventListener('click', () => {
-      const t = b.dataset.topicTag || '__all'
-      setActive(t)
-      applyFilter(t)
+      setActiveTopic(b.dataset.topicTag || '__all')
+      applyFilter()
       window.scrollTo({ top: filterBar?.offsetTop ?? 0, behavior: 'smooth' })
     })
   })
 
-  // Honor URL hash on load
-  const initial = decodeURIComponent(location.hash.slice(1))
-  if (initial) {
-    setActive(initial)
-    applyFilter(initial)
+  // Honor URL hash on load. Supports both "#Memory" (legacy bare-topic
+  // links) and "#topic=Memory&year=2024".
+  const raw = location.hash.slice(1)
+  if (raw) {
+    if (raw.includes('=')) {
+      const params = new URLSearchParams(raw)
+      const t = params.get('topic')
+      const y = params.get('year')
+      if (t) setActiveTopic(t)
+      if (y) setActiveYear(y)
+    } else {
+      setActiveTopic(decodeURIComponent(raw))
+    }
+    applyFilter()
   }
 </script>
