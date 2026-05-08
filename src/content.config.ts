@@ -69,8 +69,10 @@ const projects = defineCollection({
     description: z.string(),
     year: z.number().int().optional(),
     githubUrl: z.string().url().optional(),
-    paperLink: z.string().url().optional(),
-    paperTitle: z.string().optional(),
+    // Reference an entry in publications/content.yaml by its slug. The
+    // /code page pulls authors / title / venue / link from there, so a
+    // citation is never duplicated.
+    paperSlug: z.string().optional(),
     otherLinks: z
       .array(z.object({ label: z.string(), url: z.string().url() }))
       .optional(),

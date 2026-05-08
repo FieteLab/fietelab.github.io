@@ -1,28 +1,9 @@
-# Lab code releases — copied from fietelab.mit.edu/code/.
-# To add a project, copy a block below and edit. `paperLink`, `paperTitle`,
-# `githubUrl`, and `otherLinks` are all optional.
-
-farmap:
-  name: "FARMap"
-  year: 2024
-  description: |
-    Fragmentation-and-Recall (FAR) maps for efficient exploration of
-    large spaces, drawing on observed fragmentation of grid-cell maps
-    in compartmentalized environments.
-  githubUrl: "https://github.com/FieteLab/FARMap"
-  paperLink: "https://openreview.net/forum?id=cT8oOJ6Q6F"
-  paperTitle: "J. Hwang, Z. W. Hong, E. Chen, A. Boopathy, P. Agrawal, I. R. Fiete. Grid Cell-Inspired Fragmentation and Recall for Efficient Map Building. TMLR (2024)."
-
-farcuriosity:
-  name: "FARCuriosity"
-  year: 2023
-  description: |
-    Applies the FAR fragmentation-and-recall idea to curiosity-driven
-    reinforcement learning, mitigating catastrophic forgetting in
-    long-horizon tasks.
-  githubUrl: "https://github.com/FieteLab/FARCuriosity"
-  paperLink: "https://arxiv.org/abs/2310.17537"
-  paperTitle: "J. D. Hwang, Z. W. Hong, E. Chen, A. Boopathy, P. Agrawal, I. R. Fiete. Neuro-Inspired Fragmentation and Recall to Overcome Catastrophic Forgetting in Curiosity (2023)."
+# Lab code releases. To add a project, copy a block below and edit.
+#
+# `paperSlug:` references an entry in src/content/publications/content.yaml
+# by its key (e.g. "hwang2024grid"). The /code page pulls authors,
+# title, venue, year, and link from the publications entry, so citations
+# stay in sync automatically — no need to copy them here.
 
 m2a:
   name: "M2A"
@@ -32,8 +13,7 @@ m2a:
     between an LLM's training language and lower-resource target
     languages.
   githubUrl: "https://github.com/jd730/M2A"
-  paperLink: "https://arxiv.org/abs/2507.05418"
-  paperTitle: "J. D. Hwang, T. Kumar, S. J. Lee, A. Agrawal, H. Palangi, A. Kumar, I. R. Fiete, P. P. Liang. Learn globally, speak locally: Bridging the gaps in multilingual reasoning (2025)."
+  paperSlug: "hwang2025learn"
 
 multiregion-brain-model:
   name: "Multi-Region Brain Model"
@@ -42,8 +22,17 @@ multiregion-brain-model:
     Multi-region neural network probing how the hippocampus supports
     spatially-embedded decision making in rodents and primates.
   githubUrl: "https://github.com/FieteLab/multiregion-brain-model"
-  paperLink: "https://www.biorxiv.org/content/10.1101/2025.05.29.656671"
-  paperTitle: "Y. Xie, J. Hwang, C. Brody, D. Tank, I. R. Fiete. A Multi-Region Brain Model to Elucidate the Role of Hippocampus in Spatially Embedded Decision-Making. ICML (2025)."
+  paperSlug: "xie2025multiregion"
+
+farmap:
+  name: "FARMap"
+  year: 2024
+  description: |
+    Fragmentation-and-Recall (FAR) maps for efficient exploration of
+    large spaces, drawing on observed fragmentation of grid-cell maps
+    in compartmentalized environments.
+  githubUrl: "https://github.com/FieteLab/FARMap"
+  paperSlug: "hwang2024grid"
 
 seq-wm:
   name: "seq-WM"
@@ -53,8 +42,38 @@ seq-wm:
     without catastrophic forgetting in artificial agents, with reference
     RL agents that solve it.
   githubUrl: "https://github.com/raymondw2/seq-wm"
-  paperLink: "https://proceedings.mlr.press/v235/wang24ab.html"
-  paperTitle: "R. L. Wang, J. Hwang, A. Boopathy, I. R. Fiete. Rapid Learning without Catastrophic Forgetting in the Morris Water Maze. ICML (2024)."
+  paperSlug: "wang2024rapid"
+
+exact-inductive-bias:
+  name: "Exact Inductive Bias"
+  year: 2024
+  description: |
+    Computes the exact inductive bias of common ML architectures,
+    extending the generalization-difficulty framework.
+  githubUrl: "https://github.com/FieteLab/Exact-Inductive-Bias"
+  paperSlug: "boopathy2024towards"
+
+farcuriosity:
+  name: "FARCuriosity"
+  year: 2023
+  description: |
+    Applies the FAR fragmentation-and-recall idea to curiosity-driven
+    reinforcement learning, mitigating catastrophic forgetting in
+    long-horizon tasks.
+  githubUrl: "https://github.com/FieteLab/FARCuriosity"
+  paperSlug: "hwang2023neuroinspired"
+
+dsa:
+  name: "Dynamical Similarity Analysis"
+  year: 2023
+  description: |
+    Compares dynamical systems using Koopman operators; input-driven
+    (InputDSA) variants are also included. Works on arbitrary time
+    series, with or without input.
+  paperSlug: "ostrow2023beyond"
+  otherLinks:
+    - { label: "code (git)", url: "https://github.com/mitchellostrow/DSA" }
+    - { label: "InputDSA paper", url: "https://openreview.net/forum?id=2FrAvRz1E7" }
 
 inductive-bias-complexity:
   name: "Inductive Bias Complexity"
@@ -64,32 +83,8 @@ inductive-bias-complexity:
     hypothesis class, derived from the Kolmogorov complexity of the
     optimal predictor relative to the inductive bias.
   githubUrl: "https://github.com/FieteLab/inductive-bias-complexity"
-  paperLink: "https://proceedings.mlr.press/v202/boopathy23a.html"
-  paperTitle: "A. Boopathy, K. Liu, J. Hwang, S. Ge, A. Mohammedsaleh, I. R. Fiete. Model-agnostic measure of generalization difficulty. ICML (2023)."
+  paperSlug: "boopathy2023modelagnostic"
 
-exact-inductive-bias:
-  name: "Exact Inductive Bias"
-  year: 2024
-  description: |
-    Computes the exact inductive bias of common ML architectures,
-    extending the generalization-difficulty framework.
-  githubUrl: "https://github.com/FieteLab/Exact-Inductive-Bias"
-  paperLink: "https://arxiv.org/abs/2406.15941"
-  paperTitle: "A. Boopathy, W. Yue, J. Hwang, A. Iyer, I. R. Fiete. Towards Exact Computation of Inductive Bias (2024)."
-
-dsa:
-  name: "Dynamical Similarity Analysis"
-  year: 2023
-  description: |
-    Compares dynamical systems using Koopman operators; input-driven
-    (InputDSA) variants are also included. Works on arbitrary time
-    series, with or without input.
-  paperLink: "https://openreview.net/forum?id=7blSUMwe7R"
-  paperTitle: "M. Ostrow, A. Eisen, L. Kozachkov, I.R. Fiete. Beyond Geometry: Comparing the Temporal Structure of Computation in Neural Circuits with Dynamical Similarity Analysis. NeurIPS (2023)."
-  otherLinks:
-    - { label: "code (git)", url: "https://github.com/mitchellostrow/DSA" }
-    - { label: "inputDSA paper", url: "https://openreview.net/forum?id=2FrAvRz1E7" }
-  
 spud:
   name: "SPUD"
   year: 2019
@@ -97,26 +92,10 @@ spud:
     Characterizes manifolds and performs unsupervised decoding in the
     head direction system. Python 2.7; please cite the associated
     paper if you use it.
-  paperLink: "https://www.nature.com/articles/s41593-019-0460-x"
-  paperTitle: "R. Chaudhuri, B. Gercek*, B. Pandey*, A. Peyrache, I.R. Fiete. The intrinsic population dynamics of a canonical cognitive circuit. Nature Neurosci. (2019)."
+  paperSlug: "chaudhuri2019intrinsic"
   otherLinks:
     - { label: "SPUD code (.zip)", url: "https://fietelab.mit.edu/wp-content/uploads/2019/08/spud_code.zip" }
     - { label: "Readme (.docx)", url: "https://fietelab.mit.edu/wp-content/uploads/2019/08/spudreadme.docx" }
-
-grid-cell-attractor:
-  name: "Grid cell continuous attractor models"
-  year: 2009
-  description: |
-    Simulates grid-cell activity from continuous-attractor dynamics, with
-    periodic or aperiodic boundary conditions. Runs on random or
-    recorded rat trajectories (included).
-  paperLink: "https://fietelab.mit.edu/wp-content/uploads/2018/12/gcdynamics_burakfiete09_plos.pdf"
-  paperTitle: "Y. Burak and I. R. Fiete. Accurate path integration in continuous attractor network models of grid cells. PLoS Comp. Biol. 5(2) (2009)."
-  otherLinks:
-    - { label: "Matlab GC Dynamics", url: "https://www.dropbox.com/sh/ird9hnh8xbh76m8/AADIvXSqkUsWsVrUAoJFOU23a?dl=0" }
-    - { label: "Matlab Readme", url: "https://www.dropbox.com/s/1t73nvw4y10cve3/README_GC_Dynamics2009.txt?dl=0" }
-    - { label: "C GC Dynamics", url: "https://www.dropbox.com/sh/x1bkd10aqjxsisy/AAAxxgbpWIy78XQB2bDl_QXxa?dl=0" }
-    - { label: "C code Readme", url: "https://www.dropbox.com/s/xtmp9376iv7nlhl/README_GC_Dynamics2009c.txt?dl=0" }
 
 stdp-sequences:
   name: "Neural sequences via STDP and heterosynaptic competition"
@@ -126,11 +105,24 @@ stdp-sequences:
     spontaneously organize networks to produce long, sparse activity
     sequences — whether the training inputs are sequential or not.
     Matlab; aligns with Fig. 2 (summed weight bound).
-  paperLink: "https://fietelab.mit.edu/wp-content/uploads/2018/12/sequence_formation_neuron10.pdf"
-  paperTitle: "I. R. Fiete, W. Senn, C. Wang, R. H. R. Hahnloser. Spike time-dependent plasticity and heterosynaptic competition organize networks to produce long scale-free sequences of neural activity. Neuron 65(4): 563-576 (2010)."
+  paperSlug: "fiete2010spike"
   otherLinks:
     - { label: "Sequence formation code", url: "https://www.dropbox.com/sh/bv4q14hur1ty7no/AADkJZWIkcRznR_g8cdj6Cs4a?dl=0" }
     - { label: "Readme", url: "https://www.dropbox.com/s/0ig4aw5fc16htrk/README_LCN.txt?dl=0" }
+
+grid-cell-attractor:
+  name: "Grid cell continuous attractor models"
+  year: 2009
+  description: |
+    Simulates grid-cell activity from continuous-attractor dynamics, with
+    periodic or aperiodic boundary conditions. Runs on random or
+    recorded rat trajectories (included).
+  paperSlug: "burak2009accurate"
+  otherLinks:
+    - { label: "Matlab GC Dynamics", url: "https://www.dropbox.com/sh/ird9hnh8xbh76m8/AADIvXSqkUsWsVrUAoJFOU23a?dl=0" }
+    - { label: "Matlab Readme", url: "https://www.dropbox.com/s/1t73nvw4y10cve3/README_GC_Dynamics2009.txt?dl=0" }
+    - { label: "C GC Dynamics", url: "https://www.dropbox.com/sh/x1bkd10aqjxsisy/AAAxxgbpWIy78XQB2bDl_QXxa?dl=0" }
+    - { label: "C code Readme", url: "https://www.dropbox.com/s/xtmp9376iv7nlhl/README_GC_Dynamics2009c.txt?dl=0" }
 
 github-org:
   name: "FieteLab on GitHub"
