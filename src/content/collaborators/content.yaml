@@ -1,0 +1,30 @@
+# Frequent external collaborators we want to surface as clickable author
+# names — they're not lab members or alumni, but they appear often
+# enough in paper bylines that linking them is worth the effort.
+#
+# Most entries here are MIT faculty who co-advise current Fiete-Lab grad
+# students. Add a new collaborator by copying any block below.
+#
+# Convention: the `name:` must match the canonical full name as it
+# appears in publications/content.yaml's `authors:` strings (full first
+# + last, no middle initials).
+
+paul-liang:
+  name: "Paul Liang"
+  url: "https://pliang279.github.io/"
+
+josh-mcdermott:
+  name: "Josh McDermott"
+  url: "https://mcdermottlab.mit.edu/"
+
+michale-fee:
+  name: "Michale Fee"
+  url: "https://feelaboratory.org/"
+
+fan-wang:
+  name: "Fan Wang"
+  url: "https://www.wanglab-neuro.org/"
+
+earl-miller:
+  name: "Earl Miller"
+  url: "https://ekmillerlab.mit.edu/"

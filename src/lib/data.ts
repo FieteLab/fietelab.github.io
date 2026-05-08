@@ -39,24 +39,10 @@ export function formatAuthors(authors: string): string {
 }
 
 /**
- * Frequent external collaborators we want to surface as clickable author
- * names — they're not lab members or alumni. Includes MIT faculty who
- * co-advise current Fiete-Lab grad students. Keys must match the
- * canonical full name as it appears in publications/content.yaml.
- */
-const EXTERNAL_AUTHOR_LINKS: Record<string, string> = {
-  'Paul Liang':     'https://pliang279.github.io/',
-  'Josh McDermott': 'https://mcdermottlab.mit.edu/',
-  'Michale Fee':    'https://feelaboratory.org/',
-  'Fan Wang':       'https://www.wanglab-neuro.org/',
-  'Earl Miller':    'https://ekmillerlab.mit.edu/',
-}
-
-/**
  * Build a map from canonical author full-name to a link target. Includes
  * (1) current lab members (→ /people/<slug>/), (2) alumni who have a
  * personal website on record (→ external URL), and (3) named external
- * collaborators from EXTERNAL_AUTHOR_LINKS.
+ * collaborators from the `collaborators` content collection.
  */
 export async function getAuthorLinkMap(): Promise<
   Map<string, { href: string; external: boolean }>
@@ -76,8 +62,11 @@ export async function getAuthorLinkMap(): Promise<
       map.set(a.data.name, { href: target, external: true })
     }
   }
-  for (const [name, href] of Object.entries(EXTERNAL_AUTHOR_LINKS)) {
-    if (!map.has(name)) map.set(name, { href, external: true })
+  const collaborators = await getCollection('collaborators')
+  for (const c of collaborators) {
+    if (!map.has(c.data.name)) {
+      map.set(c.data.name, { href: c.data.url, external: true })
+    }
   }
   return map
 }
