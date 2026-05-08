@@ -1,7 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import { getCollection } from 'astro:content'
-import { topicColor, TOPIC_ORDER } from '@/lib/topics'
+import { topicColor, orderTopics } from '@/lib/topics'
 import { isRedundantCitation, getAuthorLinkMap } from '@/lib/data'
 import AuthorList from '@/components/AuthorList.astro'
 
@@ -13,7 +13,7 @@ const presentTopics = new Set<string>()
 for (const p of allPubs) {
   for (const t of p.data.topics ?? []) presentTopics.add(t)
 }
-const topics = TOPIC_ORDER.filter((t) => presentTopics.has(t))
+const topics = orderTopics(presentTopics)
 const topicCount = (t: string) =>
   allPubs.filter((p) => (p.data.topics ?? []).includes(t)).length
 

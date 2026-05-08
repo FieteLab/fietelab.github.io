@@ -1,7 +1,9 @@
 /**
- * Color palette for topic tags. Each topic maps to a Tailwind-100 / 700 pair
- * that has WCAG AA contrast. Adding a new topic? Add a color row below; if
- * you forget, the default stone-gray is used.
+ * Hand-picked colors for the canonical topic taxonomy carried over from the
+ * original WordPress site. Topics not in this list get an auto-generated
+ * color via `generateColor()` below, so adding a new topic to a paper
+ * "just works" — no edit required here unless you specifically want a
+ * curated palette for it.
  */
 const TOPIC_COLORS: Record<string, { bg: string; text: string; ring: string }> = {
   'Theoretical ML': { bg: '#dbeafe', text: '#1e40af', ring: '#93c5fd' },
@@ -16,12 +18,33 @@ const TOPIC_COLORS: Record<string, { bg: string; text: string; ring: string }> =
   'Condensed-matter physics': { bg: '#e7e5e4', text: '#44403c', ring: '#a8a29e' },
 }
 
-const FALLBACK = { bg: '#f3f4f6', text: '#374151', ring: '#d1d5db' }
-
-export function topicColor(name: string) {
-  return TOPIC_COLORS[name] ?? FALLBACK
+/**
+ * Stable, deterministic hue per unknown topic name (FNV-1a-style hash).
+ * Same name always maps to the same color, so the page stays visually
+ * consistent across builds even though no one curated it.
+ */
+function generateColor(name: string) {
+  let hash = 2166136261 >>> 0
+  for (const ch of name) {
+    hash ^= ch.charCodeAt(0)
+    hash = Math.imul(hash, 16777619) >>> 0
+  }
+  const hue = hash % 360
+  return {
+    bg: `hsl(${hue}, 65%, 92%)`,
+    text: `hsl(${hue}, 60%, 32%)`,
+    ring: `hsl(${hue}, 60%, 75%)`,
+  }
 }
 
+export function topicColor(name: string) {
+  return TOPIC_COLORS[name] ?? generateColor(name)
+}
+
+/**
+ * Preferred display order for the curated topics. Topics not on this list
+ * still appear — they slot in alphabetically after the curated ones.
+ */
 export const TOPIC_ORDER = [
   'Theoretical ML',
   'Biologically plausible gradient learning',
@@ -34,3 +57,18 @@ export const TOPIC_ORDER = [
   'Navigation circuits and spatial cognition',
   'Condensed-matter physics',
 ] as const
+
+/**
+ * Sort topics so curated ones come first in their declared order, then any
+ * new topic by name. Used by /publications to build the filter row.
+ */
+export function orderTopics(topics: Iterable<string>): string[] {
+  const orderIdx = (t: string) => {
+    const i = (TOPIC_ORDER as readonly string[]).indexOf(t)
+    return i === -1 ? Number.POSITIVE_INFINITY : i
+  }
+  return [...new Set(topics)].sort((a, b) => {
+    const ia = orderIdx(a), ib = orderIdx(b)
+    return ia !== ib ? ia - ib : a.localeCompare(b)
+  })
+}
