@@ -11,7 +11,7 @@
 eisen2026similar:
   title: "Similar destabilization of neural dynamics under different general anesthetics"
   topics: ["Altered brain states_Claude"]
-  authors: "Adam Joseph Eisen, A. G. Bardon, J. J. Ballesteros, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, J. Roy, Y. Ishizawa, E. Brown, Ila Fiete+, Earl Miller+"
+  authors: "Adam Joseph Eisen, Alexandra G Bardon, J. J. Ballesteros, André M. Bastos, Jacob Donoghue, Meredith Mahnke, Scott L. Brincat, Jefferson E. Roy, Yumiko Ishizawa, Emery N. Brown, Ila Fiete+, Earl Miller+"
   year: 2026
   venue: "Cell Reports"
   citation: "bioRxiv 10.1101/2025.08.21.671540 (2025) and Cell Reports 45(3) (2026)"
@@ -21,7 +21,7 @@ eisen2026similar:
 mccourt2026noisy:
   title: "Noisy dynamical systems evolve error-correcting codes and modularity"
   topics: ["Theoretical ML", "Module/structure emergence"]
-  authors: "T. McCourt, Ila Fiete, I. L. Chuang"
+  authors: "T. McCourt, Ila Fiete, Isaac L. Chuang"
   year: 2026
   venue: "PRX Life"
   citation: "bioRxiv 2022.12.15.520640 (2023) and PRX Life 4(2), 023002 (2026)"
@@ -30,7 +30,7 @@ mccourt2026noisy:
 liang2026blessing:
   title: "The Blessing of Dimensionality in LLM Fine-tuning: A Variance-Curvature Perspective"
   topics: ["Theoretical ML"]
-  authors: "Qiyao (Catherine) Liang, J. Song, Y. Liu, J. Gore, Ila Fiete, R. Miikkulainen, X. Qiu"
+  authors: "Qiyao (Catherine) Liang, Jinyeop Song, Yizhou Liu, Jeff Gore, Ila Fiete, Risto Miikkulainen, Xin Qiu"
   year: 2026
   venue: "arXiv preprint"
   citation: "arXiv:2602.00170 (2026)"
@@ -80,7 +80,7 @@ schartner2025spatially:
 hwang2025learn:
   title: "Learn globally, speak locally: Bridging the gaps in multilingual reasoning"
   topics: ["Theoretical ML_Claude"]
-  authors: "Jaedong Hwang, T. Kumar, S. J. Lee, A. Agrawal, H. Palangi, A. Kumar, Ila Fiete+, Paul Liang+"
+  authors: "Jaedong Hwang, T. Kumar, Seung‐Koo Lee, Ayush Agrawal, Hamid Palangi, A. Kumar, Ila Fiete+, Paul Liang+"
   year: 2025
   venue: "arXiv preprint"
   citation: "arXiv:2507.05418 (2025)"
@@ -128,7 +128,7 @@ zahorodnii2025neuroprobe:
 zahorodnii2025paper:
   title: "Paper Quality Assessment based on Individual Wisdom Metrics from Open Peer Review"
   topics: ["Theoretical ML_Claude"]
-  authors: "Andrii Zahorodnii, J. J. F. van den Bosch, I. Charest, C. Summerfield, Ila Fiete"
+  authors: "Andrii Zahorodnii, Jasper J.F. van den Bosch, Ian Charest, Christopher Summerfield, Ila Fiete"
   year: 2025
   venue: "arXiv preprint"
   citation: "arXiv:2501.13014 (2025)"
@@ -180,7 +180,7 @@ qian2025fundamental:
 gershman2025keyvalue:
   title: "Key-value memory in the brain"
   topics: ["Memory_Claude"]
-  authors: "S. J. Gershman, Ila Fiete, K. Irie"
+  authors: "Samuel J. Gershman, Ila Fiete, Kazuki Irie"
   year: 2025
   venue: "Neuron"
   citation: "arXiv:2501.02950 (2025) and Neuron (2025)"
@@ -206,7 +206,7 @@ chandra2025episodic:
 xie2025multiregion:
   title: "A Multi-Region Brain Model to Elucidate the Role of Hippocampus in Spatially Embedded Decision-Making"
   topics: ["Decision making", "Memory", "Navigation circuits and spatial cognition"]
-  authors: "Y. Xie, Jaedong Hwang, C. Brody, D. Tank, Ila Fiete"
+  authors: "Yi Xie, Jaedong Hwang, Carlos D. Brody, David W. Tank, Ila Fiete"
   year: 2025
   venue: "ICML"
   citation: "bioRxiv 2025.05.29.656671 (2025) and Proc. ICML (2025)"
@@ -231,7 +231,7 @@ noel2025common:
 behrad2025fast:
   title: "Fast dynamical similarity analysis"
   topics: ["Neural Dynamics"]
-  authors: "A. Behrad, Mitchell Ostrow, M. T. Fakharian, Ila Fiete, C. Beste, S. Safavi"
+  authors: "Arman Behrad, Mitchell Ostrow, Mohammad Taha Fakharian, Ila Fiete, Christian Beste, Shervin Safavi"
   year: 2025
   venue: "arXiv preprint"
   citation: "arXiv:2511.22828 (2025)"
@@ -252,7 +252,7 @@ biderman2024lightning:
 witten2024future:
   title: "Future views on neuroscience and AI"
   topics: ["Theoretical ML_Claude"]
-  authors: "I. B. Witten, D. Yamins, C. Clopath, M. Bethge, Y. Zeng, A. R. Kennedy, A. Birhane, D. Y. Tsao, B. Kim, Ila Fiete"
+  authors: "Ilana B. Witten, Daniel Yamins, Claudia Clopath, Matthias Bethge, Yi Zeng, Ann R. Kennedy, Abeba Birhane, Doris Y. Tsao, Been Kim, Ila Fiete"
   year: 2024
   venue: "Cell"
   link: "https://doi.org/10.1016/j.cell.2024.09.031"
@@ -269,7 +269,7 @@ ostrow2024how:
 schaeffer2024bridging:
   title: "Bridging Associative Memory and Probabilistic Modeling"
   topics: ["Memory"]
-  authors: "Rylan Schaeffer, N. Zahedi, Mikail Khona, D. Pai, S. Truong, Y. Du, Mitchell Ostrow, Sarthak Chandra, A. Carranza Carranza, Ila Fiete, A. Gromov, S. Koyejo"
+  authors: "Rylan Schaeffer, Nika Zahedi, Mikail Khona, Dhruv Pai, Sang Truong, Yilun Du, Mitchell Ostrow, Sarthak Chandra, Andrés Carranza Carranza, Ila Fiete, Andrey Gromov, Oluwasanmi Koyejo"
   year: 2024
   venue: "arXiv preprint"
   citation: "arXiv:2402.10202 (2024)"
@@ -295,7 +295,7 @@ chandra2024flexible:
 fiete2024flexible:
   title: "Flexible Context-Driven Sensory Processing in Dynamical Vision Models"
   topics: ["Module/structure emergence_Claude", "Theoretical ML_Claude"]
-  authors: "Ila Fiete, Lakshmi Govindarajan, Abhi Iyer, V. Kothare"
+  authors: "Ila Fiete, Lakshmi Govindarajan, Abhi Iyer, Valmiki Kothare"
   year: 2024
   venue: "NeurReps Workshop"
   link: "https://doi.org/10.52202/079017-0125"
@@ -313,7 +313,7 @@ chandra2024selforganized:
 boopathy2024permutation:
   title: "Permutation Invariant Learning with High-Dimensional Particle Filters"
   topics: ["Theoretical ML"]
-  authors: "Akhilan Boopathy, A. Muppidi, P. Yang, Abhi Iyer, W. Yue, Ila Fiete"
+  authors: "Akhilan Boopathy, Aneesh Muppidi, Peggy Yang, Abhi Iyer, William Yue, Ila Fiete"
   year: 2024
   venue: "arXiv preprint"
   citation: "arXiv:2410.22695 (2024)"
@@ -322,7 +322,7 @@ boopathy2024permutation:
 hwang2024imagenetrib:
   title: "ImageNet-RIB Benchmark: Large Pre-Training Datasets Don't Guarantee Robustness after Fine-Tuning"
   topics: ["Theoretical ML"]
-  authors: "Jaedong Hwang, B. Cheung, Z. W. Hong, Akhilan Boopathy, P. Agrawal, Ila Fiete"
+  authors: "Jaedong Hwang, Brian Cheung, Zhang-Wei Hong, Akhilan Boopathy, Pulkit Agrawal, Ila Fiete"
   year: 2024
   venue: "arXiv preprint"
   citation: "arXiv:2410.21582 (2024)"
@@ -340,7 +340,7 @@ boopathy2024unified:
 boopathy2024breaking:
   title: "Breaking Neural Network Scaling Laws with Modularity"
   topics: ["Theoretical ML"]
-  authors: "Akhilan Boopathy, S. Jiang, W. Yue, Jaedong Hwang, Abhi Iyer, Ila Fiete"
+  authors: "Akhilan Boopathy, S. S. Jiang, William Yue, Jaedong Hwang, Abhi Iyer, Ila Fiete"
   year: 2024
   venue: "arXiv preprint"
   citation: "arXiv:2409.05780 (2024)"
@@ -349,7 +349,7 @@ boopathy2024breaking:
 boopathy2024towards:
   title: "Towards Exact Computation of Inductive Bias"
   topics: ["Theoretical ML"]
-  authors: "Akhilan Boopathy, W. Yue, Jaedong Hwang, Abhi Iyer, Ila Fiete"
+  authors: "Akhilan Boopathy, William Yue, Jaedong Hwang, Abhi Iyer, Ila Fiete"
   year: 2024
   venue: "arXiv preprint"
   citation: "arXiv:2406.15941 (2024)"
@@ -358,7 +358,7 @@ boopathy2024towards:
 boopathy2024resamplingfree:
   title: "Resampling-free Particle Filters in High-dimensions"
   topics: ["Theoretical ML"]
-  authors: "Akhilan Boopathy, A. Muppidi, P. Yang, Abhi Iyer, W. Yue, Ila Fiete"
+  authors: "Akhilan Boopathy, Aneesh Muppidi, Peggy Yang, Abhi Iyer, William Yue, Ila Fiete"
   year: 2024
   venue: "arXiv preprint"
   citation: "arXiv:2404.13698 (2024)"
@@ -375,7 +375,7 @@ liang2024how:
 hwang2024grid:
   title: "Grid Cell-Inspired Fragmentation and Recall for Efficient Map Building"
   topics: ["Navigation circuits and spatial cognition", "Memory"]
-  authors: "Jaedong Hwang, Z. W. Hong, E. Chen, Akhilan Boopathy, P. Agrawal, Ila Fiete"
+  authors: "Jaedong Hwang, Zhang-Wei Hong, Eric Chen, Akhilan Boopathy, Pulkit Agrawal, Ila Fiete"
   year: 2024
   venue: "TMLR"
   citation: "arXiv:2307.05793 (2023) and TMLR (2024)"
@@ -384,7 +384,7 @@ hwang2024grid:
 zlokapa2024faulttolerant:
   title: "Fault-tolerant neural networks from biological error correction codes"
   topics: ["Theoretical ML", "Error-correcting codes"]
-  authors: "A. Zlokapa, A. K. Tan, J. M. Martyn, Ila Fiete, M. Tegmark, I. L. Chuang"
+  authors: "Alexander Zlokapa, Andrew K. Tan, John M. Martyn, Ila Fiete, Max Tegmark, Isaac L. Chuang"
   year: 2024
   venue: "Physical Review E"
   citation: "Physical Review E 110, 054303 (2024)"
@@ -419,7 +419,7 @@ eisen2024propofol:
 neupane2024mental:
   title: "Mental navigation in the primate entorhinal cortex"
   topics: ["Navigation circuits and spatial cognition_Claude"]
-  authors: "S. Neupane, Ila Fiete, M. Jazayeri"
+  authors: "Sujaya Neupane, Ila Fiete, Mehrdad Jazayeri"
   year: 2024
   venue: "Nature"
   link: "https://www.nature.com/articles/s41586-024-07557-z"
@@ -455,7 +455,7 @@ kirjner2024improving:
 hwang2023neuroinspired:
   title: "Neuro-Inspired Fragmentation and Recall to Overcome Catastrophic Forgetting in Curiosity"
   topics: ["Memory", "Navigation circuits and spatial cognition"]
-  authors: "Jaedong Hwang, Z. W. Hong, E. Chen, Akhilan Boopathy, P. Agrawal, Ila Fiete"
+  authors: "Jaedong Hwang, Zhang-Wei Hong, Eric Chen, Akhilan Boopathy, Pulkit Agrawal, Ila Fiete"
   year: 2023
   venue: "arXiv preprint"
   citation: "arXiv:2310.17537 (2023)"
@@ -464,7 +464,7 @@ hwang2023neuroinspired:
 schaeffer2023double:
   title: "Double Descent Demystified: Identifying, Interpreting & Ablating the Sources of a Deep Learning Puzzle"
   topics: ["Theoretical ML_Claude"]
-  authors: "Rylan Schaeffer, Mikail Khona, Z. Robertson, Akhilan Boopathy, K. Pistunova, J. W. Rocks, Ila Fiete, S. Koyejo"
+  authors: "Rylan Schaeffer, Mikail Khona, Zachary Robertson, Akhilan Boopathy, Kateryna Pistunova, Jason W. Rocks, Ila Fiete, Oluwasanmi Koyejo"
   year: 2023
   venue: "arXiv preprint"
   citation: "arXiv:2303.14151 (2023)"
@@ -482,7 +482,7 @@ hwang2023generalizable:
 liu2023growing:
   title: "Growing Brains: Co-emergence of Anatomical and Functional Modularity in Recurrent Neural Networks"
   topics: ["Module/structure emergence"]
-  authors: "Z. Liu, Mikail Khona, Ila Fiete, M. Tegmark"
+  authors: "Ziming Liu, Mikail Khona, Ila Fiete, Max Tegmark"
   year: 2023
   venue: "NeurReps Workshop"
   citation: "arXiv:2310.07711 (2023) and NeurIPS Workshop (2023)"
@@ -509,7 +509,7 @@ boopathy2023modelagnostic:
 schaeffer2023selfsupervised:
   title: "Self-Supervised Learning of Representations for Space Generates Multi-Modular Grid Cells"
   topics: ["Module/structure emergence"]
-  authors: "Rylan Schaeffer*, Mikail Khona*, Tzuhsuan Ma, C. Eyzaguirre, S. Koyejo, Ila Fiete"
+  authors: "Rylan Schaeffer*, Mikail Khona*, Tzuhsuan Ma, Cristóbal Eyzaguirre, Sanmi Koyejo, Ila Fiete"
   year: 2023
   venue: "NeurIPS"
   citation: "arXiv:2311.02316 (2023) and NeurIPS (2023)"
@@ -545,7 +545,7 @@ schaeffer2023divergence:
 duan2023see:
   title: "See and Copy: Generation of complex compositional movements from modular and geometric RNN representations"
   topics: ["Module/structure emergence_Claude"]
-  authors: "Sunny Duan, Mikail Khona, A. Bertagnoli, Sarthak Chandra, Ila Fiete"
+  authors: "Sunny Duan, Mikail Khona, Adrian Bertagnoli, Sarthak Chandra, Ila Fiete"
   year: 2023
   venue: "NeurReps Workshop (PMLR)"
   citation: "PMLR (2023) and arXiv:2210.02521 (2022)"
@@ -554,7 +554,7 @@ duan2023see:
 schaeffer2023testing:
   title: "Testing Assumptions Underlying a Unified Theory for the Origin of Grid Cells"
   topics: ["Navigation circuits and spatial cognition_Claude"]
-  authors: "Rylan Schaeffer, Mikail Khona, A. Bertagnoli, S. Koyejo, Ila Fiete"
+  authors: "Rylan Schaeffer, Mikail Khona, Adrian Bertagnoli, Oluwasanmi Koyejo, Ila Fiete"
   year: 2023
   venue: "NeurIPS Workshop (AI4Science)"
   citation: "arXiv:2311.16295 (2023) and NeurIPS Workshop (2023)"
@@ -563,7 +563,7 @@ schaeffer2023testing:
 khona2023winning:
   title: "Winning the lottery with neurobiology: faster learning on many cognitive tasks with fixed sparse RNNs"
   topics: ["Theoretical ML_Claude", "Module/structure emergence_Claude"]
-  authors: "Mikail Khona*, Sarthak Chandra*, J. J. Ma, Ila Fiete"
+  authors: "Mikail Khona*, Sarthak Chandra*, Joy J. Ma, Ila Fiete"
   year: 2023
   venue: "Neural Computation"
   link: "https://arxiv.org/pdf/2207.03523.pdf"
@@ -677,7 +677,7 @@ schaeffer2021efficient:
 yim2021place:
   title: "Place cell capacity and volatility with grid-like inputs"
   topics: ["Error-correcting codes"]
-  authors: "Manyi Yim, L. Sadun, Ila Fiete, T. Taillefumier"
+  authors: "Manyi Yim, Lorenzo Sadun, Ila Fiete, Thibaud Taillefumier"
   year: 2021
   venue: "eLife"
   link: "https://elifesciences.org/articles/62702"
@@ -707,7 +707,7 @@ boopathy2021gradienttrained:
 kim2020superlinear:
   title: "Superlinear precision and memory in simple population codes"
   topics: ["Memory_Claude"]
-  authors: "J. H. J. Kim, Ila Fiete, D. Schwab"
+  authors: "Jimmy H. J. Kim, Ila Fiete, David J. Schwab"
   year: 2020
   venue: "arXiv preprint"
   citation: "arXiv:2008.00629 (2020)"
@@ -759,7 +759,7 @@ das2020systematic:
 stangl2020sources:
   title: "Sources of path integration error in young and aging humans"
   topics: ["Navigation circuits and spatial cognition"]
-  authors: "M. Stangl*, Ingmar Kanitscheider*, M. Riemer, Ila Fiete+, T. Wolbers+"
+  authors: "Matthias Stangl*, Ingmar Kanitscheider*, Martin Riemer, Ila Fiete+, Thomas Wolbers+"
   year: 2020
   venue: "Nature Communications"
   link: "https://www.nature.com/articles/s41467-020-15805-9"
@@ -768,7 +768,7 @@ stangl2020sources:
 klukas2020flexible:
   title: "Flexible representation and memory of higher-dimensional cognitive variables with grid cells"
   topics: ["Error-correcting codes"]
-  authors: "Mirko Klukas, M. Lewis, Ila Fiete"
+  authors: "Mirko Klukas, Marcus Lewis, Ila Fiete"
   year: 2020
   venue: "PLOS Computational Biology"
   link: "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007796"
@@ -788,7 +788,7 @@ chaudhuri2019bipartite:
 chaudhuri2019intrinsic:
   title: "The intrinsic population dynamics of a canonical cognitive circuit"
   topics: ["Continuous attractors in the brain"]
-  authors: "Rishidev Chaudhuri, Berk Gercek*, Biraj Pandey*, A. Peyrache, Ila Fiete"
+  authors: "Rishidev Chaudhuri, Berk Gercek*, Biraj Pandey*, Adrien Peyrache, Ila Fiete"
   year: 2019
   venue: "Nature Neuroscience"
   link: "https://www.nature.com/articles/s41593-019-0460-x"
@@ -797,7 +797,7 @@ chaudhuri2019intrinsic:
 trettel2019grid:
   title: "Grid cell co-activity patterns during sleep reflect spatial overlap of grid fields during active behaviors"
   topics: ["Continuous attractors in the brain"]
-  authors: "S. G. Trettel*, J. B. Trimper*, E. Hwaun, Ila Fiete, L. L. Colgin"
+  authors: "Sean G. Trettel*, John B. Trimper*, Ernie Hwaun, Ila Fiete, Laura L Colgin"
   year: 2019
   venue: "Nature Neuroscience"
   citation: "Nature Neurosci. 22, 609-617 (2019)"
@@ -828,7 +828,7 @@ gu2018maplike:
 widloski2018inferring:
   title: "Inferring circuit mechanisms from sparse neural recording and global perturbation in grid cells"
   topics: ["Inferring neural connectivity", "Navigation circuits and spatial cognition"]
-  authors: "John Widloski, M. Marder, Ila Fiete"
+  authors: "John Widloski, Michael Marder, Ila Fiete"
   year: 2018
   venue: "eLife"
   link: "https://elifesciences.org/articles/33503"
@@ -864,7 +864,7 @@ kanitscheider2017training:
 koyluoglu2017fundamental:
   title: "Fundamental bound on the persistence and capacity of short-term memory stored as graded persistent activity"
   topics: ["Memory"]
-  authors: "O. O. Koyluoglu, Y. Pertzov, S. Manohar, M. Husain, Ila Fiete"
+  authors: "O. Ozan Koyluoglu, Yoni Pertzov, Sanjay Manohar, Masud Husain, Ila Fiete"
   year: 2017
   venue: "eLife"
   citation: "eLife 6:e22225 (2017)"
