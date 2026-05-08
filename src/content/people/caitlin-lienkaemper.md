@@ -3,6 +3,8 @@ name: "Caitlin Lienkaemper"
 role: "Postdoc"
 title: "Postdoc · Swartz Fellow"
 avatar: "./images/caitlin-lienkaemper.png"
+scholar: "https://scholar.google.com/citations?user=7d3VVVsAAAAJ"
+website: "https://lienkaemper.github.io/"
 order: 10
 ---
 

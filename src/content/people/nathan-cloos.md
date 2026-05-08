@@ -3,6 +3,8 @@ name: "Nathan Cloos"
 role: "Graduate Student"
 title: "PhD, BCS"
 avatar: "./images/nathan-cloos.jpg"
+scholar: "https://scholar.google.com/citations?user=AYBWN0gAAAAJ"
+website: "https://nacloos.github.io/"
 order: 29
 ---
 

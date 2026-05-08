@@ -3,6 +3,8 @@ name: "Qiyao (Catherine) Liang"
 role: "Graduate Student"
 title: "PhD, EECS"
 avatar: "./images/qiyao-liang.jpg"
+scholar: "https://scholar.google.com/citations?user=qzSOnnwAAAAJ"
+website: "https://qiyaoliang.com/"
 order: 27
 ---
 

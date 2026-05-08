@@ -3,6 +3,8 @@ name: "Mitchell Ostrow"
 role: "Graduate Student"
 title: "PhD, BCS"
 avatar: "./images/mitchell-ostrow.jpg"
+scholar: "https://scholar.google.com/citations?user=WRIrZ2cAAAAJ"
+website: "https://mitchellostrow.github.io/"
 order: 26
 ---
 

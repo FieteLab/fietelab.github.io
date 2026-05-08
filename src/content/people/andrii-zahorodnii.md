@@ -3,6 +3,8 @@ name: "Andrii Zahorodnii"
 role: "Graduate Student"
 title: "M.Eng., BCS"
 avatar: "./images/andrii-zahorodnii.png"
+scholar: "https://scholar.google.com/citations?user=je-fgs8AAAAJ"
+website: "https://azaho.org/"
 order: 30
 ---
 

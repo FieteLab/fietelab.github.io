@@ -3,6 +3,7 @@ name: "Ling Liang Dong"
 role: "Graduate Student"
 title: "PhD, BCS"
 avatar: "./images/ling-liang-dong.jpg"
+scholar: "https://scholar.google.com/citations?user=zsWwT3IAAAAJ"
 order: 21
 ---
 

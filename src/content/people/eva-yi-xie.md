@@ -3,6 +3,8 @@ name: "Eva Yi Xie"
 role: "Affiliate"
 title: "Neuroscience PhD Student, Princeton University"
 avatar: "./images/eva-yi-xie.png"
+scholar: "https://scholar.google.com/citations?user=NnJwsiEAAAAJ"
+website: "https://minzsiure.github.io/"
 order: 40
 ---
 

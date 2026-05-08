@@ -4,6 +4,7 @@ role: "PI"
 title: "Principal Investigator"
 avatar: "./images/ila-fiete.jpg"
 website: "https://mcgovern.mit.edu/profile/ila-fiete/"
+scholar: "https://scholar.google.com/citations?user=uE-CihIAAAAJ"
 order: 1
 ---
 

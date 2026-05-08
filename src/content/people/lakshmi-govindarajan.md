@@ -4,6 +4,8 @@ role: "Postdoc"
 title: "Postdoc"
 coAdvisor: "Josh McDermott"
 avatar: "./images/lakshmi-govindarajan.jpg"
+scholar: "https://scholar.google.com/citations?user=-1k4MtgAAAAJ"
+website: "https://lakshmi-gov.github.io/"
 order: 11
 ---
 

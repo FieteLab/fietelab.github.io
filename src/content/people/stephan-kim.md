@@ -3,6 +3,7 @@ name: "Stephan Kim"
 role: "Postdoc"
 title: "Postdoc"
 avatar: "./images/stephan-kim.jpg"
+scholar: "https://scholar.google.com/citations?user=DdaM3AwAAAAJ"
 order: 14
 ---
 

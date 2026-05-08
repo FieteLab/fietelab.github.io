@@ -5,6 +5,7 @@ title: "PhD, BCS"
 coAdvisor: "Josh McDermott"
 avatar: "./images/bryan-medina.jpg"
 website: "https://bjmedina.github.io"
+scholar: "https://scholar.google.com/citations?user=md-luCIAAAAJ"
 order: 25
 ---
 

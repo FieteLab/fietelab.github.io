@@ -4,6 +4,8 @@ role: "Graduate Student"
 title: "PhD, BCS"
 coAdvisor: "Earl Miller"
 avatar: "./images/adam-eisen.jpg"
+scholar: "https://scholar.google.com/citations?user=pEJ4yfIAAAAJ"
+website: "https://adamjeisen.com/"
 order: 22
 ---
 

@@ -4,6 +4,7 @@ role: "Graduate Student"
 title: "PhD, EECS"
 avatar: "./images/jaedong-hwang.png"
 website: "https://jd730.github.io"
+scholar: "https://scholar.google.com/citations?user=bITgqEUAAAAJ"
 order: 20
 ---
 

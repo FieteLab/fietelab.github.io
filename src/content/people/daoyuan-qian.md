@@ -4,6 +4,7 @@ role: "Postdoc"
 title: "Postdoc"
 coAdvisor: "Michale Fee"
 avatar: "./images/daoyuan-qian.jpeg"
+scholar: "https://scholar.google.com/citations?user=iPpuSd0AAAAJ"
 order: 12
 ---
 
