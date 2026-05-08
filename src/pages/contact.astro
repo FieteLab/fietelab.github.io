@@ -1,57 +1,31 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import { getEntry } from 'astro:content'
+
+const contact = await getEntry('site', 'contact')
+const intro = contact?.data.intro ?? 'Get in touch with the lab.'
+const cards = contact?.data.cards ?? []
 ---
 
 <Layout title="Contact">
   <section class="mx-auto max-w-4xl px-6 py-12">
     <h1 class="text-3xl font-semibold">Contact</h1>
-    <p class="mt-2 max-w-2xl text-[color:var(--color-text-muted)]">
-      Get in touch with the lab.
-    </p>
+    <p class="mt-2 max-w-2xl text-[color:var(--color-text-muted)]">{intro}</p>
 
     <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-      <div class="rounded-xl border border-[color:var(--color-border)] bg-white p-6">
-        <h2 class="text-base font-semibold text-[color:var(--color-accent)]">
-          Address
-        </h2>
-        <p class="mt-2 text-sm text-[color:var(--color-text-muted)]">
-          MIT Department of Brain and Cognitive Sciences<br />
-          Building 46, Suite 5065<br />
-          43 Vassar St.<br />
-          Cambridge, MA 02139
-        </p>
-      </div>
-
-      <div class="rounded-xl border border-[color:var(--color-border)] bg-white p-6">
-        <h2 class="text-base font-semibold text-[color:var(--color-accent)]">
-          Administrative Contact
-        </h2>
-        <p class="mt-2 text-sm text-[color:var(--color-text-muted)]">
-          <strong class="text-[color:var(--color-text)]">Mara Riley</strong><br />
-          Administrative Assistant<br />
-          <a href="mailto:mriley4@mit.edu">mriley4@mit.edu</a>
-        </p>
-      </div>
-
-      <div class="rounded-xl border border-[color:var(--color-border)] bg-white p-6">
-        <h2 class="text-base font-semibold text-[color:var(--color-accent)]">
-          Prospective students &amp; postdocs
-        </h2>
-        <p class="mt-2 text-sm text-[color:var(--color-text-muted)]">
-          For inquiries about joining the lab, please email Prof. Fiete with
-          your CV and a brief description of your research interests.
-        </p>
-      </div>
-
-      <div class="rounded-xl border border-[color:var(--color-border)] bg-white p-6">
-        <h2 class="text-base font-semibold text-[color:var(--color-accent)]">
-          Press &amp; collaborations
-        </h2>
-        <p class="mt-2 text-sm text-[color:var(--color-text-muted)]">
-          For press inquiries or collaboration proposals, please contact the
-          lab administrator who will route your message appropriately.
-        </p>
-      </div>
+      {
+        cards.map((card) => (
+          <div class="rounded-xl border border-[color:var(--color-border)] bg-white p-6">
+            <h2 class="text-base font-semibold text-[color:var(--color-accent)]">
+              {card.title}
+            </h2>
+            <p
+              class="mt-2 text-sm text-[color:var(--color-text-muted)]"
+              set:html={card.body}
+            />
+          </div>
+        ))
+      }
     </div>
   </section>
 </Layout>

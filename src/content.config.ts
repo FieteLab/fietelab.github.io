@@ -103,6 +103,31 @@ const collaborators = defineCollection({
   }),
 })
 
+// Editable copy for static pages — pulled out of the .astro templates
+// so non-coders can edit text without touching layout code.
+const site = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/site' }),
+  schema: z.object({
+    // home.md
+    heroTitle: z.string().optional(),
+    heroTagline: z.string().optional(),
+    exploreCards: z
+      .array(
+        z.object({
+          href: z.string(),
+          title: z.string(),
+          description: z.string(),
+        }),
+      )
+      .optional(),
+    // contact.md
+    intro: z.string().optional(),
+    cards: z
+      .array(z.object({ title: z.string(), body: z.string() }))
+      .optional(),
+  }),
+})
+
 export const collections = {
   people,
   undergrads,
@@ -112,4 +137,5 @@ export const collections = {
   news,
   groupPhotos,
   collaborators,
+  site,
 }
