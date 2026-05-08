@@ -47,12 +47,25 @@ re-check Scholar directly.
      words: `a, an, the, and, or, of, in, on, at, to, for, with,
      from, by, into, onto, about, as, is, are, be, we, do, does`.
    - **Authors line:** full names for lab members + alumni + named
-     external collaborators in `EXTERNAL_AUTHOR_LINKS`
-     (`src/lib/data.ts`); abbreviated form for everyone else. Co-first
-     gets `*`, co-senior gets `+` (with a matching `annotation:` line).
-   - **Topics:** add a `topics: [...]` line if the title makes the
-     topic obvious. Allowed list is in
-     [`src/lib/topics.ts`](../src/lib/topics.ts) — match exactly.
+     external collaborators in
+     [`src/content/collaborators/content.yaml`](../src/content/collaborators/content.yaml);
+     abbreviated form for everyone else. Co-first gets `*`, co-senior
+     gets `+` (with a matching `annotation:` line).
+   - **Topics: required.** Always add a `topics: [...]` line for every
+     new entry — leaving it off makes the paper invisible to the topic
+     filter. Pick from the curated list in
+     [`src/lib/topics.ts`](../src/lib/topics.ts) when one fits.
+     Use multiple tags when genuinely multidisciplinary (e.g.
+     `["Memory", "Navigation circuits and spatial cognition"]`). If
+     nothing fits, invent a new short topic name (e.g.
+     `"Altered brain states"`) — it will auto-color and auto-slot
+     into the filter row, no `topics.ts` edit required.
+
+     **Do NOT use the `_Claude` suffix.** That postfix was a
+     one-time marker for the bulk-tagging audit; ongoing edits should
+     use canonical topic names directly. If you want to convert an
+     existing `Foo_Claude` tag to canonical, just delete the suffix in
+     the YAML.
 4. **If a preprint we have is now journal-published:**
    *Update the existing entry, don't add a duplicate.* Rename slug to
    the new publication year, change `year` / `venue` / `link`, and
