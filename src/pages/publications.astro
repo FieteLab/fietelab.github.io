@@ -89,6 +89,24 @@ if (newestOld >= oldestYear) {
       >.
     </p>
 
+    <!-- Search -->
+    <div class="mt-8 max-w-md">
+      <label class="relative block">
+        <span class="sr-only">Search papers</span>
+        <input
+          id="pub-search"
+          type="search"
+          placeholder="Search title, authors, venue…"
+          autocomplete="off"
+          class="w-full rounded-full border border-[color:var(--color-border)] bg-white px-4 py-2 pr-10 text-sm placeholder:text-[color:var(--color-text-soft)] focus:border-[color:var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[color:var(--color-accent)]/20"
+        />
+        <span
+          class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[color:var(--color-text-soft)]"
+          aria-hidden="true"
+        >⌕</span>
+      </label>
+    </div>
+
     <!-- Topic filter -->
     <div class="mt-8 flex flex-wrap items-center gap-2" id="topic-filter">
       <span class="mr-1 w-16 shrink-0 text-xs font-semibold uppercase tracking-wide text-[color:var(--color-text-soft)]">
@@ -195,6 +213,7 @@ if (newestOld >= oldestYear) {
                 <li
                   class="pub-item py-4"
                   data-topics={JSON.stringify(pubTopics)}
+                  data-search={(pub.data.title + ' ' + pub.data.authors + ' ' + pub.data.venue + ' ' + (pub.data.citation ?? '')).toLowerCase()}
                 >
                   <div class="font-medium leading-snug">
                     {link ? (
@@ -265,7 +284,7 @@ if (newestOld >= oldestYear) {
       id="empty-state"
       class="mt-12 hidden rounded-lg border border-dashed border-[color:var(--color-border)] bg-[color:var(--color-bg-alt)] p-8 text-center text-sm text-[color:var(--color-text-soft)]"
     >
-      No papers tagged with this topic.
+      No papers match the current filters.
     </div>
   </section>
 </Layout>
@@ -305,6 +324,8 @@ if (newestOld >= oldestYear) {
 
   let activeTopic = '__all'
   let activeYear = '__all' // '__all' | a 4-digit year | a "low-high" bucket id
+  let activeQuery = ''     // lowercased search box value
+  const searchInput = document.getElementById('pub-search') as HTMLInputElement | null
 
   function styleTopicPill(p: HTMLButtonElement, isActive: boolean) {
     p.setAttribute('aria-pressed', String(isActive))
@@ -364,7 +385,9 @@ if (newestOld >= oldestYear) {
         const y = Number(itemYear)
         passesYear = y >= yearLow && y <= yearHigh
       }
-      const show = passesTopic && passesYear
+      const passesQuery =
+        !activeQuery || (item.dataset.search || '').includes(activeQuery)
+      const show = passesTopic && passesYear && passesQuery
       item.style.display = show ? '' : 'none'
       if (show) visibleCount++
     })
@@ -378,11 +401,16 @@ if (newestOld >= oldestYear) {
     emptyState?.classList.toggle('hidden', visibleCount > 0)
     // When any filter is active, expand every year section so the
     // matches don't hide inside a collapsed year.
-    if (activeTopic !== '__all' || activeYear !== '__all') {
+    if (activeTopic !== '__all' || activeYear !== '__all' || activeQuery) {
       expandAllYears()
     }
     syncHash()
   }
+
+  searchInput?.addEventListener('input', () => {
+    activeQuery = (searchInput.value || '').trim().toLowerCase()
+    applyFilter()
+  })
 
   function syncHash() {
     const parts: string[] = []
