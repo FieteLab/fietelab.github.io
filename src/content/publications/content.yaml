@@ -5,6 +5,45 @@
 # Sorted by year, newest first.
 
 # ============================================================
+# 2026
+# ============================================================
+
+eisen2026similar:
+  title: "Similar destabilization of neural dynamics under different general anesthetics"
+  authors: "Adam Joseph Eisen, A. G. Bardon, J. J. Ballesteros, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, J. Roy, Y. Ishizawa, E. Brown, Ila Fiete+, Earl Miller+"
+  year: 2026
+  venue: "Cell Reports"
+  citation: "bioRxiv 10.1101/2025.08.21.671540 (2025) and Cell Reports 45(3) (2026)"
+  link: "https://www.cell.com/cell-reports/fulltext/S2211-1247(26)00126-9"
+  annotation: "+ co-senior authors"
+
+mccourt2026noisy:
+  title: "Noisy dynamical systems evolve error-correcting codes and modularity"
+  topics: ["Theoretical ML", "Module/structure emergence"]
+  authors: "T. McCourt, Ila Fiete, I. L. Chuang"
+  year: 2026
+  venue: "PRX Life"
+  citation: "bioRxiv 2022.12.15.520640 (2023) and PRX Life 4(2), 023002 (2026)"
+  link: "https://doi.org/10.1103/7kcl-jshm"
+
+liang2026blessing:
+  title: "The Blessing of Dimensionality in LLM Fine-tuning: A Variance-Curvature Perspective"
+  topics: ["Theoretical ML"]
+  authors: "Qiyao (Catherine) Liang, J. Song, Y. Liu, J. Gore, Ila Fiete, R. Miikkulainen, X. Qiu"
+  year: 2026
+  venue: "arXiv preprint"
+  citation: "arXiv:2602.00170 (2026)"
+  link: "https://arxiv.org/abs/2602.00170"
+
+chen2026dopamine:
+  title: "Dopamine signatures of excessive and compulsive cocaine and fentanyl use"
+  authors: "K. Chen, Hao Zheng, G. Sevrain, W. Xiao, C. Wang, A. Sundai, Ila Fiete, Fan Wang"
+  year: 2026
+  venue: "bioRxiv"
+  citation: "bioRxiv 10.1101/2026.01.18.700215 (2026)"
+  link: "https://www.biorxiv.org/content/10.1101/2026.01.18.700215"
+
+# ============================================================
 # 2025
 # ============================================================
 
@@ -58,15 +97,6 @@ duan2025synapses:
   citation: "bioRxiv 2025.05.26.655406 (2025)"
   link: "https://www.biorxiv.org/content/10.1101/2025.05.26.655406v1"
   annotation: "* co-first authors"
-
-eisen2025similar:
-  title: "Similar destabilization of neural dynamics under different general anesthetics"
-  authors: "Adam Joseph Eisen, A. G. Bardon, J. J. Ballesteros, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, J. Roy, Y. Ishizawa, E. Brown, Ila Fiete+, Earl Miller+"
-  year: 2025
-  venue: "bioRxiv"
-  citation: "bioRxiv 10.1101/2025.08.21.671540 (2025)"
-  link: "https://www.biorxiv.org/content/10.1101/2025.08.21.671540"
-  annotation: "+ co-senior authors"
 
 eisen2025characterizing:
   title: "Characterizing control between interacting subsystems with deep Jacobian estimation"
@@ -405,15 +435,6 @@ schaeffer2023double:
   venue: "arXiv preprint"
   citation: "arXiv:2303.14151 (2023)"
   link: "https://arxiv.org/abs/2303.14151"
-
-mccourt2023noisy:
-  title: "Noisy dynamical systems evolve error-correcting codes and modularity"
-  topics: ["Theoretical ML", "Module/structure emergence"]
-  authors: "T. McCourt, Ila Fiete, I. L. Chuang"
-  year: 2023
-  venue: "bioRxiv"
-  citation: "bioRxiv 2022.12.15.520640 (2023)"
-  link: "https://www.biorxiv.org/content/10.1101/2022.12.15.520640v1"
 
 hwang2023generalizable:
   title: "Generalizable Relational Inference with Cognitive Maps in a Hippocampal Model and in Primates"

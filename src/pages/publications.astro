@@ -40,14 +40,26 @@ for (const p of allPubs) {
 }
 const years = [...byYear.keys()].sort((a, b) => b - a)
 
-// Year filter: each of the 5 most recent years individually,
-// then "Earlier" rolls everything older into one bucket.
+// Year filter: most recent 5 years individually, then 5-year calendar
+// buckets going back ("2021–2017", "2016–2012", …). Bucket id encodes
+// the high+low year so the JS can match items by year.
 const RECENT_N = 5
-const recentYears = years.slice(0, RECENT_N).filter((y) => (byYear.get(y)?.length ?? 0) > 0)
-const earlierYears = years.slice(RECENT_N)
-const earlierCount = earlierYears.reduce((n, y) => n + (byYear.get(y)?.length ?? 0), 0)
-const earliestYear = earlierYears.length ? Math.min(...earlierYears) : 0
-const latestEarlier = earlierYears.length ? Math.max(...earlierYears) : 0
+const allYearsSorted = [...byYear.keys()].sort((a, b) => b - a)
+const recentYears = allYearsSorted.slice(0, RECENT_N).filter((y) => (byYear.get(y)?.length ?? 0) > 0)
+
+const oldestYear = allYearsSorted.length ? allYearsSorted[allYearsSorted.length - 1] : 0
+const newestOld = recentYears.length ? Math.min(...recentYears) - 1 : 0  // first old year
+
+interface Bucket { id: string; high: number; low: number; count: number }
+const buckets: Bucket[] = []
+if (newestOld >= oldestYear) {
+  for (let high = newestOld; high >= oldestYear; high -= 5) {
+    const low = Math.max(oldestYear, high - 4)
+    let count = 0
+    for (let y = low; y <= high; y++) count += byYear.get(y)?.length ?? 0
+    if (count > 0) buckets.push({ id: `${low}-${high}`, high, low, count })
+  }
+}
 ---
 
 <Layout title="Papers">
@@ -122,16 +134,20 @@ const latestEarlier = earlierYears.length ? Math.max(...earlierYears) : 0
           </button>
         ))
       }
-      {earlierCount > 0 && (
-        <button
-          type="button"
-          data-year="__earlier"
-          class="year-pill rounded-full border border-[color:var(--color-border)] bg-white px-3 py-1 text-xs font-medium text-[color:var(--color-text)] transition hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
-          aria-pressed="false"
-        >
-          {earliestYear}–{latestEarlier} ({earlierCount})
-        </button>
-      )}
+      {
+        buckets.map((b) => (
+          <button
+            type="button"
+            data-year={b.id}
+            data-bucket-low={b.low}
+            data-bucket-high={b.high}
+            class="year-pill rounded-full border border-[color:var(--color-border)] bg-white px-3 py-1 text-xs font-medium text-[color:var(--color-text)] transition hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
+            aria-pressed="false"
+          >
+            {b.high}–{b.low} ({b.count})
+          </button>
+        ))
+      }
     </div>
 
     {
@@ -237,14 +253,7 @@ const latestEarlier = earlierYears.length ? Math.max(...earlierYears) : 0
   const emptyState = document.getElementById('empty-state')
 
   let activeTopic = '__all'
-  let activeYear = '__all' // '__all' | '__earlier' | a 4-digit year string
-
-  // Read every section's data-year once so we can resolve "earlier" quickly.
-  const allYears = [...yearSections].map((s) => Number(s.dataset.year))
-  const RECENT_N = 5
-  const recentSet = new Set(
-    [...allYears].sort((a, b) => b - a).slice(0, RECENT_N).map(String),
-  )
+  let activeYear = '__all' // '__all' | a 4-digit year | a "low-high" bucket id
 
   function styleTopicPill(p: HTMLButtonElement, isActive: boolean) {
     p.setAttribute('aria-pressed', String(isActive))
@@ -280,15 +289,30 @@ const latestEarlier = earlierYears.length ? Math.max(...earlierYears) : 0
 
   function applyFilter() {
     let visibleCount = 0
+    // Resolve active year into either an exact year or a [low, high] range
+    let yearLow = -Infinity, yearHigh = Infinity
+    let exactYear = ''
+    if (activeYear !== '__all') {
+      if (activeYear.includes('-')) {
+        const [lo, hi] = activeYear.split('-').map(Number)
+        yearLow = lo
+        yearHigh = hi
+      } else {
+        exactYear = activeYear
+      }
+    }
     items.forEach((item) => {
       const topics: string[] = JSON.parse(item.dataset.topics || '[]')
       const passesTopic = activeTopic === '__all' || topics.includes(activeTopic)
-      // Year section parent contains the year; walk up to find it
       const sec = item.closest<HTMLDivElement>('.year-section')
       const itemYear = sec?.dataset.year || ''
-      const passesYear =
-        activeYear === '__all' ||
-        (activeYear === '__earlier' ? !recentSet.has(itemYear) : itemYear === activeYear)
+      let passesYear: boolean
+      if (activeYear === '__all') passesYear = true
+      else if (exactYear) passesYear = itemYear === exactYear
+      else {
+        const y = Number(itemYear)
+        passesYear = y >= yearLow && y <= yearHigh
+      }
       const show = passesTopic && passesYear
       item.style.display = show ? '' : 'none'
       if (show) visibleCount++
