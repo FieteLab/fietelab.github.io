@@ -2,6 +2,8 @@
 import Layout from '@/layouts/Layout.astro'
 import { Image } from 'astro:assets'
 import { getCollection, render, type CollectionEntry } from 'astro:content'
+import { getPublicationsByPerson } from '@/lib/data'
+import { topicColor } from '@/lib/topics'
 
 export async function getStaticPaths() {
   const people = await getCollection('people')
@@ -18,6 +20,21 @@ interface Props {
 const { person } = Astro.props
 const data = person.data
 const { Content } = await render(person)
+const personPubs = await getPublicationsByPerson(person)
+
+function linkLabel(link?: string) {
+  if (!link) return null
+  if (/arxiv\.org/.test(link)) return 'arXiv'
+  if (/biorxiv\.org/.test(link)) return 'bioRxiv'
+  if (/openreview\.net/.test(link)) return 'OpenReview'
+  if (
+    /(nature|elifesciences|cell\.com|sciencedirect|nih|pnas|aps\.org|annualreviews|nips|neurips|mlr\.press|proceedings|sfn)/.test(
+      link,
+    )
+  )
+    return 'Journal'
+  return 'Link'
+}
 
 const initials = data.name
   .split(/\s+/)
@@ -97,5 +114,84 @@ const initials = data.name
     <article class="prose-bio mt-10 max-w-2xl text-[color:var(--color-text-muted)]">
       <Content />
     </article>
+
+    {personPubs.length > 0 && (
+      <section class="mt-16">
+        <div class="flex items-baseline justify-between gap-3">
+          <h2 class="text-xl font-semibold">
+            Publications ({personPubs.length})
+          </h2>
+          <a
+            href="/publications/"
+            class="text-xs text-[color:var(--color-text-soft)] hover:text-[color:var(--color-accent)]"
+          >
+            All lab papers &rarr;
+          </a>
+        </div>
+        <p class="mt-1 text-xs text-[color:var(--color-text-soft)]">
+          Auto-detected by matching {data.name} against author lists. If a
+          paper is missing or extra, edit
+          <code>authorAliases</code> in
+          <code>src/content/people/{person.id}.md</code>.
+        </p>
+        <ul class="mt-4 divide-y divide-[color:var(--color-border)]">
+          {personPubs.map((pub) => {
+            const link = pub.data.link
+            const label = linkLabel(link)
+            const pubTopics = pub.data.topics ?? []
+            return (
+              <li class="py-3">
+                <div class="font-medium leading-snug">
+                  {link ? (
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noopener"
+                      class="text-[color:var(--color-text)] no-underline hover:text-[color:var(--color-accent)] hover:underline"
+                    >
+                      {pub.data.title}
+                    </a>
+                  ) : (
+                    <span class="text-[color:var(--color-text)]">
+                      {pub.data.title}
+                    </span>
+                  )}
+                </div>
+                <div class="mt-1 text-xs text-[color:var(--color-text-muted)]">
+                  {pub.data.authors}
+                </div>
+                <div class="mt-1.5 flex flex-wrap items-center gap-2 text-xs">
+                  <span class="font-semibold text-[color:var(--color-accent)]">
+                    {pub.data.venue} · {pub.data.year}
+                  </span>
+                  {pubTopics.map((t) => {
+                    const c = topicColor(t)
+                    return (
+                      <a
+                        href={`/publications/#${encodeURIComponent(t)}`}
+                        class="inline-flex items-center rounded-full border px-2 py-0.5 font-medium no-underline transition hover:brightness-95 hover:no-underline"
+                        style={`background:${c.bg};color:${c.text};border-color:${c.ring}`}
+                      >
+                        {t}
+                      </a>
+                    )
+                  })}
+                  {link && (
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noopener"
+                      class="ml-auto inline-flex items-center gap-1 rounded-full border border-[color:var(--color-border)] bg-white px-2.5 py-0.5 text-[color:var(--color-link)] no-underline hover:bg-[color:var(--color-bg-alt)] hover:no-underline"
+                    >
+                      {label} <span aria-hidden="true">↗</span>
+                    </a>
+                  )}
+                </div>
+              </li>
+            )
+          })}
+        </ul>
+      </section>
+    )}
   </section>
 </Layout>

@@ -1,5 +1,48 @@
 import { getCollection, type CollectionEntry } from 'astro:content'
 
+/**
+ * Build a regex that matches abbreviated forms of a person's name in a
+ * publication's `authors` string. Handles common citation styles:
+ *   "Jaedong Hwang" → matches "J. Hwang", "JD Hwang", "J. D. Hwang"
+ *   "Ila Fiete"    → matches "I. R. Fiete", "I.R. Fiete", "IR Fiete"
+ *   "Adam Joseph Eisen" → matches "A. Eisen", "A.J. Eisen", "AJ Eisen"
+ */
+function authorRegex(fullName: string): RegExp {
+  const cleaned = fullName.replace(/\([^)]+\)/g, '').replace(/\s+/g, ' ').trim()
+  const tokens = cleaned.split(' ').filter(Boolean)
+  if (tokens.length < 2) return /(?!)/
+  const last = tokens[tokens.length - 1].replace(/[^A-Za-z\-]/g, '')
+  const firstInitial = tokens[0][0]
+  // First initial, then up to 3 optional middle-initial tokens (each is a
+  // capital letter possibly followed by a period and space), then the
+  // surname at a word boundary. Asterisks and other annotation chars are
+  // tolerated by relying on \b which treats them as boundaries.
+  return new RegExp(`\\b${firstInitial}(?:[A-Z]?\\.?\\s*){0,3}${last}\\b`, 'i')
+}
+
+/**
+ * Return all publications a person co-authored, newest first.
+ * Uses (a) explicit `authorAliases` from the person's frontmatter as
+ * substring matches, plus (b) an auto-derived regex from the full name.
+ */
+export async function getPublicationsByPerson(
+  person: CollectionEntry<'people'>,
+): Promise<CollectionEntry<'publications'>[]> {
+  const aliases = person.data.authorAliases ?? []
+  const re = authorRegex(person.data.name)
+  const all = await getCollection('publications')
+  return all
+    .filter((p) => {
+      const text = p.data.authors
+      if (aliases.length > 0) {
+        const lower = text.toLowerCase()
+        if (aliases.some((a) => lower.includes(a.toLowerCase()))) return true
+      }
+      return re.test(text)
+    })
+    .sort((a, b) => b.data.year - a.data.year)
+}
+
 const ROLE_ORDER: Record<CollectionEntry<'people'>['data']['role'], number> = {
   PI: 0,
   'Administrative Assistant': 1,

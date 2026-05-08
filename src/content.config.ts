@@ -22,6 +22,9 @@ const people = defineCollection({
       github: z.string().url().optional(),
       linkedin: z.string().url().optional(),
       order: z.number().optional(),
+      // Override or extend automatic author-name matching used to attach
+      // papers to this person on their detail page. e.g. ["JD Hwang", "J. Hwang"]
+      authorAliases: z.array(z.string()).optional(),
     }),
 })
 

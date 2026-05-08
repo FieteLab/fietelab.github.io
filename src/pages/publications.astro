@@ -1,24 +1,11 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import { getCollection } from 'astro:content'
+import { topicColor, TOPIC_ORDER } from '@/lib/topics'
 
 const allPubs = (await getCollection('publications')).sort(
   (a, b) => b.data.year - a.data.year,
 )
-
-// Build the list of all topics (in the order they appear on the original site)
-const TOPIC_ORDER = [
-  'Theoretical ML',
-  'Biologically plausible gradient learning',
-  'Module/structure emergence',
-  'Continuous attractors in the brain',
-  'Error-correcting codes',
-  'Inferring neural connectivity',
-  'Memory',
-  'Decision making',
-  'Navigation circuits and spatial cognition',
-  'Condensed-matter physics',
-]
 const presentTopics = new Set<string>()
 for (const p of allPubs) {
   for (const t of p.data.topics ?? []) presentTopics.add(t)
@@ -78,16 +65,23 @@ const years = [...byYear.keys()].sort((a, b) => b - a)
         All ({allPubs.length})
       </button>
       {
-        topics.map((t) => (
-          <button
-            type="button"
-            data-topic={t}
-            class="topic-pill rounded-full border border-[color:var(--color-border)] bg-white px-3 py-1 text-xs font-medium text-[color:var(--color-text)] transition hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
-            aria-pressed="false"
-          >
-            {t} ({topicCount(t)})
-          </button>
-        ))
+        topics.map((t) => {
+          const c = topicColor(t)
+          return (
+            <button
+              type="button"
+              data-topic={t}
+              data-color-bg={c.bg}
+              data-color-text={c.text}
+              data-color-ring={c.ring}
+              class="topic-pill rounded-full border px-3 py-1 text-xs font-medium transition"
+              style={`background:${c.bg};color:${c.text};border-color:${c.ring}`}
+              aria-pressed="false"
+            >
+              {t} ({topicCount(t)})
+            </button>
+          )
+        })
       }
     </div>
     <p class="mt-3 text-xs text-[color:var(--color-text-soft)]">
@@ -145,15 +139,19 @@ const years = [...byYear.keys()].sort((a, b) => b - a)
                         · {pub.data.annotation}
                       </span>
                     )}
-                    {pubTopics.map((t) => (
-                      <button
-                        type="button"
-                        data-topic-tag={t}
-                        class="topic-tag inline-flex items-center rounded-full bg-[color:var(--color-bg-alt)] px-2 py-0.5 font-medium text-[color:var(--color-text-muted)] hover:bg-[color:var(--color-accent)] hover:text-white"
-                      >
-                        {t}
-                      </button>
-                    ))}
+                    {pubTopics.map((t) => {
+                      const c = topicColor(t)
+                      return (
+                        <button
+                          type="button"
+                          data-topic-tag={t}
+                          class="topic-tag inline-flex items-center rounded-full border px-2 py-0.5 font-medium transition hover:brightness-95"
+                          style={`background:${c.bg};color:${c.text};border-color:${c.ring}`}
+                        >
+                          {t}
+                        </button>
+                      )
+                    })}
                     {link && (
                       <a
                         href={link}
@@ -194,20 +192,27 @@ const years = [...byYear.keys()].sort((a, b) => b - a)
     pills.forEach((p) => {
       const isActive = p.dataset.topic === topic
       p.setAttribute('aria-pressed', String(isActive))
-      if (isActive) {
-        p.classList.add(
-          'bg-[color:var(--color-accent)]',
-          'text-white',
-          'border-[color:var(--color-accent)]',
-        )
-        p.classList.remove('bg-white', 'text-[color:var(--color-text)]')
+      // Topic-specific pills carry their own colors via data-* + inline style.
+      // For active state, bump opacity to 100% + add a 2-px ring; otherwise
+      // keep them at 60% so the active one is obvious.
+      if (p.dataset.topic === '__all') {
+        // Special case: the "All" button has no topic color
+        if (isActive) {
+          p.style.background = 'var(--color-accent)'
+          p.style.color = '#fff'
+          p.style.borderColor = 'var(--color-accent)'
+          p.style.opacity = '1'
+        } else {
+          p.style.background = '#fff'
+          p.style.color = 'var(--color-text)'
+          p.style.borderColor = 'var(--color-border)'
+          p.style.opacity = '1'
+        }
       } else {
-        p.classList.remove(
-          'bg-[color:var(--color-accent)]',
-          'text-white',
-          'border-[color:var(--color-accent)]',
-        )
-        p.classList.add('bg-white', 'text-[color:var(--color-text)]')
+        p.style.opacity = isActive ? '1' : '0.55'
+        p.style.boxShadow = isActive
+          ? `inset 0 0 0 2px ${p.dataset.colorText}`
+          : 'none'
       }
     })
   }

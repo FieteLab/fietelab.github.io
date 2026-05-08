@@ -35,6 +35,9 @@ GitHub repo to see the build error.
    website: "https://janedoe.io" # optional
    email: "jane@mit.edu"         # optional
    order: 30                     # optional — controls order within the role section (lower = earlier)
+   authorAliases:                # optional — see "Publications on a person's page" below
+     - "JD Doe"
+     - "J. Doe"
    ---
 
    Write the bio here in regular paragraphs. A blank line starts a new paragraph.
@@ -42,6 +45,24 @@ GitHub repo to see the build error.
 
 5. Commit and push. The new card will appear on
    [/people](https://fietelab.github.io/people).
+
+### Publications on a person's page
+
+When you visit `/people/<slug>/`, the site automatically lists every paper
+in `publications/content.yaml` whose `authors:` string contains a match for
+this person's name. The match is generous — it accepts forms like
+`J. Doe`, `J.D. Doe`, `JD Doe`, `Jane Doe` — but unusual citation styles
+sometimes slip through.
+
+If a paper is missing from a person's list (or an extra paper shows up),
+add an `authorAliases:` array to the person's `.md` file. Each entry is a
+literal substring that will mark a paper as theirs. For example, to make
+sure a paper that lists `J.D. Hwang*` is included for Jaedong Hwang:
+
+```yaml
+authorAliases:
+  - "J.D. Hwang"
+```
 
 ### To remove a member (e.g. someone graduates)
 
