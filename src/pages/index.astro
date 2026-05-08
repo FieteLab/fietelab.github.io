@@ -13,12 +13,15 @@ newsItems.sort((a, b) => b.data.date.localeCompare(a.data.date))
 
 <Layout>
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-[color:var(--color-bg-dark)] py-24 text-white">
+  <section
+    class="relative overflow-hidden py-24 text-white"
+    style="background: linear-gradient(135deg, #14060c 0%, #45091c 55%, #8a1538 100%);"
+  >
     <div
-      class="absolute inset-0 opacity-70"
+      class="absolute inset-0 opacity-80"
       style="background:
-        radial-gradient(circle at 20% 20%, rgba(138,21,56,.32), transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(11,95,255,.22), transparent 45%);"
+        radial-gradient(circle at 18% 22%, rgba(196,69,112,.32), transparent 45%),
+        radial-gradient(circle at 82% 78%, rgba(20,6,12,.55), transparent 50%);"
     >
     </div>
     <div class="relative mx-auto max-w-5xl px-6">
@@ -29,14 +32,26 @@ newsItems.sort((a, b) => b.data.date.localeCompare(a.data.date))
         Our goal is to better understand the dynamics and coding principles
         that underlie computation in the brain.
       </p>
-      <p class="animate-fade-in mt-8 text-sm text-white/65">
-        {AFFILIATIONS.map((a, i) => (
-          <>
-            <a class="text-[color:#cfe0ff]" href={a.href} target="_blank" rel="noopener">{a.name}</a>
-            {i < AFFILIATIONS.length - 1 && <span class="mx-2 text-white/40">·</span>}
-          </>
+      <div class="animate-fade-in mt-10 flex flex-wrap items-center gap-x-10 gap-y-4">
+        {AFFILIATIONS.map((a) => (
+          <a
+            href={a.href}
+            target="_blank"
+            rel="noopener"
+            class="opacity-90 transition hover:opacity-100"
+            aria-label={a.name}
+            title={a.name}
+          >
+            <img
+              src={a.logo}
+              alt={a.name}
+              class="h-10 w-auto md:h-12"
+              loading="eager"
+              decoding="async"
+            />
+          </a>
         ))}
-      </p>
+      </div>
     </div>
   </section>
 

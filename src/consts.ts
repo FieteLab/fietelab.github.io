@@ -22,7 +22,14 @@ export const SOCIAL_LINKS = [
 ] as const
 
 export const AFFILIATIONS = [
-  { name: 'MIT Department of Brain and Cognitive Sciences', href: 'https://bcs.mit.edu/' },
-  { name: 'McGovern Institute for Brain Research', href: 'https://mcgovern.mit.edu/' },
-  { name: 'K. Lisa Yang Integrative Computational Neuroscience Center', href: 'https://icon.mit.edu/' },
+  {
+    name: 'MIT Department of Brain and Cognitive Sciences',
+    href: 'https://bcs.mit.edu/',
+    logo: '/mit-bcs-logo.png',
+  },
+  {
+    name: 'McGovern Institute for Brain Research',
+    href: 'https://mcgovern.mit.edu/',
+    logo: '/mcgovern-logo.png',
+  },
 ] as const
