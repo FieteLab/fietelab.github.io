@@ -30,15 +30,15 @@ const groupPhotos = (await getCollection('groupPhotos')).sort((a, b) =>
     </p>
 
     {groupPhotos.length > 0 && (
-      <figure class="mt-8 overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-white shadow-sm">
+      <figure class="mx-auto mt-8 max-w-3xl overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-white shadow-sm">
         <Image
           src={groupPhotos[0].data.image}
           alt={groupPhotos[0].data.caption}
           width={1600}
           height={900}
-          class="w-full object-cover"
+          class="aspect-[16/9] w-full object-cover"
         />
-        <figcaption class="border-t border-[color:var(--color-border)] bg-[color:var(--color-bg-alt)] px-5 py-3 text-sm italic text-[color:var(--color-text-muted)]">
+        <figcaption class="border-t border-[color:var(--color-border)] bg-[color:var(--color-bg-alt)] px-4 py-2 text-xs italic text-[color:var(--color-text-muted)]">
           {groupPhotos[0].data.caption}
         </figcaption>
       </figure>

@@ -25,3 +25,8 @@ pnpm-debug.log*
 # OpenAlex sync — pending file is ephemeral output of scripts/sync_publications.py
 pending_publications.yaml
 scripts/__pycache__/
+
+# Marp slide build artifacts
+slides.pdf
+slides.html
+slides.pptx

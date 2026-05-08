@@ -1,11 +1,3 @@
-<!--
-Marp slides — render with the Marp VS Code extension or:
-    npx @marp-team/marp-cli notes/slides.md -o slides.pdf
-    npx @marp-team/marp-cli notes/slides.md -o slides.html
-
-About 12 slides; ~10 min talk.
--->
-
 ---
 marp: true
 theme: default
