@@ -34,7 +34,7 @@ schartner2025spatially:
 
 hwang2025learn:
   title: "Learn globally, speak locally: Bridging the gaps in multilingual reasoning"
-  authors: "Jaedong Hwang, T. Kumar, S. J. Lee, A. Agrawal, H. Palangi, A. Kumar, Ila Fiete, P. P. Liang"
+  authors: "Jaedong Hwang, T. Kumar, S. J. Lee, A. Agrawal, H. Palangi, A. Kumar, Ila Fiete+, P. P. Liang+"
   year: 2025
   venue: "arXiv preprint"
   citation: "arXiv:2507.05418 (2025)"
@@ -43,7 +43,7 @@ hwang2025learn:
 
 chen2025slow:
   title: "Slow synaptic plasticity from the hippocampus underlies gradual mapping and fragmentation of novel spaces by grid cells"
-  authors: "L. Chen, Ling Liang Dong, H. Shin, F. Shahid, T. Malone, Y. Ma, S. O. Vasu, N. W. Tien, K. Cekada, L. Anderson, Sarthak Chandra, Ila Fiete, V. A. Alvarez, Y. Gu"
+  authors: "L. Chen, Ling Liang Dong, H. Shin, F. Shahid, T. Malone, Y. Ma, S. O. Vasu, N. W. Tien, K. Cekada, L. Anderson, Sarthak Chandra+, Ila Fiete+, V. A. Alvarez+, Y. Gu+"
   year: 2025
   venue: "bioRxiv"
   citation: "bioRxiv 10.1101/2025.07.30.667696 (2025)"
@@ -61,7 +61,7 @@ duan2025synapses:
 
 eisen2025similar:
   title: "Similar destabilization of neural dynamics under different general anesthetics"
-  authors: "Adam Joseph Eisen, A. G. Bardon, J. J. Ballesteros, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, J. Roy, Y. Ishizawa, E. Brown, Ila Fiete, E. K. Miller"
+  authors: "Adam Joseph Eisen, A. G. Bardon, J. J. Ballesteros, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, J. Roy, Y. Ishizawa, E. Brown, Ila Fiete+, E. K. Miller+"
   year: 2025
   venue: "bioRxiv"
   citation: "bioRxiv 10.1101/2025.08.21.671540 (2025)"
@@ -280,7 +280,7 @@ dong2024grid:
 
 eisen2024propofol:
   title: "Propofol anesthesia destabilizes neural dynamics across cortex"
-  authors: "Adam Joseph Eisen, Leo Kozachkov, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, Sarthak Chandra, E. N. Brown, Ila Fiete, E. K. Miller"
+  authors: "Adam Joseph Eisen, Leo Kozachkov, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, Sarthak Chandra, E. N. Brown, Ila Fiete+, E. K. Miller+"
   year: 2024
   venue: "Neuron"
   link: "https://pubmed.ncbi.nlm.nih.gov/39013467/"
@@ -615,11 +615,11 @@ das2020systematic:
 stangl2020sources:
   title: "Sources of path integration error in young and aging humans"
   topics: ["Navigation circuits and spatial cognition"]
-  authors: "M. Stangl*, Ingmar Kanitscheider*, M. Riemer, Ila Fiete, T. Wolbers"
+  authors: "M. Stangl*, Ingmar Kanitscheider*, M. Riemer, Ila Fiete+, T. Wolbers+"
   year: 2020
   venue: "Nature Communications"
   link: "https://www.nature.com/articles/s41467-020-15805-9"
-  annotation: "* co-first; + co-senior authors"
+  annotation: "* co-first authors; + co-senior authors"
 
 klukas2020flexible:
   title: "Flexible representation and memory of higher-dimensional cognitive variables with grid cells"
@@ -750,12 +750,12 @@ chaudhuri2016computational:
 yoon2016grid:
   title: "Grid cell responses in 1D environments assessed as slices through a 2D lattice"
   topics: ["Continuous attractors in the brain"]
-  authors: "Kijung Yoon*, S. Lewallen*, A. Kinkhabwalla, D. W. Tank, Ila Fiete"
+  authors: "Kijung Yoon*, S. Lewallen*, A. Kinkhabwalla, D. W. Tank+, Ila Fiete+"
   year: 2016
   venue: "Neuron"
   citation: "Neuron 89(5), 1086-1099 (2016)"
   link: "http://www.cell.com/neuron/abstract/S0896-6273(16)00064-7"
-  annotation: "* co-first; + co-senior authors"
+  annotation: "* co-first authors; + co-senior authors"
 
 yoo2016multiperiodic:
   title: "Multi-periodic neural coding for adaptive information transfer"
