@@ -61,7 +61,7 @@ qian2025modular:
 huangostrow2025inputdsa:
   title: "InputDSA: Demixing then Comparing Recurrent and Externally Driven Dynamics"
   topics: ["Neural Dynamics", "Altered Brain States"]
-  authors: "A. Huang*, Mitchell Ostrow*, S. H. Singh, Leo Kozachkov, Ila Fiete, K. Rajan"
+  authors: "Ann Huang*, Mitchell Ostrow*, Satpreet H. Singh, Leo Kozachkov, Ila Fiete, Kanaka Rajan"
   year: 2025
   venue: "ICLR"
   citation: "arXiv:2510.25943 (2025)"
@@ -71,7 +71,7 @@ huangostrow2025inputdsa:
 schartner2025spatially:
   title: "Spatially distributed and regionally unbound cellular resolution brain-wide processing loops in mice"
   topics: ["Inferring neural connectivity_Claude"]
-  authors: "M. Schartner, Ari Liu, International Brain Laboratory, Ila Fiete"
+  authors: "Michael Schartner, Ari Liu, International Brain Laboratory, Ila Fiete"
   year: 2025
   venue: "bioRxiv"
   citation: "bioRxiv 10.1101/2025.07.30.667641 (2025)"
@@ -90,7 +90,7 @@ hwang2025learn:
 chen2025slow:
   title: "Slow synaptic plasticity from the hippocampus underlies gradual mapping and fragmentation of novel spaces by grid cells"
   topics: ["Navigation circuits and spatial cognition_Claude", "Memory_Claude"]
-  authors: "L. Chen, Ling Liang Dong, H. Shin, F. Shahid, T. Malone, Y. Ma, S. O. Vasu, N. W. Tien, K. Cekada, L. Anderson, Sarthak Chandra+, Ila Fiete+, V. A. Alvarez+, Y. Gu+"
+  authors: "Lujia Chen, Ling Liang Dong, Jung Hoon Shin, Farah Shahid, Taylor J. Malone, Yan Ma, Sreerag Othayoth Vasu, Nai-Wen Tien, Kyle Cekada, Lucy Anderson, Sarthak Chandra+, Ila Fiete+, Veronica A. Alvarez+, Yi Gu+"
   year: 2025
   venue: "bioRxiv"
   citation: "bioRxiv 10.1101/2025.07.30.667696 (2025)"
@@ -119,7 +119,7 @@ eisen2025characterizing:
 zahorodnii2025neuroprobe:
   title: "Neuroprobe: Evaluating Intracranial Brain Responses to Naturalistic Stimuli"
   topics: ["Theoretical ML_Claude"]
-  authors: "Andrii Zahorodnii, C. Wang, B. Stankovits, C. Moraitaki, G. Chau, A. Barbu, B. Katz, Ila Fiete"
+  authors: "Andrii Zahorodnii, Christopher Wang, Bennett Stankovits, Charikleia Moraitaki, Geeling Chau, Andrei Barbu, Boris Katz, Ila Fiete"
   year: 2025
   venue: "arXiv preprint"
   citation: "arXiv:2509.21671 (2025)"
@@ -410,7 +410,7 @@ dong2024grid:
 eisen2024propofol:
   title: "Propofol anesthesia destabilizes neural dynamics across cortex"
   topics: ["Neural Dynamics", "Altered Brain States"]
-  authors: "Adam Joseph Eisen, Leo Kozachkov, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, Sarthak Chandra, E. N. Brown, Ila Fiete+, Earl Miller+"
+  authors: "Adam Joseph Eisen, Leo Kozachkov, André M. Bastos, Jacob Donoghue, Meredith Mahnke, Scott L. Brincat, Sarthak Chandra, Emery N. Brown, Ila Fiete+, Earl Miller+"
   year: 2024
   venue: "Neuron"
   link: "https://pubmed.ncbi.nlm.nih.gov/39013467/"

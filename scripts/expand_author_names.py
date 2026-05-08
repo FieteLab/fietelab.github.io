@@ -66,10 +66,49 @@ def extract_arxiv(text: str) -> str | None:
     return m.group(1).lower() if m else None
 
 
-def fetch_openalex(doi: str | None, arxiv: str | None) -> dict | None:
-    """Look up a single work by DOI (preferred) or arXiv ID."""
+def extract_pmid(text: str) -> str | None:
+    """Pull a PubMed ID out of a pubmed.ncbi.nlm.nih.gov URL."""
+    if not text:
+        return None
+    m = re.search(r"pubmed\.ncbi\.nlm\.nih\.gov/(\d+)", text)
+    return m.group(1) if m else None
+
+
+def fetch_crossref(doi: str) -> dict | None:
+    """Crossref fallback when OpenAlex misses. Returns OpenAlex-shaped
+    {'authorships': [{'author': {'display_name': '...'}}, ...]}."""
+    url = f"https://api.crossref.org/works/{urllib.parse.quote(doi, safe='/')}"
+    try:
+        r = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=15)
+        if r.status_code != 200:
+            return None
+        msg = r.json().get("message", {})
+        authors = []
+        for a in msg.get("author", []) or []:
+            given = a.get("given", "")
+            family = a.get("family", "")
+            name = f"{given} {family}".strip()
+            if name:
+                authors.append({"author": {"display_name": name}})
+        if not authors:
+            return None
+        return {"authorships": authors}
+    except requests.RequestException:
+        return None
+
+
+def fetch_openalex(doi: str | None, arxiv: str | None, pmid: str | None = None) -> dict | None:
+    """Look up a single work by DOI (preferred) or arXiv ID or PMID."""
     if doi:
         url = f"https://api.openalex.org/works/doi:{urllib.parse.quote(doi, safe='')}"
+        try:
+            r = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=15)
+            if r.status_code == 200:
+                return r.json()
+        except requests.RequestException:
+            pass
+    if pmid:
+        url = f"https://api.openalex.org/works/pmid:{pmid}"
         try:
             r = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=15)
             if r.status_code == 200:
@@ -105,9 +144,19 @@ def fetch_openalex(doi: str | None, arxiv: str | None) -> dict | None:
     return None
 
 
+def normalize_display_name(name: str) -> str:
+    """Convert "Lastname, Firstname" to "Firstname Lastname" if needed."""
+    name = name.strip().rstrip("*+").strip()
+    if "," in name:
+        parts = [p.strip() for p in name.split(",", 1)]
+        if len(parts) == 2 and parts[0] and parts[1]:
+            return f"{parts[1]} {parts[0]}"
+    return name
+
+
 def surname_key(name: str) -> str:
     """Last word, lowercased, alphanumerics only — for matching."""
-    cleaned = re.sub(r"\([^)]+\)", "", name).strip().rstrip("*+").strip()
+    cleaned = re.sub(r"\([^)]+\)", "", normalize_display_name(name)).strip()
     tokens = cleaned.split()
     if not tokens:
         return ""
@@ -143,26 +192,58 @@ def split_marker(token: str) -> tuple[str, str]:
     return m.group(1).strip(), m.group(2)
 
 
+def first_initial(name: str) -> str:
+    cleaned = re.sub(r"\([^)]+\)", "", normalize_display_name(name)).strip()
+    parts = cleaned.split()
+    if not parts:
+        return ""
+    return parts[0][0].lower() if parts[0] else ""
+
+
 def update_authors(yaml_authors: str, openalex_names: list[str]) -> str | None:
-    """Return updated authors string, or None if we couldn't safely match."""
+    """Return updated authors string. Surname-aligned (with first-initial
+    tiebreak): for each YAML token find an OpenAlex author with the same
+    surname (and matching first initial when ambiguous). Tokens whose
+    surname doesn't match any OpenAlex author are kept verbatim — better
+    to leave alone than corrupt.
+    """
     if "et al." in yaml_authors.lower():
         return None
     yaml_tokens = split_authors(yaml_authors)
-    if len(yaml_tokens) != len(openalex_names):
-        return None  # count mismatch; bail
+    if not yaml_tokens or not openalex_names:
+        return None
 
-    out = []
-    for ya_tok, oa_name in zip(yaml_tokens, openalex_names):
+    # Pre-bucket OpenAlex names by surname for fast lookup. Names are
+    # also normalized "Last, First" → "First Last" so they look natural
+    # when written back into the YAML.
+    by_surname: dict[str, list[tuple[int, str]]] = {}
+    for i, oa in enumerate(openalex_names):
+        normalized = normalize_display_name(oa)
+        by_surname.setdefault(surname_key(normalized), []).append((i, normalized))
+
+    used: set[int] = set()
+    out: list[str] = []
+    matched = 0
+    for ya_tok in yaml_tokens:
         core, mark = split_marker(ya_tok)
-        if surname_key(core) != surname_key(oa_name):
-            # Surname mismatch at this position; ordering may differ.
-            # Keep ours rather than risk corruption.
+        ya_surname = surname_key(core)
+        cands = [(i, oa) for i, oa in by_surname.get(ya_surname, []) if i not in used]
+        if not cands:
             out.append(ya_tok)
             continue
+        # Tiebreak by first initial
+        ya_fi = first_initial(core)
+        ranked = sorted(cands, key=lambda iox: (first_initial(iox[1]) != ya_fi, iox[0]))
+        idx, oa_name = ranked[0]
+        used.add(idx)
+        matched += 1
         if is_abbreviated(core):
             out.append(f"{oa_name}{mark}")
         else:
             out.append(ya_tok)
+
+    if matched == 0:
+        return None  # nothing aligned; leave alone
     return ", ".join(out)
 
 
@@ -208,14 +289,19 @@ def main() -> int:
         ]))
         doi = extract_doi(haystack)
         arxiv = extract_arxiv(haystack)
-        if not (doi or arxiv):
-            skipped.append((slug, "no DOI / arXiv ID"))
+        pmid = extract_pmid(haystack)
+        if not (doi or arxiv or pmid):
+            skipped.append((slug, "no DOI / arXiv / PMID"))
             continue
 
-        work = fetch_openalex(doi, arxiv)
+        work = fetch_openalex(doi, arxiv, pmid)
         time.sleep(0.05)
+        # Crossref fallback if OpenAlex came up empty and we have a DOI
+        if not work and doi:
+            work = fetch_crossref(doi)
+            time.sleep(0.05)
         if not work:
-            skipped.append((slug, f"OpenAlex no match (doi={doi}, arxiv={arxiv})"))
+            skipped.append((slug, f"no source match (doi={doi}, arxiv={arxiv}, pmid={pmid})"))
             continue
         oa_names = [
             a.get("author", {}).get("display_name", "")
@@ -223,12 +309,12 @@ def main() -> int:
             if a.get("author", {}).get("display_name")
         ]
         if not oa_names:
-            skipped.append((slug, "OpenAlex has no authorships"))
+            skipped.append((slug, "no authorships in source"))
             continue
 
         new_authors = update_authors(old_authors, oa_names)
         if new_authors is None:
-            skipped.append((slug, f"count mismatch (yaml={len(split_authors(old_authors))}, openalex={len(oa_names)})"))
+            skipped.append((slug, f"no surnames matched (yaml={len(split_authors(old_authors))}, ext={len(oa_names)})"))
             continue
         if new_authors == old_authors:
             continue  # no abbreviated tokens or all surnames mismatched
