@@ -69,6 +69,7 @@ Add a block at the top of the relevant year section:
 ```yaml
 my-paper-2026:                        # any unique slug, lowercase + dashes
   title: "My Amazing Paper"
+  topics: ["Memory", "Theoretical ML"]   # optional — see allowed topics below
   authors: "J. Doe, I. R. Fiete"
   year: 2026
   venue: "Nature"                     # journal name or "arXiv preprint" or "NeurIPS"
@@ -78,7 +79,23 @@ my-paper-2026:                        # any unique slug, lowercase + dashes
 ```
 
 Papers are automatically grouped and sorted by year on
-[/publications](https://fietelab.github.io/publications).
+[/publications](https://fietelab.github.io/publications). The page also has
+a "Filter by topic" bar at the top — pick a topic to show only matching
+papers.
+
+**Allowed topics** (must match exactly, capitalization included):
+- `Theoretical ML`
+- `Biologically plausible gradient learning`
+- `Module/structure emergence`
+- `Continuous attractors in the brain`
+- `Error-correcting codes`
+- `Inferring neural connectivity`
+- `Memory`
+- `Decision making`
+- `Navigation circuits and spatial cognition`
+- `Condensed-matter physics`
+
+A paper can be tagged with as many topics as fit (or none).
 
 ---
 

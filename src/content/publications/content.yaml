@@ -94,6 +94,7 @@ paper-quality-2025:
 
 forced-rendering-2025:
   title: "Compositional Generalization via Forced Rendering of Disentangled Latents"
+  topics: ["Theoretical ML"]
   authors: "Q. Liang, D. Qian, L. Ziyin, I. R. Fiete"
   year: 2025
   venue: "Proc. ICML"
@@ -143,6 +144,7 @@ key-value-memory-2025:
 
 global-modules-2025:
   title: "Global modules robustly emerge from local interactions and smooth gradients"
+  topics: ["Module/structure emergence"]
   authors: "M. Khona, S. Chandra, I. R. Fiete"
   year: 2025
   venue: "Nature"
@@ -151,6 +153,7 @@ global-modules-2025:
 
 episodic-scaffold-2025:
   title: "Episodic and associative memory from spatial scaffolds in the hippocampus"
+  topics: ["Memory", "Error-correcting codes"]
   authors: "S. Chandra*, S. Sharma*, R. Chaudhuri, I. R. Fiete"
   year: 2025
   venue: "Nature"
@@ -180,6 +183,7 @@ latent-memories-2025:
 
 self-org-modularity-2024:
   title: "Self-organized emergence of modularity, hierarchy, and mirror reversals from competitive synaptic growth in a developmental model of the visual pathway"
+  topics: ["Module/structure emergence"]
   authors: "S. Chandra*, M. Khona*, T. Konkle, I. R. Fiete"
   year: 2024
   venue: "bioRxiv"
@@ -189,6 +193,7 @@ self-org-modularity-2024:
 
 permutation-invariant-2024:
   title: "Permutation Invariant Learning with High-Dimensional Particle Filters"
+  topics: ["Theoretical ML"]
   authors: "A. Boopathy, A. Muppidi, P. Yang, A. Iyer, W. Yue, I. R. Fiete"
   year: 2024
   venue: "arXiv preprint"
@@ -205,6 +210,7 @@ imagenet-rib-2024:
 
 scaling-laws-2024:
   title: "Unified Neural Network Scaling Laws and Scale-time Equivalence"
+  topics: ["Theoretical ML"]
   authors: "A. Boopathy, I. R. Fiete"
   year: 2024
   venue: "arXiv preprint"
@@ -213,6 +219,7 @@ scaling-laws-2024:
 
 scaling-modularity-2024:
   title: "Breaking Neural Network Scaling Laws with Modularity"
+  topics: ["Theoretical ML"]
   authors: "A. Boopathy, S. Jiang, W. Yue, J. Hwang, A. Iyer, I. R. Fiete"
   year: 2024
   venue: "arXiv preprint"
@@ -221,6 +228,7 @@ scaling-modularity-2024:
 
 inductive-bias-2024:
   title: "Towards Exact Computation of Inductive Bias"
+  topics: ["Theoretical ML"]
   authors: "A. Boopathy, W. Yue, J. Hwang, A. Iyer, I. R. Fiete"
   year: 2024
   venue: "arXiv preprint"
@@ -229,6 +237,7 @@ inductive-bias-2024:
 
 resampling-free-pf-2024:
   title: "Resampling-free Particle Filters in High-dimensions"
+  topics: ["Theoretical ML"]
   authors: "A. Boopathy, A. Muppidi, P. Yang, A. Iyer, W. Yue, I. R. Fiete"
   year: 2024
   venue: "arXiv preprint"
@@ -237,6 +246,7 @@ resampling-free-pf-2024:
 
 diffusion-factorize-2024:
   title: "How Diffusion Models Learn to Factorize and Compose"
+  topics: ["Theoretical ML", "Module/structure emergence"]
   authors: "Q. Liang, Z. Liu, M. Ostrow, I. R. Fiete"
   year: 2024
   venue: "Proc. NeurIPS"
@@ -253,6 +263,7 @@ grid-cell-fragmentation-2024:
 
 ecc-fault-tolerant-2024:
   title: "Fault-tolerant neural networks from biological error correction codes"
+  topics: ["Theoretical ML", "Error-correcting codes"]
   authors: "A. Zlokapa, A. K. Tan, J. M. Martyn, I. R. Fiete, M. Tegmark, I. L. Chuang"
   year: 2024
   venue: "Physical Review E"
@@ -338,6 +349,7 @@ double-descent-2023:
 
 noisy-ecc-2023:
   title: "Noisy dynamical systems evolve error-correcting codes and modularity"
+  topics: ["Theoretical ML", "Module/structure emergence"]
   authors: "T. McCourt, I. R. Fiete, I. L. Chuang"
   year: 2023
   venue: "bioRxiv"
@@ -354,6 +366,7 @@ relational-inference-2023:
 
 growing-brains-2023:
   title: "Growing Brains: Co-emergence of Anatomical and Functional Modularity in Recurrent Neural Networks"
+  topics: ["Module/structure emergence"]
   authors: "Z. Liu, M. Khona, I. R. Fiete, M. Tegmark"
   year: 2023
   venue: "NeurIPS Workshop on Symmetry and Geometry in Neural Representations"
@@ -370,6 +383,7 @@ dsa-2023:
 
 generalization-difficulty-2023:
   title: "Model-agnostic measure of generalization difficulty"
+  topics: ["Theoretical ML"]
   authors: "A. Boopathy, K. Liu, J. Hwang, S. Ge, A. Mohammedsaleh, I. R. Fiete"
   year: 2023
   venue: "ICML"
@@ -378,6 +392,7 @@ generalization-difficulty-2023:
 
 ssl-grid-cells-2023:
   title: "Self-Supervised Learning of Representations for Space Generates Multi-Modular Grid Cells"
+  topics: ["Module/structure emergence"]
   authors: "R. Schaeffer*, M. Khona*, T. Ma, C. Eyzaguirre, S. Koyejo, I. R. Fiete"
   year: 2023
   venue: "NeurIPS"
@@ -403,6 +418,7 @@ grid-place-scaffold-2023:
 
 interpolation-threshold-2023:
   title: "Divergence at the Interpolation Threshold: Identifying, Interpreting & Ablating the Sources of a Deep Learning Puzzle"
+  topics: ["Theoretical ML"]
   authors: "R. Schaeffer, Z. Robertson, A. Boopathy, M. Khona, I. R. Fiete, A. Gromov, S. Koyejo"
   year: 2023
   venue: "NeurIPS Workshop on Mathematics of Modern Machine Learning"
@@ -448,6 +464,7 @@ no-free-lunch-2022:
 
 attractor-integrator-2022:
   title: "Attractor and integrator networks in the brain"
+  topics: ["Continuous attractors in the brain"]
   authors: "M. Khona, I. R. Fiete"
   year: 2022
   venue: "Nature Reviews Neuroscience"
@@ -464,6 +481,7 @@ wide-no-backprop-2022:
 
 content-addressable-2022:
   title: "Content-addressable memory without catastrophic forgetting by heteroassociation with a fixed scaffold"
+  topics: ["Memory"]
   authors: "S. Sharma, S. Chandra, I. R. Fiete"
   year: 2022
   venue: "ICML, PMLR"
@@ -480,6 +498,7 @@ streaming-inference-2022:
 
 map-induction-2022:
   title: "Map Induction: Compositional spatial submap learning for efficient exploration in novel environments"
+  topics: ["Navigation circuits and spatial cognition"]
   authors: "S. Sharma, A. Curtis, M. Kryven, J. Tenenbaum, I. R. Fiete"
   year: 2022
   venue: "ICLR"
@@ -532,6 +551,7 @@ theoretical-decipher-2021:
 
 online-mixture-2021:
   title: "Efficient online inference for nonparametric mixture models"
+  topics: ["Memory"]
   authors: "R. Schaeffer, B. Bordelon, M. Khona, W. Pan, I. R. Fiete"
   year: 2021
   venue: "PMLR (Conference on Uncertainty in AI)"
@@ -540,6 +560,7 @@ online-mixture-2021:
 
 place-cell-capacity-2021:
   title: "Place cell capacity and volatility with grid-like inputs"
+  topics: ["Error-correcting codes"]
   authors: "M. Yim, L. Sadun, I. R. Fiete, T. Taillefumier"
   year: 2021
   venue: "eLife"
@@ -548,6 +569,7 @@ place-cell-capacity-2021:
 
 ibl-decision-making-2021:
   title: "Standardized and reproducible measurement of decision-making in mice"
+  topics: ["Decision making"]
   authors: "The International Brain Laboratory, et al."
   year: 2021
   venue: "eLife"
@@ -556,6 +578,7 @@ ibl-decision-making-2021:
 
 gradient-trained-2021:
   title: "Gradient-trained weights in wide neural networks align layerwise to error-scaled input correlations"
+  topics: ["Theoretical ML", "Biologically plausible gradient learning"]
   authors: "A. Boopathy, I. R. Fiete"
   year: 2021
   venue: "arXiv preprint"
@@ -584,6 +607,7 @@ efficient-inference-2020:
 
 reverse-engineering-rnn-2020:
   title: "Reverse-engineering Recurrent Neural Network solutions to a hierarchical inference task for mice"
+  topics: ["Decision making"]
   authors: "R. Schaeffer, M. Khona, L. Meshulam, The International Brain Laboratory, I. R. Fiete"
   year: 2020
   venue: "NeurIPS"
@@ -592,6 +616,7 @@ reverse-engineering-rnn-2020:
 
 mind-of-a-mouse-2020:
   title: "The mind of a mouse"
+  topics: ["Inferring neural connectivity"]
   authors: "L. F. Abbott, et al."
   year: 2020
   venue: "Cell"
@@ -600,6 +625,7 @@ mind-of-a-mouse-2020:
 
 parallel-decision-2020:
   title: "Robust parallel decision-making in neural circuits with nonlinear inhibition"
+  topics: ["Decision making"]
   authors: "B. Kriener*, R. Chaudhuri*, I. R. Fiete"
   year: 2020
   venue: "PNAS"
@@ -609,6 +635,7 @@ parallel-decision-2020:
 
 systematic-errors-2020:
   title: "Systematic errors in connectivity inferred from activity in strongly coupled recurrent circuits"
+  topics: ["Inferring neural connectivity"]
   authors: "A. Das, I. R. Fiete"
   year: 2020
   venue: "Nature Neurosci."
@@ -617,6 +644,7 @@ systematic-errors-2020:
 
 path-integration-aging-2020:
   title: "Sources of path integration error in young and aging humans"
+  topics: ["Navigation circuits and spatial cognition"]
   authors: "M. Stangl*, I. Kanitscheider*, M. Riemer, I. R. Fiete, T. Wolbers"
   year: 2020
   venue: "Nature Communications"
@@ -626,6 +654,7 @@ path-integration-aging-2020:
 
 flexible-grid-2020:
   title: "Flexible representation and memory of higher-dimensional cognitive variables with grid cells"
+  topics: ["Error-correcting codes"]
   authors: "M. Klukas, M. Lewis, I. R. Fiete"
   year: 2020
   venue: "PLoS Comp. Biol."
@@ -638,6 +667,7 @@ flexible-grid-2020:
 
 bipartite-hopfield-2019:
   title: "Bipartite expander Hopfield networks as self-decoding high-capacity error correcting codes"
+  topics: ["Error-correcting codes"]
   authors: "R. Chaudhuri, I. R. Fiete"
   year: 2019
   venue: "Proc. NeurIPS"
@@ -646,6 +676,7 @@ bipartite-hopfield-2019:
 
 intrinsic-dynamics-2019:
   title: "The intrinsic population dynamics of a canonical cognitive circuit"
+  topics: ["Continuous attractors in the brain"]
   authors: "R. Chaudhuri, B. Gercek*, B. Pandey*, A. Peyrache, I. R. Fiete"
   year: 2019
   venue: "Nature Neurosci."
@@ -655,6 +686,7 @@ intrinsic-dynamics-2019:
 
 grid-coactivity-2019:
   title: "Grid cell co-activity patterns during sleep reflect spatial overlap of grid fields during active behaviors"
+  topics: ["Continuous attractors in the brain"]
   authors: "S. G. Trettel*, J. B. Trimper*, E. Hwaun, I. R. Fiete, L. L. Colgin"
   year: 2019
   venue: "Nature Neurosci."
@@ -664,6 +696,7 @@ grid-coactivity-2019:
 
 kernl-2019:
   title: "Kernel RNN Learning (KeRNL)"
+  topics: ["Biologically plausible gradient learning"]
   authors: "C. Roth, I. Kanitscheider, I. R. Fiete"
   year: 2019
   venue: "Proceedings of ICLR"
@@ -676,6 +709,7 @@ kernl-2019:
 
 map-like-grid-2018:
   title: "A map-like micro-organization of grid cells in the medial entorhinal cortex"
+  topics: ["Continuous attractors in the brain"]
   authors: "Y. Gu, S. Lewallen, A. Kinkhabwala, C. Domnisoru, K. Yoon, J. Gauthier, I. R. Fiete, D. W. Tank"
   year: 2018
   venue: "Cell"
@@ -684,6 +718,7 @@ map-like-grid-2018:
 
 inferring-circuit-2018:
   title: "Inferring circuit mechanisms from sparse neural recording and global perturbation in grid cells"
+  topics: ["Inferring neural connectivity", "Navigation circuits and spatial cognition"]
   authors: "J. Widloski, M. Marder, I. R. Fiete"
   year: 2018
   venue: "eLife"
@@ -704,6 +739,7 @@ reconfigurable-hippocampal-2017:
 
 ibl-2017:
   title: "An International Laboratory for Systems and Computational Neuroscience"
+  topics: ["Decision making"]
   authors: "The International Brain Laboratory"
   year: 2017
   venue: "Neuron"
@@ -712,6 +748,7 @@ ibl-2017:
 
 training-rnn-nav-2017:
   title: "Training recurrent networks to generate hypotheses about how the brain solves hard navigation problems"
+  topics: ["Navigation circuits and spatial cognition"]
   authors: "I. Kanitscheider, I. R. Fiete"
   year: 2017
   venue: "Advances in NIPS"
@@ -720,6 +757,7 @@ training-rnn-nav-2017:
 
 short-term-memory-bound-2017:
   title: "Fundamental bound on the persistence and capacity of short-term memory stored as graded persistent activity"
+  topics: ["Memory"]
   authors: "O. O. Koyluoglu, Y. Pertzov, S. Manohar, M. Husain, I. R. Fiete"
   year: 2017
   venue: "eLife"
@@ -728,6 +766,7 @@ short-term-memory-bound-2017:
 
 nav-systems-2017:
   title: "Toward a comprehensive functional understanding of the brain's spatial navigation system"
+  topics: ["Navigation circuits and spatial cognition"]
   authors: "I. Kanitscheider, I. R. Fiete"
   year: 2017
   venue: "Curr. Opinion in Systems Biol."
@@ -740,6 +779,7 @@ nav-systems-2017:
 
 memory-principles-2016:
   title: "Computational principles of memory"
+  topics: ["Memory"]
   authors: "R. Chaudhuri, I. R. Fiete"
   year: 2016
   venue: "Nature Neurosci."
@@ -748,6 +788,7 @@ memory-principles-2016:
 
 grid-1d-2016:
   title: "Grid cell responses in 1D environments assessed as slices through a 2D lattice"
+  topics: ["Continuous attractors in the brain"]
   authors: "K. Yoon*, S. Lewallen*, A. Kinkhabwalla, D. W. Tank, I. R. Fiete"
   year: 2016
   venue: "Neuron"
@@ -757,6 +798,7 @@ grid-1d-2016:
 
 multi-periodic-2016:
   title: "Multi-periodic neural coding for adaptive information transfer"
+  topics: ["Error-correcting codes"]
   authors: "Y. Yoo, O. O. Koyluoglu, S. Vishwanath, I. R. Fiete"
   year: 2016
   venue: "Theoretical Computer Science"
@@ -769,6 +811,7 @@ multi-periodic-2016:
 
 human-path-bias-2015:
   title: "Bias in human path integration is predicted by properties of grid cells"
+  topics: ["Navigation circuits and spatial cognition"]
   authors: "X. Chen, Q. He, J. W. Kelly, I. R. Fiete, T. P. McNamara"
   year: 2015
   venue: "Current Biology"
@@ -781,6 +824,7 @@ human-path-bias-2015:
 
 hopfield-grid-2014:
   title: "A binary Hopfield network with 1/log(n) information rate and applications to grid cell decoding"
+  topics: ["Error-correcting codes"]
   authors: "I. Fiete, D. Schwab, N. M. Tran"
   year: 2014
   venue: "Biological Distributed Algorithms (Workshop), Austin TX"
@@ -789,6 +833,7 @@ hopfield-grid-2014:
 
 grid-development-2014:
   title: "A Model of Grid Cell Development through Spatial Exploration and Spike Time-Dependent Plasticity"
+  topics: ["Module/structure emergence", "Navigation circuits and spatial cognition"]
   authors: "J. Widloski, I. R. Fiete"
   year: 2014
   venue: "Neuron"
@@ -801,6 +846,7 @@ grid-development-2014:
 
 low-dim-attractor-2013:
   title: "Specific evidence of low dimensional continuous attractor dynamics in grid cells"
+  topics: ["Continuous attractors in the brain"]
   authors: "K. Yoon, M. Buice, C. Barry, N. Burgess, I. R. Fiete"
   year: 2013
   venue: "Nature Neurosci."
@@ -809,6 +855,7 @@ low-dim-attractor-2013:
 
 nav-bookchapter-2013:
   title: "How does the brain solve the computational problems of spatial navigation?"
+  topics: ["Navigation circuits and spatial cognition"]
   authors: "J. Widloski, I. R. Fiete"
   year: 2013
   venue: "Space, Time, and Memory in the Hippocampal Formation (book chapter)"
@@ -821,6 +868,7 @@ nav-bookchapter-2013:
 
 persistent-bound-2012:
   title: "Fundamental limits on persistent activity in networks of noisy neurons"
+  topics: ["Memory"]
   authors: "Y. Burak, I. R. Fiete"
   year: 2012
   venue: "PNAS"
@@ -829,6 +877,7 @@ persistent-bound-2012:
 
 shift-map-2012:
   title: "Dynamic shift-map coding with side information at the decoder"
+  topics: ["Error-correcting codes"]
   authors: "Y. Yoo, O. O. Koyluoglu, S. Vishwanath, I. R. Fiete"
   year: 2012
   venue: "50th Allerton Conf. on Communication, Control, and Computing"
@@ -841,6 +890,7 @@ shift-map-2012:
 
 analog-ecc-grid-2011:
   title: "Grid cells generate an analog error-correcting code for singularly precise neural computation"
+  topics: ["Error-correcting codes", "Navigation circuits and spatial cognition"]
   authors: "S. Sreenivasan, I. R. Fiete"
   year: 2011
   venue: "Nature Neurosci."
@@ -853,6 +903,7 @@ analog-ecc-grid-2011:
 
 losing-phase-2010:
   title: "Losing phase"
+  topics: ["Navigation circuits and spatial cognition"]
   authors: "I. R. Fiete"
   year: 2010
   venue: "Neuron"
@@ -861,6 +912,7 @@ losing-phase-2010:
 
 stdp-sequences-2010:
   title: "Spike time-dependent plasticity and heterosynaptic competition organize networks to produce long scale-free sequences of neural activity"
+  topics: ["Module/structure emergence"]
   authors: "I. R. Fiete, W. Senn, C. Wang, R. H. R. Hahnloser"
   year: 2010
   venue: "Neuron"
@@ -873,6 +925,7 @@ stdp-sequences-2010:
 
 path-integration-2009:
   title: "Accurate path integration in continuous attractor network models of grid cells"
+  topics: ["Navigation circuits and spatial cognition"]
   authors: "Y. Burak, I. R. Fiete"
   year: 2009
   venue: "PLoS Comp. Biol."
@@ -881,6 +934,7 @@ path-integration-2009:
 
 birdsong-encyc-2009:
   title: "Birdsong Learning"
+  topics: ["Biologically plausible gradient learning"]
   authors: "I. R. Fiete, H. S. Seung"
   year: 2009
   venue: "Encyclopedia of Neuroscience (book chapter)"
@@ -893,6 +947,7 @@ birdsong-encyc-2009:
 
 drosophila-stereotypy-2008:
   title: "Testing odor response stereotypy in the Drosophila mushroom body"
+  topics: ["Inferring neural connectivity"]
   authors: "M. Murthy, I. R. Fiete, G. Laurent"
   year: 2008
   venue: "Neuron"
@@ -910,6 +965,7 @@ drosophila-preview-2008:
 
 grid-review-2008:
   title: "Grid cells: The position code, neural network models of activity, and the problem of learning"
+  topics: ["Navigation circuits and spatial cognition"]
   authors: "P. E. Welinder, Y. Burak, I. R. Fiete"
   year: 2008
   venue: "Hippocampus"
@@ -918,6 +974,7 @@ grid-review-2008:
 
 what-grid-encode-2008:
   title: "What grid cells encode about rat position"
+  topics: ["Error-correcting codes", "Navigation circuits and spatial cognition"]
   authors: "I. R. Fiete, Y. Burak, T. Brookings"
   year: 2008
   venue: "J. Neuroscience"
@@ -930,6 +987,7 @@ what-grid-encode-2008:
 
 birdsong-gradient-2007:
   title: "Model of birdsong learning based on gradient estimation by dynamic perturbation of neural conductances"
+  topics: ["Biologically plausible gradient learning"]
   authors: "I. R. Fiete, M. S. Fee, H. S. Seung"
   year: 2007
   venue: "J. Neurophysiology"
@@ -942,6 +1000,7 @@ birdsong-gradient-2007:
 
 emergent-grid-2006:
   title: "Do we understand the emergent dynamics of grid cell activity?"
+  topics: ["Navigation circuits and spatial cognition"]
   authors: "Y. Burak, I. R. Fiete"
   year: 2006
   venue: "J. Neuroscience"
@@ -950,6 +1009,7 @@ emergent-grid-2006:
 
 gradient-spiking-2006:
   title: "Gradient learning in spiking neural networks by dynamic perturbation of conductances"
+  topics: ["Biologically plausible gradient learning"]
   authors: "I. R. Fiete, H. S. Seung"
   year: 2006
   venue: "Physical Review Letters"
@@ -962,6 +1022,7 @@ gradient-spiking-2006:
 
 sparseness-birdsong-2004:
   title: "Temporal sparseness of the premotor drive is important for rapid learning in a neural network model of birdsong"
+  topics: ["Biologically plausible gradient learning"]
   authors: "I. R. Fiete, R. H. R. Hahnloser, M. S. Fee, H. S. Seung"
   year: 2004
   venue: "J. Neurophysiology"
@@ -974,6 +1035,7 @@ sparseness-birdsong-2004:
 
 eub6-2000a:
   title: "Metallization and magnetic order in EuB_6"
+  topics: ["Condensed-matter physics"]
   authors: "S. Sullow, I. R. Prasad, M. C. Aronson, et al."
   year: 2000
   venue: "Physical Review B"
@@ -982,6 +1044,7 @@ eub6-2000a:
 
 eub6-2000b:
   title: "Magnetotransport in the low carrier density ferromagnet EuB_6"
+  topics: ["Condensed-matter physics"]
   authors: "S. Sullow, I. R. Prasad, S. Bogdanovich, et al."
   year: 2000
   venue: "J. Applied Physics"
@@ -994,6 +1057,7 @@ eub6-2000b:
 
 eub6-1998:
   title: "Magnetic order of EuB_6"
+  topics: ["Condensed-matter physics"]
   authors: "S. Sullow, I. R. Prasad, M. C. Aronson, et al."
   year: 1998
   venue: "Physical Review B"

@@ -1,8 +1,54 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import { getPublicationsByYear } from '@/lib/data'
+import { getCollection } from 'astro:content'
 
-const byYear = await getPublicationsByYear()
+const allPubs = (await getCollection('publications')).sort(
+  (a, b) => b.data.year - a.data.year,
+)
+
+// Build the list of all topics (in the order they appear on the original site)
+const TOPIC_ORDER = [
+  'Theoretical ML',
+  'Biologically plausible gradient learning',
+  'Module/structure emergence',
+  'Continuous attractors in the brain',
+  'Error-correcting codes',
+  'Inferring neural connectivity',
+  'Memory',
+  'Decision making',
+  'Navigation circuits and spatial cognition',
+  'Condensed-matter physics',
+]
+const presentTopics = new Set<string>()
+for (const p of allPubs) {
+  for (const t of p.data.topics ?? []) presentTopics.add(t)
+}
+const topics = TOPIC_ORDER.filter((t) => presentTopics.has(t))
+const topicCount = (t: string) =>
+  allPubs.filter((p) => (p.data.topics ?? []).includes(t)).length
+
+// Short label for the link badge
+function linkLabel(link?: string) {
+  if (!link) return null
+  if (/arxiv\.org/.test(link)) return 'arXiv'
+  if (/biorxiv\.org/.test(link)) return 'bioRxiv'
+  if (/openreview\.net/.test(link)) return 'OpenReview'
+  if (
+    /(nature|elifesciences|cell\.com|sciencedirect|nih|pnas|aps\.org|annualreviews|nips|neurips|mlr\.press|proceedings|sfn)/.test(
+      link,
+    )
+  )
+    return 'Journal'
+  return 'Link'
+}
+
+// Group by year for default view
+const byYear = new Map<number, typeof allPubs>()
+for (const p of allPubs) {
+  if (!byYear.has(p.data.year)) byYear.set(p.data.year, [])
+  byYear.get(p.data.year)!.push(p)
+}
+const years = [...byYear.keys()].sort((a, b) => b - a)
 ---
 
 <Layout title="Papers">
@@ -18,28 +64,54 @@ const byYear = await getPublicationsByYear()
       >.
     </p>
 
+    <!-- Topic filter -->
+    <div class="mt-8 flex flex-wrap items-center gap-2" id="topic-filter">
+      <span class="mr-1 text-xs font-semibold uppercase tracking-wide text-[color:var(--color-text-soft)]">
+        Filter by topic:
+      </span>
+      <button
+        type="button"
+        data-topic="__all"
+        class="topic-pill rounded-full border border-[color:var(--color-accent)] bg-[color:var(--color-accent)] px-3 py-1 text-xs font-medium text-white transition"
+        aria-pressed="true"
+      >
+        All ({allPubs.length})
+      </button>
+      {
+        topics.map((t) => (
+          <button
+            type="button"
+            data-topic={t}
+            class="topic-pill rounded-full border border-[color:var(--color-border)] bg-white px-3 py-1 text-xs font-medium text-[color:var(--color-text)] transition hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
+            aria-pressed="false"
+          >
+            {t} ({topicCount(t)})
+          </button>
+        ))
+      }
+    </div>
+    <p class="mt-3 text-xs text-[color:var(--color-text-soft)]">
+      Topics follow the original
+      <a href="https://fietelab.mit.edu/publications/" target="_blank" rel="noopener">fietelab.mit.edu</a>
+      categorization. Papers without a topic show only when "All" is selected.
+    </p>
+
     {
-      [...byYear.entries()].map(([year, pubs]) => (
-        <div class="mt-12">
+      years.map((year) => (
+        <div class="year-section mt-12" data-year={year}>
           <h2 class="border-b border-[color:var(--color-border)] pb-2 text-xl font-semibold">
             {year}
           </h2>
           <ul class="divide-y divide-[color:var(--color-border)]">
-            {pubs.map((pub) => {
+            {byYear.get(year)!.map((pub) => {
               const link = pub.data.link
-              const linkLabel = link
-                ? /arxiv\.org/.test(link)
-                  ? 'arXiv'
-                  : /biorxiv\.org/.test(link)
-                    ? 'bioRxiv'
-                    : /openreview\.net/.test(link)
-                      ? 'OpenReview'
-                      : /(nature|elifesciences|cell\.com|sciencedirect|nih|pnas|aps\.org|annualreviews|nips|neurips|mlr\.press|proceedings|sfn)/.test(link)
-                        ? 'Journal'
-                        : 'Link'
-                : null
+              const label = linkLabel(link)
+              const pubTopics = pub.data.topics ?? []
               return (
-                <li class="py-4">
+                <li
+                  class="pub-item py-4"
+                  data-topics={JSON.stringify(pubTopics)}
+                >
                   <div class="font-medium leading-snug">
                     {link ? (
                       <a
@@ -51,13 +123,15 @@ const byYear = await getPublicationsByYear()
                         {pub.data.title}
                       </a>
                     ) : (
-                      <span class="text-[color:var(--color-text)]">{pub.data.title}</span>
+                      <span class="text-[color:var(--color-text)]">
+                        {pub.data.title}
+                      </span>
                     )}
                   </div>
                   <div class="mt-1 text-sm text-[color:var(--color-text-muted)]">
                     {pub.data.authors}
                   </div>
-                  <div class="mt-1 flex flex-wrap items-center gap-2 text-xs">
+                  <div class="mt-2 flex flex-wrap items-center gap-2 text-xs">
                     <span class="font-semibold text-[color:var(--color-accent)]">
                       {pub.data.venue}
                     </span>
@@ -71,6 +145,15 @@ const byYear = await getPublicationsByYear()
                         · {pub.data.annotation}
                       </span>
                     )}
+                    {pubTopics.map((t) => (
+                      <button
+                        type="button"
+                        data-topic-tag={t}
+                        class="topic-tag inline-flex items-center rounded-full bg-[color:var(--color-bg-alt)] px-2 py-0.5 font-medium text-[color:var(--color-text-muted)] hover:bg-[color:var(--color-accent)] hover:text-white"
+                      >
+                        {t}
+                      </button>
+                    ))}
                     {link && (
                       <a
                         href={link}
@@ -78,7 +161,7 @@ const byYear = await getPublicationsByYear()
                         rel="noopener"
                         class="ml-auto inline-flex items-center gap-1 rounded-full border border-[color:var(--color-border)] bg-white px-2.5 py-0.5 text-[color:var(--color-link)] no-underline hover:bg-[color:var(--color-bg-alt)] hover:no-underline"
                       >
-                        {linkLabel} <span aria-hidden="true">↗</span>
+                        {label} <span aria-hidden="true">↗</span>
                       </a>
                     )}
                   </div>
@@ -89,5 +172,95 @@ const byYear = await getPublicationsByYear()
         </div>
       ))
     }
+
+    <div
+      id="empty-state"
+      class="mt-12 hidden rounded-lg border border-dashed border-[color:var(--color-border)] bg-[color:var(--color-bg-alt)] p-8 text-center text-sm text-[color:var(--color-text-soft)]"
+    >
+      No papers tagged with this topic.
+    </div>
   </section>
 </Layout>
+
+<script>
+  const filterBar = document.getElementById('topic-filter')
+  const pills = document.querySelectorAll<HTMLButtonElement>('.topic-pill')
+  const tagButtons = document.querySelectorAll<HTMLButtonElement>('.topic-tag')
+  const items = document.querySelectorAll<HTMLLIElement>('.pub-item')
+  const yearSections = document.querySelectorAll<HTMLDivElement>('.year-section')
+  const emptyState = document.getElementById('empty-state')
+
+  function setActive(topic: string) {
+    pills.forEach((p) => {
+      const isActive = p.dataset.topic === topic
+      p.setAttribute('aria-pressed', String(isActive))
+      if (isActive) {
+        p.classList.add(
+          'bg-[color:var(--color-accent)]',
+          'text-white',
+          'border-[color:var(--color-accent)]',
+        )
+        p.classList.remove('bg-white', 'text-[color:var(--color-text)]')
+      } else {
+        p.classList.remove(
+          'bg-[color:var(--color-accent)]',
+          'text-white',
+          'border-[color:var(--color-accent)]',
+        )
+        p.classList.add('bg-white', 'text-[color:var(--color-text)]')
+      }
+    })
+  }
+
+  function applyFilter(topic: string) {
+    let visibleCount = 0
+    items.forEach((item) => {
+      const topics: string[] = JSON.parse(item.dataset.topics || '[]')
+      const show = topic === '__all' || topics.includes(topic)
+      item.style.display = show ? '' : 'none'
+      if (show) visibleCount++
+    })
+    yearSections.forEach((sec) => {
+      let visibleInYear = 0
+      sec.querySelectorAll<HTMLLIElement>('.pub-item').forEach((it) => {
+        if (it.style.display !== 'none') visibleInYear++
+      })
+      sec.style.display = visibleInYear > 0 ? '' : 'none'
+    })
+    if (emptyState) {
+      emptyState.classList.toggle('hidden', visibleCount > 0)
+    }
+    // Sync URL hash for shareable links
+    if (topic === '__all') {
+      history.replaceState(null, '', location.pathname + location.search)
+    } else {
+      history.replaceState(null, '', '#' + encodeURIComponent(topic))
+    }
+  }
+
+  pills.forEach((p) => {
+    p.addEventListener('click', () => {
+      const t = p.dataset.topic || '__all'
+      setActive(t)
+      applyFilter(t)
+      window.scrollTo({ top: filterBar?.offsetTop ?? 0, behavior: 'smooth' })
+    })
+  })
+
+  // Click on a topic tag inside a paper → filter to that topic
+  tagButtons.forEach((b) => {
+    b.addEventListener('click', () => {
+      const t = b.dataset.topicTag || '__all'
+      setActive(t)
+      applyFilter(t)
+      window.scrollTo({ top: filterBar?.offsetTop ?? 0, behavior: 'smooth' })
+    })
+  })
+
+  // Honor URL hash on load
+  const initial = decodeURIComponent(location.hash.slice(1))
+  if (initial) {
+    setActive(initial)
+    applyFilter(initial)
+  }
+</script>
