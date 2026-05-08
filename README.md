@@ -19,8 +19,10 @@ GitHub Pages at [fietelab.github.io](https://fietelab.github.io/).
 src/
 ├── pages/                     route per .astro file
 ├── content/                   ALL editable content lives here
+│   ├── site/                    home + contact page copy (markdown + YAML)
 │   ├── people/                  PI / postdocs / students / affiliates (one .md per person + headshot)
 │   ├── alumni/, undergrads/     YAML lists
+│   ├── collaborators/           external researchers we link in paper bylines
 │   ├── publications/            YAML, full BibTeX-style keys
 │   ├── projects/                code releases
 │   ├── news/                    homepage announcements

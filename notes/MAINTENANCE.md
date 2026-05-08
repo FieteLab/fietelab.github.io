@@ -112,14 +112,16 @@ Common drift to look for:
 ### c. Co-advisor links
 
 Every value of `coAdvisor:` in any person's frontmatter must appear as a
-key in `EXTERNAL_AUTHOR_LINKS` in `src/lib/data.ts`. Quick audit:
+`name:` in [`src/content/collaborators/content.yaml`](../src/content/collaborators/content.yaml).
+Quick audit:
 
 ```bash
 grep -h '^coAdvisor:' src/content/people/*.md | sort -u
-grep -hE '^\s+[A-Z][^:]*:' src/lib/data.ts | grep -oE "'[^']+'" | sort -u
+grep -h 'name:' src/content/collaborators/content.yaml | sort -u
 ```
 
-If a co-advisor isn't in the map, add their lab page URL.
+If a co-advisor isn't in the collection, add a YAML block with their
+lab page URL — no code edit needed.
 
 ### d. Add new lab members
 

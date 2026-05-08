@@ -14,18 +14,19 @@ under each section — the markdown image links are already wired up.
 
 | If you want to change… | Open this file |
 |---|---|
-| Banner gradient color, hero title, tagline | [`src/pages/index.astro`](src/pages/index.astro) |
+| Hero title, tagline, "About the lab" paragraphs, explore cards | [`src/content/site/home.md`](src/content/site/home.md) |
+| Banner gradient color | [`src/pages/index.astro`](src/pages/index.astro) (the `<!-- Hero -->` section) |
 | Affiliation logos in the banner | [`src/consts.ts`](src/consts.ts) (logo files in [`public/`](public/)) |
-| Lab description ("About the lab") | [`src/pages/index.astro`](src/pages/index.astro) |
 | Add / remove a news item on the home page | [`src/content/news/content.yaml`](src/content/news/content.yaml) |
 | Add / remove a current member | new `.md` file in [`src/content/people/`](src/content/people/) |
 | Move someone from current → alumni | delete their `.md`, add a YAML block in [`src/content/alumni/content.yaml`](src/content/alumni/content.yaml) |
+| Link a co-advisor or external collaborator from paper bylines | YAML block in [`src/content/collaborators/content.yaml`](src/content/collaborators/content.yaml) |
 | Add a paper | YAML block in [`src/content/publications/content.yaml`](src/content/publications/content.yaml) |
 | Add a code release | YAML block in [`src/content/projects/content.yaml`](src/content/projects/content.yaml) |
 | Replace a headshot | drop new file in [`src/content/people/images/`](src/content/people/images/), update `avatar:` in the person's `.md` |
 | Replace the group photo | new image in [`src/content/group-photos/images/`](src/content/group-photos/images/), edit [`src/content/group-photos/content.yaml`](src/content/group-photos/content.yaml) |
 | Site name, nav items, social links | [`src/consts.ts`](src/consts.ts) |
-| Contact info | [`src/pages/contact.astro`](src/pages/contact.astro) |
+| Contact info | [`src/content/site/contact.md`](src/content/site/contact.md) |
 
 For the workflow of editing/saving/pushing, see "Local preview" at the
 bottom.
@@ -63,11 +64,11 @@ bottom.
 | Callout | What it is | File to edit |
 |---|---|---|
 | ① | Header / nav | [`src/components/Header.astro`](src/components/Header.astro) — and `NAV_LINKS` in [`src/consts.ts`](src/consts.ts) for the link list |
-| ② | Hero banner — title, tagline, gradient, logos | [`src/pages/index.astro`](src/pages/index.astro) (the `<!-- Hero -->` section). Logo file paths and the `AFFILIATIONS` array live in [`src/consts.ts`](src/consts.ts); the logo PNGs themselves are in [`public/`](public/). |
-| ③ | About the lab | Same file, look for `<h2>About the lab</h2>` and edit the three `<p>` tags. |
-| ④ | Recent news | **Data, not layout.** Edit [`src/content/news/content.yaml`](src/content/news/content.yaml) — copy a block, change `date` (YYYY-MM or YYYY-MM-DD), `text`, optional `link`. |
-| ⑤ | PI card | **Auto-generated** from [`src/content/people/ila-fiete.md`](src/content/people/ila-fiete.md) — frontmatter for the photo / role, body for the bio. |
-| ⑥ | Quick links | Same `index.astro` file, the `<!-- Quick links -->` section. |
+| ② | Hero banner — title, tagline | [`src/content/site/home.md`](src/content/site/home.md) (frontmatter `heroTitle` and `heroTagline`). Banner gradient + logo styling stay in [`src/pages/index.astro`](src/pages/index.astro); the `AFFILIATIONS` array and logo paths live in [`src/consts.ts`](src/consts.ts). |
+| ③ | About the lab | Markdown body of [`src/content/site/home.md`](src/content/site/home.md) — paragraphs are plain text, blank line = new paragraph; supports italics with `*word*`, bold with `**word**`, links with `[text](url)`. |
+| ④ | Recent news | [`src/content/news/content.yaml`](src/content/news/content.yaml) — copy a block, change `date` (YYYY-MM or YYYY-MM-DD), `text`, optional `link`. |
+| ⑤ | PI card | **Auto-generated** from [`src/content/people/ila-fiete.md`](src/content/people/ila-fiete.md). |
+| ⑥ | Quick links / explore cards | `exploreCards:` array in [`src/content/site/home.md`](src/content/site/home.md) — add or remove blocks. |
 | ⑦ | Footer | [`src/components/Footer.astro`](src/components/Footer.astro) (address) and `SOCIAL_LINKS` in [`src/consts.ts`](src/consts.ts). |
 
 ### Banner color
@@ -270,8 +271,28 @@ my-project:
 
 ## Page 5 — Contact (`/contact/`)
 
-Plain text. Edit [`src/pages/contact.astro`](src/pages/contact.astro)
-directly — search for the field you want to change.
+All editable text lives in [`src/content/site/contact.md`](src/content/site/contact.md).
+
+```yaml
+---
+intro: "Get in touch with the lab."
+cards:
+  - title: "Address"
+    body: |
+      MIT Department of …<br/>
+      Building 46, Suite 5065<br/>
+      …
+  - title: "Administrative Contact"
+    body: |
+      <strong>Name</strong><br/>
+      Role<br/>
+      <a href="mailto:user@mit.edu">user@mit.edu</a>
+---
+```
+
+Each card maps 1:1 to a card on the page. Add a card by appending
+another `- title: …` block. Simple HTML (`<br/>`, `<strong>`, `<a>`) is
+allowed inside `body`.
 
 ---
 
