@@ -97,7 +97,7 @@ forced-rendering-2025:
   topics: ["Theoretical ML"]
   authors: "Qiyao (Catherine) Liang, Daoyuan Qian, L. Ziyin, Ila Fiete"
   year: 2025
-  venue: "Proc. ICML"
+  venue: "ICML"
   citation: "Proc. ICML (2025)"
   link: "https://openreview.net/pdf?id=rkHCHI5H5W"
 
@@ -165,7 +165,7 @@ multi-region-icml-2025:
   title: "A Multi-Region Brain Model to Elucidate the Role of Hippocampus in Spatially Embedded Decision-Making"
   authors: "Y. Xie, Jaedong Hwang, C. Brody, D. Tank, Ila Fiete"
   year: 2025
-  venue: "Proc. ICML"
+  venue: "ICML"
   citation: "bioRxiv 2025.05.29.656671 (2025) and Proc. ICML (2025)"
   link: "https://www.biorxiv.org/content/10.1101/2025.05.29.656671"
 
@@ -249,7 +249,7 @@ diffusion-factorize-2024:
   topics: ["Theoretical ML", "Module/structure emergence"]
   authors: "Qiyao (Catherine) Liang, Z. Liu, Mitchell Ostrow, Ila Fiete"
   year: 2024
-  venue: "Proc. NeurIPS"
+  venue: "NeurIPS"
   citation: "Proc. NeurIPS (2024)"
   link: "https://proceedings.neurips.cc/paper_files/paper/2024/hash/1b60893887328a6a50dd00ae0d5ed51a-Abstract-Conference.html"
 
@@ -257,9 +257,9 @@ grid-cell-fragmentation-2024:
   title: "Grid Cell-Inspired Fragmentation and Recall for Efficient Map Building"
   authors: "Jaedong Hwang, Z. W. Hong, E. Chen, Akhilan Boopathy, P. Agrawal, Ila Fiete"
   year: 2024
-  venue: "Trans. MLR"
+  venue: "TMLR"
   citation: "arXiv:2307.05793 (2023) and TMLR (2024)"
-  link: "https://openreview.net/pdf?id=cT8oyAHCQq"
+  link: "https://openreview.net/forum?id=cT8oOJ6Q6F"
 
 ecc-fault-tolerant-2024:
   title: "Fault-tolerant neural networks from biological error correction codes"
@@ -307,7 +307,7 @@ multi-region-ccn-2024:
   title: "A Multi-Region Brain Model to Shed Light on the Role of Hippocampus in Spatially Embedded Decision Tasks"
   authors: "X. Yi, Jaedong Hwang, C. Brody, D. Tank, Ila Fiete"
   year: 2024
-  venue: "Conference on Cognitive Computational Neuroscience"
+  venue: "CCN"
   citation: "Conference on Cognitive Computational Neuroscience (2024)"
   link: "https://2024.ccneuro.org/"
 
@@ -360,16 +360,16 @@ relational-inference-2023:
   title: "Generalizable Relational Inference with Cognitive Maps in a Hippocampal Model and in Primates"
   authors: "Jaedong Hwang, S. Neupane, M. Jazayeri, Ila Fiete"
   year: 2023
-  venue: "NeurIPS Workshop on Associative Memory & Hopfield Networks"
+  venue: "NeurIPS Workshop (AMHN)"
   citation: "NeurIPS Workshop (2023)"
-  link: "https://amhn.quest/"
+  link: "https://openreview.net/forum?id=RZmsvaEATv"
 
 growing-brains-2023:
   title: "Growing Brains: Co-emergence of Anatomical and Functional Modularity in Recurrent Neural Networks"
   topics: ["Module/structure emergence"]
   authors: "Z. Liu, Mikail Khona, Ila Fiete, M. Tegmark"
   year: 2023
-  venue: "NeurIPS Workshop on Symmetry and Geometry in Neural Representations"
+  venue: "NeurReps Workshop"
   citation: "arXiv:2310.07711 (2023) and NeurIPS Workshop (2023)"
   link: "https://arxiv.org/abs/2310.07711"
 
@@ -412,7 +412,7 @@ grid-place-scaffold-2023:
   title: "A Grid Cell-Place Cell Scaffold Allows Rapid Learning and Generalization at Multiple Levels on Mental Navigation Tasks"
   authors: "Jaedong Hwang, S. Neupane, M. Jazayeri, Ila Fiete"
   year: 2023
-  venue: "Conference on Cognitive Computational Neuroscience"
+  venue: "CCN"
   citation: "Conference on Cognitive Computational Neuroscience (2023)"
   link: "https://2023.ccneuro.org/"
 
@@ -421,15 +421,15 @@ interpolation-threshold-2023:
   topics: ["Theoretical ML"]
   authors: "Rylan Schaeffer, Z. Robertson, Akhilan Boopathy, Mikail Khona, Ila Fiete, A. Gromov, S. Koyejo"
   year: 2023
-  venue: "NeurIPS Workshop on Mathematics of Modern Machine Learning"
+  venue: "NeurIPS Workshop (M3L)"
   citation: "NeurIPS Workshop (2023)"
-  link: "https://m3l-workshop.github.io/"
+  link: "https://openreview.net/forum?id=Uhxtq4nCzS"
 
 see-and-copy-2023:
   title: "See and Copy: Generation of complex compositional movements from modular and geometric RNN representations"
   authors: "Sunny Duan, Mikail Khona, A. Bertagnoli, Sarthak Chandra, Ila Fiete"
   year: 2023
-  venue: "NeurIPS Workshop on Symmetry and Geometry in Neural Representations, PMLR"
+  venue: "NeurReps Workshop (PMLR)"
   citation: "PMLR (2023) and arXiv:2210.02521 (2022)"
   link: "https://proceedings.mlr.press/v197/duan23a/duan23a.pdf"
 
@@ -437,7 +437,7 @@ testing-grid-theory-2023:
   title: "Testing Assumptions Underlying a Unified Theory for the Origin of Grid Cells"
   authors: "Rylan Schaeffer, Mikail Khona, A. Bertagnoli, S. Koyejo, Ila Fiete"
   year: 2023
-  venue: "NeurIPS 2023 AI for Science Workshop"
+  venue: "NeurIPS Workshop (AI4Science)"
   citation: "arXiv:2311.16295 (2023) and NeurIPS Workshop (2023)"
   link: "https://arxiv.org/abs/2311.16295"
 
@@ -475,7 +475,7 @@ wide-no-backprop-2022:
   title: "How to Train Your Wide Neural Network Without Backprop: An Input-Weight Alignment Perspective"
   authors: "Akhilan Boopathy, Ila Fiete"
   year: 2022
-  venue: "ICML, PMLR"
+  venue: "ICML"
   citation: "ICML, PMLR (2022)"
   link: "https://proceedings.mlr.press/v162/boopathy22a.html"
 
@@ -484,7 +484,7 @@ content-addressable-2022:
   topics: ["Memory"]
   authors: "Sugandha Sharma, Sarthak Chandra, Ila Fiete"
   year: 2022
-  venue: "ICML, PMLR"
+  venue: "ICML"
   citation: "ICML, PMLR (2022)"
   link: "https://proceedings.mlr.press/v162/sharma22b.html"
 
@@ -492,7 +492,7 @@ streaming-inference-2022:
   title: "Streaming Inference for Infinite Feature Models"
   authors: "Rylan Schaeffer, Y. Du, G. K. Liu, Ila Fiete"
   year: 2022
-  venue: "ICML, PMLR"
+  venue: "ICML"
   citation: "ICML, PMLR (2022)"
   link: "https://proceedings.mlr.press/v161/schaeffer21a.html"
 
@@ -545,7 +545,7 @@ theoretical-decipher-2021:
   title: "Theoretical and computational approaches to decipher brain function from molecules to behavior"
   authors: "J. Gjorgjieva, Ila Fiete"
   year: 2021
-  venue: "Curr. Op. Neurobiology"
+  venue: "Current Opinion in Neurobiology"
   citation: "Curr. Op. Neurobiology (2021)"
   link: "https://www.sciencedirect.com/science/article/abs/pii/S0959438821001379"
 
@@ -554,7 +554,7 @@ online-mixture-2021:
   topics: ["Memory"]
   authors: "Rylan Schaeffer, B. Bordelon, Mikail Khona, W. Pan, Ila Fiete"
   year: 2021
-  venue: "PMLR (Conference on Uncertainty in AI)"
+  venue: "UAI"
   citation: "Conference on Uncertainty in AI, PMLR (2021)"
   link: "https://proceedings.mlr.press/v161/schaeffer21a.html"
 
@@ -638,7 +638,7 @@ systematic-errors-2020:
   topics: ["Inferring neural connectivity"]
   authors: "Abhranil Das, Ila Fiete"
   year: 2020
-  venue: "Nature Neurosci."
+  venue: "Nature Neuroscience"
   citation: "Nature Neurosci. (2020)"
   link: "https://www.nature.com/articles/s41593-020-0699-2"
 
@@ -657,7 +657,7 @@ flexible-grid-2020:
   topics: ["Error-correcting codes"]
   authors: "Mirko Klukas, M. Lewis, Ila Fiete"
   year: 2020
-  venue: "PLoS Comp. Biol."
+  venue: "PLOS Computational Biology"
   citation: "PLoS Comp. Biol. (2020)"
   link: "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007796"
 
@@ -670,7 +670,7 @@ bipartite-hopfield-2019:
   topics: ["Error-correcting codes"]
   authors: "Rishidev Chaudhuri, Ila Fiete"
   year: 2019
-  venue: "Proc. NeurIPS"
+  venue: "NeurIPS"
   citation: "Proc. NeurIPS (2019)"
   link: "https://papers.nips.cc/paper/8985-bipartite-expander-hopfield-networks-as-self-decoding-high-capacity-error-correcting-codes"
 
@@ -679,7 +679,7 @@ intrinsic-dynamics-2019:
   topics: ["Continuous attractors in the brain"]
   authors: "Rishidev Chaudhuri, Berk Gercek*, Biraj Pandey*, A. Peyrache, Ila Fiete"
   year: 2019
-  venue: "Nature Neurosci."
+  venue: "Nature Neuroscience"
   citation: "Nature Neurosci. (2019)"
   link: "https://www.nature.com/articles/s41593-019-0460-x"
   annotation: "* co-second authors"
@@ -689,7 +689,7 @@ grid-coactivity-2019:
   topics: ["Continuous attractors in the brain"]
   authors: "S. G. Trettel*, J. B. Trimper*, E. Hwaun, Ila Fiete, L. L. Colgin"
   year: 2019
-  venue: "Nature Neurosci."
+  venue: "Nature Neuroscience"
   citation: "Nature Neurosci. 22, 609-617 (2019)"
   link: "https://www.nature.com/articles/s41593-019-0359-6"
   annotation: "* co-first authors"
@@ -699,7 +699,7 @@ kernl-2019:
   topics: ["Biologically plausible gradient learning"]
   authors: "Christopher Roth, Ingmar Kanitscheider, Ila Fiete"
   year: 2019
-  venue: "Proceedings of ICLR"
+  venue: "ICLR"
   citation: "Proceedings of ICLR (2019)"
   link: "https://openreview.net/forum?id=ryGfnoC5KQ"
 
@@ -751,7 +751,7 @@ training-rnn-nav-2017:
   topics: ["Navigation circuits and spatial cognition"]
   authors: "Ingmar Kanitscheider, Ila Fiete"
   year: 2017
-  venue: "Advances in NIPS"
+  venue: "NeurIPS"
   citation: "In Advances in NIPS (2017)"
   link: "http://papers.nips.cc/paper/7039-training-recurrent-networks-to-generate-hypotheses-about-how-the-brain-solves-hard-navigation-problems"
 
@@ -769,7 +769,7 @@ nav-systems-2017:
   topics: ["Navigation circuits and spatial cognition"]
   authors: "Ingmar Kanitscheider, Ila Fiete"
   year: 2017
-  venue: "Curr. Opinion in Systems Biol."
+  venue: "Current Opinion in Systems Biology"
   citation: "Curr. Opinion in Systems Biol. 3, 186-194 (2017)"
   link: "http://www.sciencedirect.com/science/article/pii/S2452310017300549"
 
@@ -782,7 +782,7 @@ memory-principles-2016:
   topics: ["Memory"]
   authors: "Rishidev Chaudhuri, Ila Fiete"
   year: 2016
-  venue: "Nature Neurosci."
+  venue: "Nature Neuroscience"
   citation: "Nature Neurosci. 19, 394-403 (2016)"
   link: "http://www.nature.com/neuro/journal/v19/n3/full/nn.4237.html"
 
@@ -827,7 +827,7 @@ hopfield-grid-2014:
   topics: ["Error-correcting codes"]
   authors: "Ila Fiete, D. Schwab, N. M. Tran"
   year: 2014
-  venue: "Biological Distributed Algorithms (Workshop), Austin TX"
+  venue: "BDA Workshop"
   citation: "Workshop paper (2014)"
   link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/Ngoc_BDA_2014.pdf"
 
@@ -849,7 +849,7 @@ low-dim-attractor-2013:
   topics: ["Continuous attractors in the brain"]
   authors: "Kijung Yoon, Michael Buice, C. Barry, N. Burgess, Ila Fiete"
   year: 2013
-  venue: "Nature Neurosci."
+  venue: "Nature Neuroscience"
   citation: "Nature Neurosci. 16, 1077-1084 (2013)"
   link: "http://www.nature.com/neuro/journal/vaop/ncurrent/full/nn.3450.html"
 
@@ -880,7 +880,7 @@ shift-map-2012:
   topics: ["Error-correcting codes"]
   authors: "Yongseok Yoo, O. O. Koyluoglu, S. Vishwanath, Ila Fiete"
   year: 2012
-  venue: "50th Allerton Conf. on Communication, Control, and Computing"
+  venue: "Allerton Conference"
   citation: "Allerton (2012)"
   link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/Allerton_sideinfo_Yongseok12.pdf"
 
@@ -893,7 +893,7 @@ analog-ecc-grid-2011:
   topics: ["Error-correcting codes", "Navigation circuits and spatial cognition"]
   authors: "S. Sreenivasan, Ila Fiete"
   year: 2011
-  venue: "Nature Neurosci."
+  venue: "Nature Neuroscience"
   citation: "Nature Neurosci. 14, 1330-1337 (2011)"
   link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/nn.2901.pdf"
 
@@ -928,7 +928,7 @@ path-integration-2009:
   topics: ["Navigation circuits and spatial cognition"]
   authors: "Y. Burak, Ila Fiete"
   year: 2009
-  venue: "PLoS Comp. Biol."
+  venue: "PLOS Computational Biology"
   citation: "PLoS Comp. Biol. 5(2) (2009)"
   link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/gcdynamics_burakfiete09_plos.pdf"
 
@@ -977,7 +977,7 @@ what-grid-encode-2008:
   topics: ["Error-correcting codes", "Navigation circuits and spatial cognition"]
   authors: "Ila Fiete, Y. Burak, T. Brookings"
   year: 2008
-  venue: "J. Neuroscience"
+  venue: "Journal of Neuroscience"
   citation: "J. Neuroscience 28, 6856-6871 (2008)"
   link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/rns_fieteetal08_jneurosci.pdf"
 
@@ -990,7 +990,7 @@ birdsong-gradient-2007:
   topics: ["Biologically plausible gradient learning"]
   authors: "Ila Fiete, M. S. Fee, H. S. Seung"
   year: 2007
-  venue: "J. Neurophysiology"
+  venue: "Journal of Neurophysiology"
   citation: "J. Neurophysiology 98, 2038-2057 (2007)"
   link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/Fiete_etal_08_postpreprint-1.pdf"
 
@@ -1003,7 +1003,7 @@ emergent-grid-2006:
   topics: ["Navigation circuits and spatial cognition"]
   authors: "Y. Burak, Ila Fiete"
   year: 2006
-  venue: "J. Neuroscience"
+  venue: "Journal of Neuroscience"
   citation: "J. Neuroscience 26, 9352-9354 (2006)"
   link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/gridcell_jneurosci-1.pdf"
 
@@ -1025,7 +1025,7 @@ sparseness-birdsong-2004:
   topics: ["Biologically plausible gradient learning"]
   authors: "Ila Fiete, R. H. R. Hahnloser, M. S. Fee, H. S. Seung"
   year: 2004
-  venue: "J. Neurophysiology"
+  venue: "Journal of Neurophysiology"
   citation: "J. Neurophysiology 92, 2274 (2004)"
   link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/sparseness_reprint-1.pdf"
 
@@ -1047,7 +1047,7 @@ eub6-2000b:
   topics: ["Condensed-matter physics"]
   authors: "S. Sullow, I. R. Prasad, S. Bogdanovich, et al."
   year: 2000
-  venue: "J. Applied Physics"
+  venue: "Journal of Applied Physics"
   citation: "J. Applied Physics 87, 5591 (2000)"
   link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/sullow_jap_00.pdf"
 
