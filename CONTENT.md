@@ -127,6 +127,41 @@ A paper can be tagged with as many topics as fit (or none).
 
 ---
 
+### Pull new papers automatically (OpenAlex sync)
+
+The repo ships a one-shot script that fetches papers from
+[OpenAlex](https://openalex.org) — a free, open replacement for Google
+Scholar — using Ila Fiete's profile as the source of truth.
+
+```bash
+pip install -r scripts/requirements.txt
+python scripts/sync_publications.py
+```
+
+This writes `pending_publications.yaml` at the repo root with proposed
+new entries. Open it, copy any block that looks correct into
+[`src/content/publications/content.yaml`](src/content/publications/content.yaml),
+edit the venue / authors / topics / link as you see fit, then commit. The
+next run will detect those slugs and stop proposing them.
+
+**The script never modifies `publications/content.yaml`.** It only
+writes the pending file. You're always in control of what lands in the
+real data.
+
+**Drops are respected.** If you delete an imported paper from the YAML,
+the state file (`scripts/sync-state.yaml`) remembers its OpenAlex ID and
+won't re-suggest it.
+
+**Defaults to the last 2 years.** Pass `--since 2020` to expand the
+window if you're back-filling old papers.
+
+**Why not Google Scholar?** Google has no public API. Every "Scholar
+sync" tool actually scrapes the page, gets blocked from cloud IPs, and
+breaks when Google tweaks the markup. OpenAlex indexes the same
+Crossref/PubMed/arXiv data and is free + stable.
+
+---
+
 ## Add a news item
 
 Open [src/content/news/content.yaml](src/content/news/content.yaml). Add a block:

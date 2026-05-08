@@ -21,3 +21,7 @@ pnpm-debug.log*
 # editors
 .vscode/
 .idea/
+
+# OpenAlex sync — pending file is ephemeral output of scripts/sync_publications.py
+pending_publications.yaml
+scripts/__pycache__/
