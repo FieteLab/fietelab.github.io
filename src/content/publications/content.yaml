@@ -98,7 +98,6 @@ forced-rendering-2025:
   authors: "Qiyao (Catherine) Liang, Daoyuan Qian, L. Ziyin, Ila Fiete"
   year: 2025
   venue: "ICML"
-  citation: "Proc. ICML (2025)"
   link: "https://openreview.net/pdf?id=rkHCHI5H5W"
 
 ibl-brain-wide-2025:
@@ -106,7 +105,6 @@ ibl-brain-wide-2025:
   authors: "D. Angelaki, et al. (International Brain Laboratory)"
   year: 2025
   venue: "Nature"
-  citation: "Nature (2025)"
   link: "https://www.nature.com/articles/s41586-025-09235-0"
 
 ibl-prior-2025:
@@ -114,7 +112,6 @@ ibl-prior-2025:
   authors: "C. Findling, et al. (International Brain Laboratory)"
   year: 2025
   venue: "Nature"
-  citation: "Nature (2025)"
   link: "https://www.nature.com/articles/s41586-025-09226-1"
 
 cann-recipe-2025:
@@ -148,7 +145,6 @@ global-modules-2025:
   authors: "Mikail Khona, Sarthak Chandra, Ila Fiete"
   year: 2025
   venue: "Nature"
-  citation: "Nature (2025)"
   link: "https://www.nature.com/articles/s41586-024-08541-3"
 
 episodic-scaffold-2025:
@@ -157,7 +153,6 @@ episodic-scaffold-2025:
   authors: "Sarthak Chandra*, Sugandha Sharma*, Rishidev Chaudhuri, Ila Fiete"
   year: 2025
   venue: "Nature"
-  citation: "Nature (2025)"
   link: "https://www.nature.com/articles/s41586-024-08541-3"
   annotation: "* co-first authors"
 
@@ -174,7 +169,6 @@ latent-memories-2025:
   authors: "Sunny Duan, Mikail Khona, Abhi Iyer, Rylan Schaeffer, Ila Fiete"
   year: 2025
   venue: "ICLR"
-  citation: "ICLR (2025)"
   link: "https://openreview.net/forum?id=KSBx6FBZpE"
 
 # ============================================================
@@ -250,7 +244,6 @@ diffusion-factorize-2024:
   authors: "Qiyao (Catherine) Liang, Z. Liu, Mitchell Ostrow, Ila Fiete"
   year: 2024
   venue: "NeurIPS"
-  citation: "Proc. NeurIPS (2024)"
   link: "https://proceedings.neurips.cc/paper_files/paper/2024/hash/1b60893887328a6a50dd00ae0d5ed51a-Abstract-Conference.html"
 
 grid-cell-fragmentation-2024:
@@ -275,7 +268,6 @@ retrosplenial-2024:
   authors: "J. Voigts, Ingmar Kanitscheider, N. J. Miller, E. H. S. Toloza, J. P. Newman, Ila Fiete, M. T. Harnett"
   year: 2024
   venue: "Neuron"
-  citation: "Neuron (2024)"
   link: "https://www.biorxiv.org/content/10.1101/2022.04.12.488024v1"
 
 grid-cells-cognition-2024:
@@ -291,7 +283,6 @@ propofol-2024:
   authors: "Adam Joseph Eisen, Leo Kozachkov, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, Sarthak Chandra, E. N. Brown, Ila Fiete, E. K. Miller"
   year: 2024
   venue: "Neuron"
-  citation: "Neuron (2024)"
   link: "https://pubmed.ncbi.nlm.nih.gov/39013467/"
   annotation: "+ co-senior authors"
 
@@ -300,7 +291,6 @@ mental-nav-2024:
   authors: "S. Neupane, Ila Fiete, M. Jazayeri"
   year: 2024
   venue: "Nature"
-  citation: "Nature (2024)"
   link: "https://www.nature.com/articles/s41586-024-07557-z"
 
 multi-region-ccn-2024:
@@ -308,7 +298,6 @@ multi-region-ccn-2024:
   authors: "X. Yi, Jaedong Hwang, C. Brody, D. Tank, Ila Fiete"
   year: 2024
   venue: "CCN"
-  citation: "Conference on Cognitive Computational Neuroscience (2024)"
   link: "https://2024.ccneuro.org/"
 
 morris-water-2024:
@@ -316,7 +305,6 @@ morris-water-2024:
   authors: "Raymond L. Wang, Jaedong Hwang, Akhilan Boopathy, Ila Fiete"
   year: 2024
   venue: "ICML"
-  citation: "ICML (2024)"
   link: "https://proceedings.mlr.press/v235/"
 
 protein-fitness-2024:
@@ -324,7 +312,6 @@ protein-fitness-2024:
   authors: "A. Kirjner, J. Yim, R. Samusevich, T. Jaakkola, R. Barzilay, Ila Fiete"
   year: 2024
   venue: "ICLR"
-  citation: "ICLR (2024)"
   link: "https://openreview.net/pdf?id=rxlF2Zv8x0"
 
 # ============================================================
@@ -413,7 +400,6 @@ grid-place-scaffold-2023:
   authors: "Jaedong Hwang, S. Neupane, M. Jazayeri, Ila Fiete"
   year: 2023
   venue: "CCN"
-  citation: "Conference on Cognitive Computational Neuroscience (2023)"
   link: "https://2023.ccneuro.org/"
 
 interpolation-threshold-2023:
@@ -446,7 +432,6 @@ winning-lottery-2023:
   authors: "Mikail Khona*, Sarthak Chandra*, J. J. Ma, Ila Fiete"
   year: 2023
   venue: "Neural Computation"
-  citation: "Neural Computation (2023)"
   link: "https://arxiv.org/pdf/2207.03523.pdf"
   annotation: "* co-first authors"
 
@@ -459,7 +444,6 @@ no-free-lunch-2022:
   authors: "Rylan Schaeffer, Mikail Khona, Ila Fiete"
   year: 2022
   venue: "NeurIPS"
-  citation: "NeurIPS (2022)"
   link: "https://openreview.net/forum?id=syU-XvinTI1"
 
 attractor-integrator-2022:
@@ -468,7 +452,6 @@ attractor-integrator-2022:
   authors: "Mikail Khona, Ila Fiete"
   year: 2022
   venue: "Nature Reviews Neuroscience"
-  citation: "Nature Reviews Neuroscience (2022)"
   link: "https://www.nature.com/articles/s41583-022-00642-0"
 
 wide-no-backprop-2022:
@@ -476,7 +459,6 @@ wide-no-backprop-2022:
   authors: "Akhilan Boopathy, Ila Fiete"
   year: 2022
   venue: "ICML"
-  citation: "ICML, PMLR (2022)"
   link: "https://proceedings.mlr.press/v162/boopathy22a.html"
 
 content-addressable-2022:
@@ -485,7 +467,6 @@ content-addressable-2022:
   authors: "Sugandha Sharma, Sarthak Chandra, Ila Fiete"
   year: 2022
   venue: "ICML"
-  citation: "ICML, PMLR (2022)"
   link: "https://proceedings.mlr.press/v162/sharma22b.html"
 
 streaming-inference-2022:
@@ -493,7 +474,6 @@ streaming-inference-2022:
   authors: "Rylan Schaeffer, Y. Du, G. K. Liu, Ila Fiete"
   year: 2022
   venue: "ICML"
-  citation: "ICML, PMLR (2022)"
   link: "https://proceedings.mlr.press/v161/schaeffer21a.html"
 
 map-induction-2022:
@@ -502,7 +482,6 @@ map-induction-2022:
   authors: "Sugandha Sharma, A. Curtis, M. Kryven, J. Tenenbaum, Ila Fiete"
   year: 2022
   venue: "ICLR"
-  citation: "ICLR (2022)"
   link: "https://openreview.net/forum?id=1NUsBU-7HAL"
 
 neurotensin-2022:
@@ -510,7 +489,6 @@ neurotensin-2022:
   authors: "H. Li, et al."
   year: 2022
   venue: "Nature"
-  citation: "Nature (2022)"
   link: "https://pubmed.ncbi.nlm.nih.gov/35859170/"
 
 cortical-social-2022:
@@ -518,7 +496,6 @@ cortical-social-2022:
   authors: "N. Padilla-Coreano, et al."
   year: 2022
   venue: "Nature"
-  citation: "Nature (2022)"
   link: "https://pubmed.ncbi.nlm.nih.gov/35296862/"
 
 # ============================================================
@@ -530,7 +507,6 @@ mulders-2021:
   authors: "Dounia Mulders, Manyi Yim, J. S. Lee, A. K. Lee, T. Taillefumier, Ila Fiete"
   year: 2021
   venue: "bioRxiv"
-  citation: "bioRxiv (2021)"
   link: "https://www.biorxiv.org/content/10.1101/2021.11.20.469406v1"
 
 fragmented-maps-2021:
@@ -538,7 +514,6 @@ fragmented-maps-2021:
   authors: "Mirko Klukas, Sugandha Sharma, Y. Du, T. Lozano-Perez, L. Kaelbling, Ila Fiete"
   year: 2021
   venue: "bioRxiv"
-  citation: "bioRxiv (2021)"
   link: "https://www.biorxiv.org/content/10.1101/2021.10.29.466499v1"
 
 theoretical-decipher-2021:
@@ -546,7 +521,6 @@ theoretical-decipher-2021:
   authors: "J. Gjorgjieva, Ila Fiete"
   year: 2021
   venue: "Current Opinion in Neurobiology"
-  citation: "Curr. Op. Neurobiology (2021)"
   link: "https://www.sciencedirect.com/science/article/abs/pii/S0959438821001379"
 
 online-mixture-2021:
@@ -564,7 +538,6 @@ place-cell-capacity-2021:
   authors: "Manyi Yim, L. Sadun, Ila Fiete, T. Taillefumier"
   year: 2021
   venue: "eLife"
-  citation: "eLife (2021)"
   link: "https://elifesciences.org/articles/62702"
 
 ibl-decision-making-2021:
@@ -611,7 +584,6 @@ reverse-engineering-rnn-2020:
   authors: "Rylan Schaeffer, Mikail Khona, Leenoy Meshulam, The International Brain Laboratory, Ila Fiete"
   year: 2020
   venue: "NeurIPS"
-  citation: "NeurIPS (2020)"
   link: "https://papers.nips.cc/paper/2020/hash/30f0641c041f03d94e95a76b9d8bd58f-Abstract.html"
 
 mind-of-a-mouse-2020:
@@ -629,7 +601,6 @@ parallel-decision-2020:
   authors: "Birgit Kriener*, Rishidev Chaudhuri*, Ila Fiete"
   year: 2020
   venue: "PNAS"
-  citation: "PNAS (2020)"
   link: "https://www.pnas.org/content/early/2020/09/29/1917551117"
   annotation: "* co-first authors"
 
@@ -639,7 +610,6 @@ systematic-errors-2020:
   authors: "Abhranil Das, Ila Fiete"
   year: 2020
   venue: "Nature Neuroscience"
-  citation: "Nature Neurosci. (2020)"
   link: "https://www.nature.com/articles/s41593-020-0699-2"
 
 path-integration-aging-2020:
@@ -648,7 +618,6 @@ path-integration-aging-2020:
   authors: "M. Stangl*, Ingmar Kanitscheider*, M. Riemer, Ila Fiete, T. Wolbers"
   year: 2020
   venue: "Nature Communications"
-  citation: "Nature Communications (2020)"
   link: "https://www.nature.com/articles/s41467-020-15805-9"
   annotation: "* co-first; + co-senior authors"
 
@@ -658,7 +627,6 @@ flexible-grid-2020:
   authors: "Mirko Klukas, M. Lewis, Ila Fiete"
   year: 2020
   venue: "PLOS Computational Biology"
-  citation: "PLoS Comp. Biol. (2020)"
   link: "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007796"
 
 # ============================================================
@@ -671,7 +639,6 @@ bipartite-hopfield-2019:
   authors: "Rishidev Chaudhuri, Ila Fiete"
   year: 2019
   venue: "NeurIPS"
-  citation: "Proc. NeurIPS (2019)"
   link: "https://papers.nips.cc/paper/8985-bipartite-expander-hopfield-networks-as-self-decoding-high-capacity-error-correcting-codes"
 
 intrinsic-dynamics-2019:
@@ -680,7 +647,6 @@ intrinsic-dynamics-2019:
   authors: "Rishidev Chaudhuri, Berk Gercek*, Biraj Pandey*, A. Peyrache, Ila Fiete"
   year: 2019
   venue: "Nature Neuroscience"
-  citation: "Nature Neurosci. (2019)"
   link: "https://www.nature.com/articles/s41593-019-0460-x"
   annotation: "* co-second authors"
 
@@ -700,7 +666,6 @@ kernl-2019:
   authors: "Christopher Roth, Ingmar Kanitscheider, Ila Fiete"
   year: 2019
   venue: "ICLR"
-  citation: "Proceedings of ICLR (2019)"
   link: "https://openreview.net/forum?id=ryGfnoC5KQ"
 
 # ============================================================
@@ -722,7 +687,6 @@ inferring-circuit-2018:
   authors: "John Widloski, M. Marder, Ila Fiete"
   year: 2018
   venue: "eLife"
-  citation: "eLife (2018)"
   link: "https://elifesciences.org/articles/33503"
 
 # ============================================================
@@ -734,7 +698,6 @@ reconfigurable-hippocampal-2017:
   authors: "Ingmar Kanitscheider, Ila Fiete"
   year: 2017
   venue: "bioRxiv"
-  citation: "bioRxiv (2017)"
   link: "https://www.biorxiv.org/content/early/2017/12/08/231159"
 
 ibl-2017:
@@ -743,7 +706,6 @@ ibl-2017:
   authors: "The International Brain Laboratory"
   year: 2017
   venue: "Neuron"
-  citation: "Neuron (2017)"
   link: "http://www.cell.com/neuron/fulltext/S0896-6273(17)31136-4"
 
 training-rnn-nav-2017:
@@ -752,7 +714,6 @@ training-rnn-nav-2017:
   authors: "Ingmar Kanitscheider, Ila Fiete"
   year: 2017
   venue: "NeurIPS"
-  citation: "In Advances in NIPS (2017)"
   link: "http://papers.nips.cc/paper/7039-training-recurrent-networks-to-generate-hypotheses-about-how-the-brain-solves-hard-navigation-problems"
 
 short-term-memory-bound-2017:
