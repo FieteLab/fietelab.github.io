@@ -39,11 +39,38 @@ export function formatAuthors(authors: string): string {
 }
 
 /**
+ * Old / alternate names a citation may use for the same venue. When we
+ * check whether a citation is redundant, we accept any of these as
+ * equivalent to the canonical venue. e.g. citation="Proc. ICML (2025)"
+ * with venue="ICML" → redundant.
+ */
+const VENUE_ALIASES: Record<string, string[]> = {
+  ICML: ['Proc. ICML', 'ICML, PMLR', 'ICML PMLR'],
+  NeurIPS: ['Proc. NeurIPS', 'Advances in NIPS'],
+  ICLR: ['Proceedings of ICLR'],
+  TMLR: ['Trans. MLR', 'Transactions on Machine Learning Research'],
+  UAI: [
+    'PMLR Conference on Uncertainty in AI',
+    'Conference on Uncertainty in AI',
+  ],
+  CCN: ['Conference on Cognitive Computational Neuroscience'],
+  'Nature Neuroscience': ['Nature Neurosci.', 'Nature Neurosci'],
+  'PLOS Computational Biology': ['PLoS Comp. Biol.'],
+  'Journal of Neurophysiology': ['J. Neurophysiology'],
+  'Journal of Neuroscience': ['J. Neuroscience'],
+  'Journal of Applied Physics': ['J. Applied Physics'],
+  'Current Opinion in Systems Biology': ['Curr. Opinion in Systems Biol.'],
+  'Current Opinion in Neurobiology': ['Curr. Op. Neurobiology'],
+  'Allerton Conference': [
+    '50th Allerton Conf. on Communication, Control, and Computing',
+  ],
+}
+
+/**
  * True when a `citation` string adds nothing on top of `venue` + `year`.
- * e.g. citation="Nature (2025)" + venue="Nature" + year=2025 → redundant.
- *      citation="Nature 999, 1-10 (2025)" → not redundant (has volume/pages).
- *      citation="arXiv:2512.13707 (2025)" + venue="arXiv preprint" → not redundant
- *      (has the arXiv ID).
+ * Accepts old venue aliases ("Proc. ICML" for "ICML") and a leading "In "
+ * (book chapters / "In Advances in NIPS"). Anything with extra info — DOI,
+ * arXiv ID, volume, page range, additional preprint — is kept.
  */
 export function isRedundantCitation(
   citation: string,
@@ -51,15 +78,23 @@ export function isRedundantCitation(
   year: number,
 ): boolean {
   const norm = (s: string) =>
-    s
-      .replace(/[().,;:]/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim()
-      .toLowerCase()
+    s.replace(/[().,;:]/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase()
   const c = norm(citation)
-  const v = norm(venue)
   const y = String(year)
-  return c === `${v} ${y}` || c === `${y} ${v}` || c === v
+  const candidates = [venue, ...(VENUE_ALIASES[venue] ?? [])]
+  for (const a of candidates) {
+    const v = norm(a)
+    if (
+      c === v ||
+      c === `${v} ${y}` ||
+      c === `${y} ${v}` ||
+      c === `in ${v}` ||
+      c === `in ${v} ${y}`
+    ) {
+      return true
+    }
+  }
+  return false
 }
 
 /**
