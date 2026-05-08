@@ -1,0 +1,70 @@
+---
+import { abbreviateAuthor } from '@/lib/data'
+
+interface Props {
+  /** Raw `authors` string from the YAML, comma-separated. */
+  authors: string
+  /**
+   * Map from canonical author full-name → link target.
+   * Built once via getAuthorLinkMap() in lib/data.ts.
+   */
+  linkMap: Map<string, { href: string; external: boolean }>
+  /**
+   * Optional canonical full-name to render in bold (used on a person's
+   * own /people/<slug>/ page so their entry stands out).
+   */
+  highlightName?: string
+  /** Aliases of `highlightName` (from the person's authorAliases frontmatter). */
+  highlightAliases?: string[]
+}
+
+const { authors, linkMap, highlightName, highlightAliases = [] } = Astro.props
+const tokens = authors.split(',').map((t) => t.trim())
+---
+
+<>
+  {
+    tokens.map((raw, i) => {
+      const trailingMatch = raw.match(/^(.*?)([\*\+]+)\s*$/)
+      const stripped = (trailingMatch ? trailingMatch[1] : raw).trim()
+      const trailing = trailingMatch ? trailingMatch[2] : ''
+      const display = abbreviateAuthor(raw)
+      const link = linkMap.get(stripped)
+      const isHighlight =
+        !!highlightName &&
+        (stripped === highlightName || highlightAliases.includes(stripped))
+
+      // Render: <a> if linked, <strong> if highlighted, plain otherwise.
+      // Trailing markers stay outside any link so they're not styled blue.
+      const displayCore = trailing
+        ? display.slice(0, display.length - trailing.length)
+        : display
+
+      let inner: any
+      if (link) {
+        inner = (
+          <a
+            href={link.href}
+            target={link.external ? '_blank' : undefined}
+            rel={link.external ? 'noopener' : undefined}
+            class="text-[color:var(--color-text)] no-underline hover:text-[color:var(--color-accent)] hover:underline"
+          >
+            {isHighlight ? <strong>{displayCore}</strong> : displayCore}
+          </a>
+        )
+      } else if (isHighlight) {
+        inner = <strong class="text-[color:var(--color-text)]">{displayCore}</strong>
+      } else {
+        inner = <span>{displayCore}</span>
+      }
+
+      return (
+        <>
+          {i > 0 && ', '}
+          {inner}
+          {trailing}
+        </>
+      )
+    })
+  }
+</>

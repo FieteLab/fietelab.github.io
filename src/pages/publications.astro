@@ -2,11 +2,13 @@
 import Layout from '@/layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 import { topicColor, TOPIC_ORDER } from '@/lib/topics'
-import { formatAuthors, isRedundantCitation } from '@/lib/data'
+import { isRedundantCitation, getAuthorLinkMap } from '@/lib/data'
+import AuthorList from '@/components/AuthorList.astro'
 
 const allPubs = (await getCollection('publications')).sort(
   (a, b) => b.data.year - a.data.year,
 )
+const linkMap = await getAuthorLinkMap()
 const presentTopics = new Set<string>()
 for (const p of allPubs) {
   for (const t of p.data.topics ?? []) presentTopics.add(t)
@@ -127,7 +129,7 @@ const years = [...byYear.keys()].sort((a, b) => b - a)
                     )}
                   </div>
                   <div class="mt-1 text-sm text-[color:var(--color-text-muted)]">
-                    {formatAuthors(pub.data.authors)}
+                    <AuthorList authors={pub.data.authors} linkMap={linkMap} />
                   </div>
                   <div class="mt-2 flex flex-wrap items-center gap-2 text-xs">
                     <span class="font-semibold text-[color:var(--color-accent)]">

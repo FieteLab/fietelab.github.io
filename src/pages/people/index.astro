@@ -99,6 +99,20 @@ const alumni = (await getCollection('alumni')).sort((a, b) => a.data.name.locale
             <div class="text-xs text-[color:var(--color-text-soft)]">
               {a.data.wasA}{a.data.now && <> → {a.data.now}</>}
             </div>
+            {(a.data.website || a.data.scholar) && (
+              <div class="mt-2 flex flex-wrap gap-2 text-xs">
+                {a.data.website && (
+                  <a href={a.data.website} target="_blank" rel="noopener" class="rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-bg-alt)] px-2 py-0.5">
+                    Website
+                  </a>
+                )}
+                {a.data.scholar && (
+                  <a href={a.data.scholar} target="_blank" rel="noopener" class="rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-bg-alt)] px-2 py-0.5">
+                    Scholar
+                  </a>
+                )}
+              </div>
+            )}
           </li>
         ))}
       </ul>

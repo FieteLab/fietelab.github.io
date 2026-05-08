@@ -44,6 +44,7 @@ const alumni = defineCollection({
     wasA: z.string(),
     now: z.string().nullable().optional(),
     website: z.string().url().optional(),
+    scholar: z.string().url().optional(),
   }),
 })
 

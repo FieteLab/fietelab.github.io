@@ -5,174 +5,194 @@ sarthak-chandra:
   wasA: "Postdoc"
   now: "Assistant Professor, ICTS India"
   website: "https://www.icts.res.in/people/sarthak-chandra"
-
+  scholar: "https://scholar.google.com/citations?user=Mx8q1rgAAAAJ"
 laureline-logiaco:
   name: "Laureline Logiaco"
   wasA: "Postdoc and Simons Fellow"
   now: "Assistant Professor, University of Colorado Anschutz School of Medicine"
   website: "https://www.necolelab.com/"
-
+  scholar: "https://scholar.google.com/citations?user=NFQh44IAAAAJ"
 akhilan-boopathy:
   name: "Akhilan Boopathy"
   wasA: "Graduate Student"
   now: "Research Scientist, Amazon"
-
+  website: "https://akhilanb.github.io/"
+  scholar: "https://scholar.google.com/citations?user=21alU7EAAAAJ"
 federico-claudi:
   name: "Federico Claudi"
   wasA: "Postdoc"
   now: "Staff Scientist, Precision Neuroscience"
-
+  website: "https://fedeclaudi.github.io/"
+  scholar: "https://scholar.google.com/citations?user=8eDOmAQAAAAJ"
 mikail-khona:
   name: "Mikail Khona"
   wasA: "Graduate Student"
   now: "Research Scientist, NVIDIA"
-
+  website: "https://mikailkhona.github.io/"
+  scholar: "https://scholar.google.com/citations?user=K5f0SYQAAAAJ"
 rylan-schaeffer:
   name: "Rylan Schaeffer"
   wasA: "Masters student"
   now: "Staff Scientist, Meta (previously Stanford, Google)"
-
+  website: "https://rylanschaeffer.github.io/"
+  scholar: "https://scholar.google.com/citations?user=6tMEGz8AAAAJ"
 abhi-iyer:
   name: "Abhi Iyer"
   wasA: "Graduate student + ICoN Fellow"
   now: "Graduate student, MIT"
-
+  website: "https://engineering.mit.edu/people/abhiram-iyer"
+  scholar: "https://scholar.google.com/citations?user=pXIRasMAAAAJ"
 sugandha-sharma:
   name: "Sugandha Sharma"
   wasA: "Graduate Student"
   now: "Staff Scientist, NVIDIA"
-
+  scholar: "https://scholar.google.com/citations?user=FsXCQc8AAAAJ"
 alex-negron:
   name: "Alex Negron"
   wasA: "PostBacc"
   now: "Graduate student, Princeton University"
-
+  website: "https://alexnegron.com/"
+  scholar: "https://scholar.google.com/citations?user=FOMHR0UAAAAJ"
 leo-kozachkov:
   name: "Leo Kozachkov"
   wasA: "Postdoc + ICoN Fellow"
   now: "Assistant Professor, Brown University"
-
+  website: "https://kozleo.github.io/"
+  scholar: "https://scholar.google.com/citations?user=V5dtdeUAAAAJ"
 mingye-wang:
   name: "Mingye (Christina) Wang"
   wasA: "Undergrad researcher"
   now: "Graduate student, Columbia"
-
+  website: "https://ctn.zuckermaninstitute.columbia.edu/people/christina-mingye-wang"
+  scholar: "https://scholar.google.com/citations?user=SMUwXgYAAAAJ"
 aaditya-singh:
   name: "Aaditya Singh"
   wasA: "M.Eng."
   now: "Graduate student, UCL"
-
+  website: "https://aadityasingh.github.io/"
+  scholar: "https://scholar.google.com/citations?user=9OPKqmMAAAAJ"
 dounia-mulders:
   name: "Dounia Mulders"
   wasA: "Postdoc"
   now: null
-
+  website: "https://www.nocions.org/postdoc/dounia-mulders"
+  scholar: "https://scholar.google.com/citations?user=zRODxo0AAAAJ"
 mirko-klukas:
   name: "Mirko Klukas"
   wasA: "Postdoc"
   now: null
-
+  website: "https://mirkoklukas.com/"
+  scholar: "https://scholar.google.com/citations?user=0lRYDwEAAAAJ"
 leenoy-meshulam:
   name: "Leenoy Meshulam"
   wasA: "Postdoc"
   now: "Assistant Professor, Brown University (previously Swartz Fellow, U. Washington)"
-
+  website: "https://vivo.brown.edu/display/lmeshula"
+  scholar: "https://scholar.google.com/citations?user=z_9bub8AAAAJ"
 manyi-yim:
   name: "Manyi Yim"
   wasA: "Postdoc"
   now: "AI industry (previously Instructor, SMU)"
-
+  website: "https://myyim.github.io/"
+  scholar: "https://scholar.google.com/citations?user=rEVQr-kAAAAJ"
 tzuhsuan-ma:
   name: "Tzuhsuan Ma"
   wasA: "Graduate Student"
   now: "Postdoc, HHMI/Janelia"
-
+  website: "https://www.janelia.org/people/tzuhsuan-ma"
+  scholar: "https://scholar.google.com/citations?user=EPqclcQAAAAJ"
 rishidev-chaudhuri:
   name: "Rishidev Chaudhuri"
   wasA: "Postdoc"
   now: "Assistant Professor, UC Davis"
-
+  website: "https://chaudhurilab.ucdavis.edu/"
+  scholar: "https://scholar.google.com/citations?user=1sVG1IgAAAAJ"
 ingmar-kanitscheider:
   name: "Ingmar Kanitscheider"
   wasA: "Postdoc"
   now: "Research Scientist, OpenAI"
-
+  scholar: "https://scholar.google.com/citations?user=tf-wLXoAAAAJ"
 christopher-roth:
   name: "Christopher Roth"
   wasA: "Graduate Student"
   now: "Graduate student, UT Austin"
-
+  website: "https://www.simonsfoundation.org/people/christopher-roth/"
+  scholar: "https://scholar.google.com/citations?user=YGOQvqwAAAAJ"
 berk-gercek:
   name: "Berk Gercek"
   wasA: "Undergrad"
   now: "Graduate student, University of Geneva"
-
+  website: "https://www.simonsfoundation.org/people/berk-gercek/"
+  scholar: "https://scholar.google.com/citations?user=6QgS-UMAAAAJ"
 biraj-pandey:
   name: "Biraj Pandey"
   wasA: "Undergrad"
   now: "Graduate student, University of Washington"
-
+  website: "https://amath.washington.edu/people/biraj-pandey"
 maxwell-gray:
   name: "Maxwell Gray"
   wasA: "Undergrad"
   now: "Graduate student, University of Washington"
-
 abhranil-das:
   name: "Abhranil Das"
   wasA: "Graduate Student"
   now: "Graduate student, UT Austin"
-
+  website: "https://abhranil.net/"
+  scholar: "https://scholar.google.com/citations?user=EZuCIygAAAAJ"
 birgit-kriener:
   name: "Birgit Kriener"
   wasA: "Postdoc"
   now: "Research scientist, University of Oslo, Norway"
-
+  website: "https://www.med.uio.no/imb/english/research/projects/finalphagy/news/meet-researcher-birgit-kriener.html"
 kijung-yoon:
   name: "Kijung Yoon"
   wasA: "Graduate Student"
   now: "Associate Professor, Hanyang University, Korea"
-
+  website: "http://yoonlab.hanyang.ac.kr/people/"
+  scholar: "https://scholar.google.com/citations?user=YH7_rOEAAAAJ"
 john-widloski:
   name: "John Widloski"
   wasA: "Graduate Student"
   now: "Postdoctoral researcher, UC Berkeley"
-
+  website: "http://john.widloski.com/"
+  scholar: "https://scholar.google.com/citations?user=i3XXK_QAAAAJ"
 michael-buice:
   name: "Michael Buice"
   wasA: "Postdoc"
   now: "Senior scientist, Allen Institute"
-
+  website: "https://alleninstitute.org/person/michael-buice/"
 yongseok-yoo:
   name: "Yongseok Yoo"
   wasA: "Graduate Student"
-  now: "Assistant Professor, Incheon National University, Korea"
-
+  now: "Associate Professor, Soongsil University, Korea"
+  website: "https://ssuai.pages.dev"
+  scholar: "https://scholar.google.com/citations?user=pzx4duwAAAAJ"
 abhinav-singh:
   name: "Abhinav Singh"
   wasA: "Postdoc"
   now: "Data scientist, Peak, UK"
-
+  website: "https://humphries-lab.org/members/abhinav-singh.html"
+  scholar: "https://scholar.google.com/citations?user=HyAj22UAAAAJ"
 daniel-robles-llana:
   name: "Daniel Robles Llana"
   wasA: "Postdoc"
   now: "Postdoc, University of Geneva"
-
 ila-varma:
   name: "Ila Varma"
   wasA: "Undergrad"
-  now: "Assistant Professor, UC San Diego"
-
+  now: "Associate Professor of Mathematics, University of Toronto"
+  website: "https://www.math.utoronto.ca/~ila/"
 prashant-joshi:
   name: "Prashant Joshi"
   wasA: "Postdoc"
   now: "Head, AI/ML group, Fractal Analytics, India"
-
 ni-ji:
   name: "Ni Ji"
   wasA: "Undergrad"
   now: "Principal Investigator/Faculty, Chinese Institute for Brain Research"
-
+  scholar: "https://scholar.google.com/citations?user=phTqe74AAAAJ"
 peter-welinder:
   name: "Peter Welinder"
   wasA: "Undergrad"
   now: "VP, OpenAI"
+  scholar: "https://scholar.google.com/citations?user=B76dD7YAAAAJ"

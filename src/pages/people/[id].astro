@@ -2,7 +2,8 @@
 import Layout from '@/layouts/Layout.astro'
 import { Image } from 'astro:assets'
 import { getCollection, render, type CollectionEntry } from 'astro:content'
-import { getPublicationsByPerson, abbreviateAuthor } from '@/lib/data'
+import { getPublicationsByPerson, getAuthorLinkMap } from '@/lib/data'
+import AuthorList from '@/components/AuthorList.astro'
 import { topicColor } from '@/lib/topics'
 
 export async function getStaticPaths() {
@@ -21,6 +22,7 @@ const { person } = Astro.props
 const data = person.data
 const { Content } = await render(person)
 const personPubs = await getPublicationsByPerson(person)
+const linkMap = await getAuthorLinkMap()
 
 function linkLabel(link?: string) {
   if (!link) return null
@@ -158,21 +160,12 @@ const initials = data.name
                   )}
                 </div>
                 <div class="mt-1 text-xs text-[color:var(--color-text-muted)]">
-                  {pub.data.authors.split(',').map((raw, i) => {
-                    const trimmed = raw.trim()
-                    const stripped = trimmed.replace(/[*+]+$/, '').trim()
-                    const aliases = data.authorAliases ?? []
-                    const isPerson =
-                      stripped === data.name ||
-                      aliases.some((a) => stripped === a)
-                    const display = abbreviateAuthor(trimmed)
-                    return (
-                      <>
-                        {i > 0 && ', '}
-                        {isPerson ? <strong class="text-[color:var(--color-text)]">{display}</strong> : display}
-                      </>
-                    )
-                  })}
+                  <AuthorList
+                    authors={pub.data.authors}
+                    linkMap={linkMap}
+                    highlightName={data.name}
+                    highlightAliases={data.authorAliases ?? []}
+                  />
                 </div>
                 <div class="mt-1.5 flex flex-wrap items-center gap-2 text-xs">
                   <span class="font-semibold text-[color:var(--color-accent)]">

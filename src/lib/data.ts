@@ -39,6 +39,33 @@ export function formatAuthors(authors: string): string {
 }
 
 /**
+ * Build a map from canonical author full-name to a link target. Includes
+ * both current lab members (→ /people/<slug>/) and alumni who have a
+ * personal website on record (→ external URL). Used to render clickable
+ * author bylines in publications.
+ */
+export async function getAuthorLinkMap(): Promise<
+  Map<string, { href: string; external: boolean }>
+> {
+  const map = new Map<string, { href: string; external: boolean }>()
+  const people = await getCollection('people')
+  for (const p of people) {
+    map.set(p.data.name, { href: `/people/${p.id}/`, external: false })
+    for (const alias of p.data.authorAliases ?? []) {
+      map.set(alias, { href: `/people/${p.id}/`, external: false })
+    }
+  }
+  const alumni = await getCollection('alumni')
+  for (const a of alumni) {
+    const target = a.data.website ?? a.data.scholar
+    if (target) {
+      map.set(a.data.name, { href: target, external: true })
+    }
+  }
+  return map
+}
+
+/**
  * Old / alternate names a citation may use for the same venue. When we
  * check whether a citation is redundant, we accept any of these as
  * equivalent to the canonical venue. e.g. citation="Proc. ICML (2025)"
