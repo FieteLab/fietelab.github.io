@@ -1,44 +1,75 @@
 import { getCollection, type CollectionEntry } from 'astro:content'
 
 /**
- * Build a regex that matches abbreviated forms of a person's name in a
- * publication's `authors` string. Handles common citation styles:
- *   "Jaedong Hwang" → matches "J. Hwang", "JD Hwang", "J. D. Hwang"
- *   "Ila Fiete"    → matches "I. R. Fiete", "I.R. Fiete", "IR Fiete"
- *   "Adam Joseph Eisen" → matches "A. Eisen", "A.J. Eisen", "AJ Eisen"
+ * Abbreviate one author name for display.
+ *   "Jaedong Hwang"           → "J. Hwang"
+ *   "Adam Joseph Eisen"       → "A. Eisen"
+ *   "Qiyao (Catherine) Liang" → "Q. Liang"
+ *   "I. R. Fiete"             → "I. R. Fiete"   (already abbreviated, untouched)
+ *   "S. J. Lee"               → "S. J. Lee"
+ *   "International Brain Laboratory" → unchanged
  */
-function authorRegex(fullName: string): RegExp {
-  const cleaned = fullName.replace(/\([^)]+\)/g, '').replace(/\s+/g, ' ').trim()
+export function abbreviateAuthor(author: string): string {
+  // Preserve trailing markers like "*", "+" that denote co-first / co-senior
+  const trailingMatch = author.match(/^(.*?)([\*\+]+)\s*$/)
+  const trailing = trailingMatch ? trailingMatch[2] : ''
+  const core = (trailingMatch ? trailingMatch[1] : author).trim()
+
+  const cleaned = core.replace(/\([^)]+\)/g, '').replace(/\s+/g, ' ').trim()
   const tokens = cleaned.split(' ').filter(Boolean)
-  if (tokens.length < 2) return /(?!)/
-  const last = tokens[tokens.length - 1].replace(/[^A-Za-z\-]/g, '')
-  const firstInitial = tokens[0][0]
-  // First initial, then up to 3 optional middle-initial tokens (each is a
-  // capital letter possibly followed by a period and space), then the
-  // surname at a word boundary. Asterisks and other annotation chars are
-  // tolerated by relying on \b which treats them as boundaries.
-  return new RegExp(`\\b${firstInitial}(?:[A-Z]?\\.?\\s*){0,3}${last}\\b`, 'i')
+  if (tokens.length < 2) return author
+
+  // Heuristic: if the FIRST token looks like a spelled-out first name
+  // (>=3 chars, starts with a capital, contains lowercase, no period),
+  // abbreviate it; otherwise return the original (already abbreviated).
+  const first = tokens[0]
+  const looksFull = first.length >= 3 && /[a-z]/.test(first) && !first.endsWith('.')
+  if (!looksFull) return author
+
+  const last = tokens[tokens.length - 1]
+  return `${first[0]}. ${last}${trailing}`
+}
+
+/** Format the comma-separated authors string with each author abbreviated. */
+export function formatAuthors(authors: string): string {
+  return authors
+    .split(',')
+    .map((a) => abbreviateAuthor(a.trim()))
+    .join(', ')
 }
 
 /**
  * Return all publications a person co-authored, newest first.
- * Uses (a) explicit `authorAliases` from the person's frontmatter as
- * substring matches, plus (b) an auto-derived regex from the full name.
+ *
+ * Primary match: the person's full name appears verbatim in the paper's
+ *   `authors` string (this is the canonical form after the YAML rewrite).
+ * Fallbacks: explicit `authorAliases` from the frontmatter, plus a
+ *   permissive regex match for any abbreviated form that escaped the
+ *   rewrite.
  */
 export async function getPublicationsByPerson(
   person: CollectionEntry<'people'>,
 ): Promise<CollectionEntry<'publications'>[]> {
+  const fullName = person.data.name
   const aliases = person.data.authorAliases ?? []
-  const re = authorRegex(person.data.name)
+  const cleaned = fullName.replace(/\([^)]+\)/g, '').replace(/\s+/g, ' ').trim()
+  const tokens = cleaned.split(' ').filter(Boolean)
+  const last = tokens.length >= 2 ? tokens[tokens.length - 1].replace(/[^A-Za-z\-]/g, '') : ''
+  const firstInitial = tokens.length >= 2 ? tokens[0][0] : ''
+  const fallbackRe = last
+    ? new RegExp(`\\b${firstInitial}(?:[A-Z]?\\.?\\s*){0,3}${last}\\b`, 'i')
+    : /(?!)/
+
   const all = await getCollection('publications')
   return all
     .filter((p) => {
       const text = p.data.authors
+      if (text.includes(fullName)) return true
       if (aliases.length > 0) {
         const lower = text.toLowerCase()
         if (aliases.some((a) => lower.includes(a.toLowerCase()))) return true
       }
-      return re.test(text)
+      return fallbackRe.test(text)
     })
     .sort((a, b) => b.data.year - a.data.year)
 }

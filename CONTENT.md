@@ -91,13 +91,20 @@ Add a block at the top of the relevant year section:
 my-paper-2026:                        # any unique slug, lowercase + dashes
   title: "My Amazing Paper"
   topics: ["Memory", "Theoretical ML"]   # optional — see allowed topics below
-  authors: "J. Doe, I. R. Fiete"
+  authors: "Jane Doe, Ila Fiete"      # FULL names for lab members; abbreviated OK for others
   year: 2026
   venue: "Nature"                     # journal name or "arXiv preprint" or "NeurIPS"
   citation: "Nature 999, 1-10 (2026)" # optional but nice to include
   link: "https://arxiv.org/abs/2601.00001"
   annotation: "(spotlight)"           # optional — used for awards / co-first / co-senior notes
 ```
+
+**Author convention.** Write lab members' **full names** ("Jane Doe", "Ila
+Fiete") so they automatically appear under each person's `/people/<slug>/`
+page. External co-authors can stay in any abbreviated form ("S. J. Lee").
+The site abbreviates everyone uniformly at display time → `J. Doe, I.
+Fiete, S. J. Lee`. Co-first / co-senior markers (`*`, `+`) on a name
+("Jane Doe*") are preserved.
 
 Papers are automatically grouped and sorted by year on
 [/publications](https://fietelab.github.io/publications). The page also has

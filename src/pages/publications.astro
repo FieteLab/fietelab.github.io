@@ -2,6 +2,7 @@
 import Layout from '@/layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 import { topicColor, TOPIC_ORDER } from '@/lib/topics'
+import { formatAuthors } from '@/lib/data'
 
 const allPubs = (await getCollection('publications')).sort(
   (a, b) => b.data.year - a.data.year,
@@ -123,7 +124,7 @@ const years = [...byYear.keys()].sort((a, b) => b - a)
                     )}
                   </div>
                   <div class="mt-1 text-sm text-[color:var(--color-text-muted)]">
-                    {pub.data.authors}
+                    {formatAuthors(pub.data.authors)}
                   </div>
                   <div class="mt-2 flex flex-wrap items-center gap-2 text-xs">
                     <span class="font-semibold text-[color:var(--color-accent)]">
