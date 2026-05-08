@@ -40,29 +40,16 @@ export function formatAuthors(authors: string): string {
 
 /**
  * Frequent external collaborators we want to surface as clickable author
- * names — even though they're not lab members or alumni. Includes the
- * MIT faculty who co-advise current Fiete-Lab grad students. Keep this
- * list small; everyone here gets the "external" link styling.
+ * names — they're not lab members or alumni. Includes MIT faculty who
+ * co-advise current Fiete-Lab grad students. Keys must match the
+ * canonical full name as it appears in publications/content.yaml.
  */
 const EXTERNAL_AUTHOR_LINKS: Record<string, string> = {
-  // Paul Liang — co-advises Jaedong Hwang
-  'Paul Liang': 'https://pliang279.github.io/',
-  'P. P. Liang': 'https://pliang279.github.io/',
-  'Paul Pu Liang': 'https://pliang279.github.io/',
-  // Josh McDermott — co-advises Lakshmi Govindarajan, Bryan Medina
+  'Paul Liang':     'https://pliang279.github.io/',
   'Josh McDermott': 'https://mcdermottlab.mit.edu/',
-  'J. McDermott': 'https://mcdermottlab.mit.edu/',
-  // Michale Fee — co-advises Daoyuan Qian
-  'Michale Fee': 'https://feelaboratory.org/',
-  'M. Fee': 'https://feelaboratory.org/',
-  'M. S. Fee': 'https://feelaboratory.org/',
-  // Fan Wang — co-advises Hao Zheng
-  'Fan Wang': 'https://www.wanglab-neuro.org/',
-  'F. Wang': 'https://www.wanglab-neuro.org/',
-  // Earl Miller — co-advises Adam Joseph Eisen
-  'Earl Miller': 'https://ekmillerlab.mit.edu/',
-  'E. K. Miller': 'https://ekmillerlab.mit.edu/',
-  'Earl K. Miller': 'https://ekmillerlab.mit.edu/',
+  'Michale Fee':    'https://feelaboratory.org/',
+  'Fan Wang':       'https://www.wanglab-neuro.org/',
+  'Earl Miller':    'https://ekmillerlab.mit.edu/',
 }
 
 /**

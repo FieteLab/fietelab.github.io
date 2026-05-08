@@ -34,7 +34,7 @@ schartner2025spatially:
 
 hwang2025learn:
   title: "Learn globally, speak locally: Bridging the gaps in multilingual reasoning"
-  authors: "Jaedong Hwang, T. Kumar, S. J. Lee, A. Agrawal, H. Palangi, A. Kumar, Ila Fiete+, P. P. Liang+"
+  authors: "Jaedong Hwang, T. Kumar, S. J. Lee, A. Agrawal, H. Palangi, A. Kumar, Ila Fiete+, Paul Liang+"
   year: 2025
   venue: "arXiv preprint"
   citation: "arXiv:2507.05418 (2025)"
@@ -61,7 +61,7 @@ duan2025synapses:
 
 eisen2025similar:
   title: "Similar destabilization of neural dynamics under different general anesthetics"
-  authors: "Adam Joseph Eisen, A. G. Bardon, J. J. Ballesteros, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, J. Roy, Y. Ishizawa, E. Brown, Ila Fiete+, E. K. Miller+"
+  authors: "Adam Joseph Eisen, A. G. Bardon, J. J. Ballesteros, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, J. Roy, Y. Ishizawa, E. Brown, Ila Fiete+, Earl Miller+"
   year: 2025
   venue: "bioRxiv"
   citation: "bioRxiv 10.1101/2025.08.21.671540 (2025)"
@@ -70,7 +70,7 @@ eisen2025similar:
 
 eisen2025characterizing:
   title: "Characterizing control between interacting subsystems with deep Jacobian estimation"
-  authors: "Adam Joseph Eisen, Mitchell Ostrow, Sarthak Chandra, Leo Kozachkov, E. K. Miller, Ila Fiete"
+  authors: "Adam Joseph Eisen, Mitchell Ostrow, Sarthak Chandra, Leo Kozachkov, Earl Miller, Ila Fiete"
   year: 2025
   venue: "arXiv preprint"
   citation: "arXiv:2507.01946 (2025)"
@@ -280,7 +280,7 @@ dong2024grid:
 
 eisen2024propofol:
   title: "Propofol anesthesia destabilizes neural dynamics across cortex"
-  authors: "Adam Joseph Eisen, Leo Kozachkov, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, Sarthak Chandra, E. N. Brown, Ila Fiete+, E. K. Miller+"
+  authors: "Adam Joseph Eisen, Leo Kozachkov, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, Sarthak Chandra, E. N. Brown, Ila Fiete+, Earl Miller+"
   year: 2024
   venue: "Neuron"
   link: "https://pubmed.ncbi.nlm.nih.gov/39013467/"
@@ -949,7 +949,7 @@ fiete2008what:
 fiete2007model:
   title: "Model of birdsong learning based on gradient estimation by dynamic perturbation of neural conductances"
   topics: ["Biologically plausible gradient learning"]
-  authors: "Ila Fiete, M. S. Fee, H. S. Seung"
+  authors: "Ila Fiete, Michale Fee, H. S. Seung"
   year: 2007
   venue: "Journal of Neurophysiology"
   citation: "J. Neurophysiology 98, 2038-2057 (2007)"
@@ -984,7 +984,7 @@ fiete2006gradient:
 fiete2004temporal:
   title: "Temporal sparseness of the premotor drive is important for rapid learning in a neural network model of birdsong"
   topics: ["Biologically plausible gradient learning"]
-  authors: "Ila Fiete, R. H. R. Hahnloser, M. S. Fee, H. S. Seung"
+  authors: "Ila Fiete, R. H. R. Hahnloser, Michale Fee, H. S. Seung"
   year: 2004
   venue: "Journal of Neurophysiology"
   citation: "J. Neurophysiology 92, 2274 (2004)"
