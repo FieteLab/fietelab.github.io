@@ -2,7 +2,7 @@
 import Layout from '@/layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 import { topicColor, TOPIC_ORDER } from '@/lib/topics'
-import { formatAuthors } from '@/lib/data'
+import { formatAuthors, isRedundantCitation } from '@/lib/data'
 
 const allPubs = (await getCollection('publications')).sort(
   (a, b) => b.data.year - a.data.year,
@@ -102,6 +102,9 @@ const years = [...byYear.keys()].sort((a, b) => b - a)
               const link = pub.data.link
               const label = linkLabel(link)
               const pubTopics = pub.data.topics ?? []
+              const showCitation =
+                pub.data.citation &&
+                !isRedundantCitation(pub.data.citation, pub.data.venue, pub.data.year)
               return (
                 <li
                   class="pub-item py-4"
@@ -130,7 +133,7 @@ const years = [...byYear.keys()].sort((a, b) => b - a)
                     <span class="font-semibold text-[color:var(--color-accent)]">
                       {pub.data.venue}
                     </span>
-                    {pub.data.citation && (
+                    {showCitation && (
                       <span class="italic text-[color:var(--color-text-soft)]">
                         · {pub.data.citation}
                       </span>

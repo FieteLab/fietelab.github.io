@@ -39,6 +39,30 @@ export function formatAuthors(authors: string): string {
 }
 
 /**
+ * True when a `citation` string adds nothing on top of `venue` + `year`.
+ * e.g. citation="Nature (2025)" + venue="Nature" + year=2025 → redundant.
+ *      citation="Nature 999, 1-10 (2025)" → not redundant (has volume/pages).
+ *      citation="arXiv:2512.13707 (2025)" + venue="arXiv preprint" → not redundant
+ *      (has the arXiv ID).
+ */
+export function isRedundantCitation(
+  citation: string,
+  venue: string,
+  year: number,
+): boolean {
+  const norm = (s: string) =>
+    s
+      .replace(/[().,;:]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .toLowerCase()
+  const c = norm(citation)
+  const v = norm(venue)
+  const y = String(year)
+  return c === `${v} ${y}` || c === `${y} ${v}` || c === v
+}
+
+/**
  * Return all publications a person co-authored, newest first.
  *
  * Primary match: the person's full name appears verbatim in the paper's
