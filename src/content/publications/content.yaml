@@ -1,0 +1,1001 @@
+# Publications — copied from fietelab.mit.edu/publications/.
+# To add a paper, copy any block below and edit. Required fields: title,
+# authors, year, venue. Optional: citation, link, annotation.
+#
+# Sorted by year, newest first.
+
+# ============================================================
+# 2025
+# ============================================================
+
+modular-connectivity-2025:
+  title: "Modular connectivity in neural networks emerges from Poisson noise-motivated regularisation, and promotes robustness and compositional generalisation"
+  authors: "D. Qian, Q. Liang, I. R. Fiete"
+  year: 2025
+  venue: "arXiv preprint"
+  citation: "arXiv:2512.13707 (2025)"
+  link: "https://arxiv.org/abs/2512.13707"
+
+inputdsa-2025:
+  title: "InputDSA: Demixing then Comparing Recurrent and Externally Driven Dynamics"
+  authors: "A. Huang, M. Ostrow, S. H. Singh, L. Kozachkov, I. R. Fiete, K. Rajan"
+  year: 2025
+  venue: "arXiv preprint"
+  citation: "arXiv:2510.25943 (2025)"
+  link: "https://arxiv.org/abs/2510.25943"
+
+ibl-loops-2025:
+  title: "Spatially distributed and regionally unbound cellular resolution brain-wide processing loops in mice"
+  authors: "M. Schartner, A. Liu, International Brain Laboratory, I. R. Fiete"
+  year: 2025
+  venue: "bioRxiv"
+  citation: "bioRxiv 10.1101/2025.07.30.667641 (2025)"
+  link: "https://www.biorxiv.org/content/10.1101/2025.07.30.667641"
+
+multilingual-reasoning-2025:
+  title: "Learn globally, speak locally: Bridging the gaps in multilingual reasoning"
+  authors: "J. D. Hwang, T. Kumar, S. J. Lee, A. Agrawal, H. Palangi, A. Kumar, I. R. Fiete, P. P. Liang"
+  year: 2025
+  venue: "arXiv preprint"
+  citation: "arXiv:2507.05418 (2025)"
+  link: "https://arxiv.org/abs/2507.05418"
+  annotation: "+ co-senior authors"
+
+slow-plasticity-grid-2025:
+  title: "Slow synaptic plasticity from the hippocampus underlies gradual mapping and fragmentation of novel spaces by grid cells"
+  authors: "L. Chen, L. L. Dong, H. Shin, F. Shahid, T. Malone, Y. Ma, S. O. Vasu, N. W. Tien, K. Cekada, L. Anderson, S. Chandra, I. Fiete, V. A. Alvarez, Y. Gu"
+  year: 2025
+  venue: "bioRxiv"
+  citation: "bioRxiv 10.1101/2025.07.30.667696 (2025)"
+  link: "https://www.biorxiv.org/content/10.1101/2025.07.30.667696"
+  annotation: "+ co-senior authors"
+
+synapses-to-dynamics-2025:
+  title: "From Synapses to Dynamics: Obtaining Function from Structure in a Connectome-Constrained Model of the Head Direction Circuit"
+  authors: "S. Duan*, L. L. Dong*, I. R. Fiete"
+  year: 2025
+  venue: "bioRxiv"
+  citation: "bioRxiv 2025.05.26.655406 (2025)"
+  link: "https://www.biorxiv.org/content/10.1101/2025.05.26.655406v1"
+  annotation: "* co-first authors"
+
+anesthesia-2025:
+  title: "Similar destabilization of neural dynamics under different general anesthetics"
+  authors: "A. J. Eisen, A. G. Bardon, J. J. Ballesteros, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, J. Roy, Y. Ishizawa, E. Brown, I. R. Fiete, E. K. Miller"
+  year: 2025
+  venue: "bioRxiv"
+  citation: "bioRxiv 10.1101/2025.08.21.671540 (2025)"
+  link: "https://www.biorxiv.org/content/10.1101/2025.08.21.671540"
+  annotation: "+ co-senior authors"
+
+deep-jacobian-2025:
+  title: "Characterizing control between interacting subsystems with deep Jacobian estimation"
+  authors: "A. J. Eisen, M. Ostrow, S. Chandra, L. Kozachkov, E. K. Miller, I. R. Fiete"
+  year: 2025
+  venue: "arXiv preprint"
+  citation: "arXiv:2507.01946 (2025)"
+  link: "https://arxiv.org/abs/2507.01946"
+
+neuroprobe-2025:
+  title: "Neuroprobe: Evaluating Intracranial Brain Responses to Naturalistic Stimuli"
+  authors: "A. Zahorodnii, C. Wang, B. Stankovits, C. Moraitaki, G. Chau, A. Barbu, B. Katz, I. R. Fiete"
+  year: 2025
+  venue: "arXiv preprint"
+  citation: "arXiv:2509.21671 (2025)"
+  link: "https://arxiv.org/abs/2509.21671"
+
+paper-quality-2025:
+  title: "Paper Quality Assessment based on Individual Wisdom Metrics from Open Peer Review"
+  authors: "A. Zahorodnii, J. J. F. van den Bosch, I. Charest, C. Summerfield, I. R. Fiete"
+  year: 2025
+  venue: "arXiv preprint"
+  citation: "arXiv:2501.13014 (2025)"
+  link: "https://arxiv.org/abs/2501.13014"
+
+forced-rendering-2025:
+  title: "Compositional Generalization via Forced Rendering of Disentangled Latents"
+  authors: "Q. Liang, D. Qian, L. Ziyin, I. R. Fiete"
+  year: 2025
+  venue: "Proc. ICML"
+  citation: "Proc. ICML (2025)"
+  link: "https://openreview.net/pdf?id=rkHCHI5H5W"
+
+ibl-brain-wide-2025:
+  title: "A brain-wide map of neural activity during complex behaviour"
+  authors: "D. Angelaki, et al. (International Brain Laboratory)"
+  year: 2025
+  venue: "Nature"
+  citation: "Nature (2025)"
+  link: "https://www.nature.com/articles/s41586-025-09235-0"
+
+ibl-prior-2025:
+  title: "Brain-wide representations of prior information in mouse decision-making"
+  authors: "C. Findling, et al. (International Brain Laboratory)"
+  year: 2025
+  venue: "Nature"
+  citation: "Nature (2025)"
+  link: "https://www.nature.com/articles/s41586-025-09226-1"
+
+cann-recipe-2025:
+  title: "A theory and recipe to construct general and biologically plausible integrating continuous attractor neural networks"
+  authors: "F. Claudi*, S. Chandra*, I. R. Fiete"
+  year: 2025
+  venue: "eLife"
+  citation: "bioRxiv 10.1101/2025.05.07.652608 (2025) and eLife (2025)"
+  link: "https://elifesciences.org/reviewed-preprints/107224"
+  annotation: "* co-first authors"
+
+reservoir-bounds-2025:
+  title: "Fundamental performance bounds on reservoir computing"
+  authors: "D. Qian, I. R. Fiete"
+  year: 2025
+  venue: "Physical Review E"
+  citation: "arXiv:2410.20393 (2024) and Physical Review E (2025)"
+  link: "https://arxiv.org/abs/2410.20393"
+
+key-value-memory-2025:
+  title: "Key-value memory in the brain"
+  authors: "S. J. Gershman, I. R. Fiete, K. Irie"
+  year: 2025
+  venue: "Neuron"
+  citation: "arXiv:2501.02950 (2025) and Neuron (2025)"
+  link: "https://arxiv.org/abs/2501.02950"
+
+global-modules-2025:
+  title: "Global modules robustly emerge from local interactions and smooth gradients"
+  authors: "M. Khona, S. Chandra, I. R. Fiete"
+  year: 2025
+  venue: "Nature"
+  citation: "Nature (2025)"
+  link: "https://www.nature.com/articles/s41586-024-08541-3"
+
+episodic-scaffold-2025:
+  title: "Episodic and associative memory from spatial scaffolds in the hippocampus"
+  authors: "S. Chandra*, S. Sharma*, R. Chaudhuri, I. R. Fiete"
+  year: 2025
+  venue: "Nature"
+  citation: "Nature (2025)"
+  link: "https://www.nature.com/articles/s41586-024-08541-3"
+  annotation: "* co-first authors"
+
+multi-region-icml-2025:
+  title: "A Multi-Region Brain Model to Elucidate the Role of Hippocampus in Spatially Embedded Decision-Making"
+  authors: "Y. Xie, J. Hwang, C. Brody, D. Tank, I. R. Fiete"
+  year: 2025
+  venue: "Proc. ICML"
+  citation: "bioRxiv 2025.05.29.656671 (2025) and Proc. ICML (2025)"
+  link: "https://www.biorxiv.org/content/10.1101/2025.05.29.656671"
+
+latent-memories-2025:
+  title: "Uncovering Latent Memories in Large Language Models"
+  authors: "S. Duan, M. Khona, A. Iyer, R. Schaeffer, I. R. Fiete"
+  year: 2025
+  venue: "ICLR"
+  citation: "ICLR (2025)"
+  link: "https://openreview.net/forum?id=KSBx6FBZpE"
+
+# ============================================================
+# 2024
+# ============================================================
+
+self-org-modularity-2024:
+  title: "Self-organized emergence of modularity, hierarchy, and mirror reversals from competitive synaptic growth in a developmental model of the visual pathway"
+  authors: "S. Chandra*, M. Khona*, T. Konkle, I. R. Fiete"
+  year: 2024
+  venue: "bioRxiv"
+  citation: "bioRxiv 2024.01.07.574543 (2024)"
+  link: "https://www.biorxiv.org/content/10.1101/2024.01.07.574543v1"
+  annotation: "* co-first authors"
+
+permutation-invariant-2024:
+  title: "Permutation Invariant Learning with High-Dimensional Particle Filters"
+  authors: "A. Boopathy, A. Muppidi, P. Yang, A. Iyer, W. Yue, I. R. Fiete"
+  year: 2024
+  venue: "arXiv preprint"
+  citation: "arXiv:2410.22695 (2024)"
+  link: "https://arxiv.org/abs/2410.22695"
+
+imagenet-rib-2024:
+  title: "ImageNet-RIB Benchmark: Large Pre-Training Datasets Don't Guarantee Robustness after Fine-Tuning"
+  authors: "J. Hwang, B. Cheung, Z. W. Hong, A. Boopathy, P. Agrawal, I. R. Fiete"
+  year: 2024
+  venue: "arXiv preprint"
+  citation: "arXiv:2410.21582 (2024)"
+  link: "https://arxiv.org/abs/2410.21582"
+
+scaling-laws-2024:
+  title: "Unified Neural Network Scaling Laws and Scale-time Equivalence"
+  authors: "A. Boopathy, I. R. Fiete"
+  year: 2024
+  venue: "arXiv preprint"
+  citation: "arXiv:2409.05782 (2024)"
+  link: "https://arxiv.org/abs/2409.05782"
+
+scaling-modularity-2024:
+  title: "Breaking Neural Network Scaling Laws with Modularity"
+  authors: "A. Boopathy, S. Jiang, W. Yue, J. Hwang, A. Iyer, I. R. Fiete"
+  year: 2024
+  venue: "arXiv preprint"
+  citation: "arXiv:2409.05780 (2024)"
+  link: "https://arxiv.org/abs/2409.05780"
+
+inductive-bias-2024:
+  title: "Towards Exact Computation of Inductive Bias"
+  authors: "A. Boopathy, W. Yue, J. Hwang, A. Iyer, I. R. Fiete"
+  year: 2024
+  venue: "arXiv preprint"
+  citation: "arXiv:2406.15941 (2024)"
+  link: "https://arxiv.org/abs/2406.15941"
+
+resampling-free-pf-2024:
+  title: "Resampling-free Particle Filters in High-dimensions"
+  authors: "A. Boopathy, A. Muppidi, P. Yang, A. Iyer, W. Yue, I. R. Fiete"
+  year: 2024
+  venue: "arXiv preprint"
+  citation: "arXiv:2404.13698 (2024)"
+  link: "https://arxiv.org/abs/2404.13698"
+
+diffusion-factorize-2024:
+  title: "How Diffusion Models Learn to Factorize and Compose"
+  authors: "Q. Liang, Z. Liu, M. Ostrow, I. R. Fiete"
+  year: 2024
+  venue: "Proc. NeurIPS"
+  citation: "Proc. NeurIPS (2024)"
+  link: "https://proceedings.neurips.cc/paper_files/paper/2024/hash/1b60893887328a6a50dd00ae0d5ed51a-Abstract-Conference.html"
+
+grid-cell-fragmentation-2024:
+  title: "Grid Cell-Inspired Fragmentation and Recall for Efficient Map Building"
+  authors: "J. Hwang, Z. W. Hong, E. Chen, A. Boopathy, P. Agrawal, I. R. Fiete"
+  year: 2024
+  venue: "Trans. MLR"
+  citation: "arXiv:2307.05793 (2023) and TMLR (2024)"
+  link: "https://openreview.net/pdf?id=cT8oyAHCQq"
+
+ecc-fault-tolerant-2024:
+  title: "Fault-tolerant neural networks from biological error correction codes"
+  authors: "A. Zlokapa, A. K. Tan, J. M. Martyn, I. R. Fiete, M. Tegmark, I. L. Chuang"
+  year: 2024
+  venue: "Physical Review E"
+  citation: "Physical Review E 110, 054303 (2024)"
+  link: "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.110.054303"
+
+retrosplenial-2024:
+  title: "Spatial reasoning via recurrent neural dynamics in mouse retrosplenial cortex"
+  authors: "J. Voigts, I. Kanitscheider, N. J. Miller, E. H. S. Toloza, J. P. Newman, I. R. Fiete, M. T. Harnett"
+  year: 2024
+  venue: "Neuron"
+  citation: "Neuron (2024)"
+  link: "https://www.biorxiv.org/content/10.1101/2022.04.12.488024v1"
+
+grid-cells-cognition-2024:
+  title: "Grid Cells in Cognition: Mechanisms and Function"
+  authors: "L. L. Dong, I. R. Fiete"
+  year: 2024
+  venue: "Annual Review of Neuroscience"
+  citation: "Annual Review of Neuroscience 47 (2024)"
+  link: "https://www.annualreviews.org/doi/10.1146/annurev-neuro-101323-112047"
+
+propofol-2024:
+  title: "Propofol anesthesia destabilizes neural dynamics across cortex"
+  authors: "A. Eisen, L. Kozachkov, A. M. Bastos, J. A. Donoghue, M. K. Mahnke, S. L. Brincat, S. Chandra, E. N. Brown, I. R. Fiete, E. K. Miller"
+  year: 2024
+  venue: "Neuron"
+  citation: "Neuron (2024)"
+  link: "https://pubmed.ncbi.nlm.nih.gov/39013467/"
+  annotation: "+ co-senior authors"
+
+mental-nav-2024:
+  title: "Mental navigation in the primate entorhinal cortex"
+  authors: "S. Neupane, I. R. Fiete, M. Jazayeri"
+  year: 2024
+  venue: "Nature"
+  citation: "Nature (2024)"
+  link: "https://www.nature.com/articles/s41586-024-07557-z"
+
+multi-region-ccn-2024:
+  title: "A Multi-Region Brain Model to Shed Light on the Role of Hippocampus in Spatially Embedded Decision Tasks"
+  authors: "X. Yi, J. Hwang, C. Brody, D. Tank, I. R. Fiete"
+  year: 2024
+  venue: "Conference on Cognitive Computational Neuroscience"
+  citation: "Conference on Cognitive Computational Neuroscience (2024)"
+  link: "https://2024.ccneuro.org/"
+
+morris-water-2024:
+  title: "Rapid Learning without Catastrophic Forgetting in the Morris Water Maze"
+  authors: "R. Wang, J. Hwang, A. Boopathy, I. R. Fiete"
+  year: 2024
+  venue: "ICML"
+  citation: "ICML (2024)"
+  link: "https://proceedings.mlr.press/v235/"
+
+protein-fitness-2024:
+  title: "Improving protein optimization with smoothed fitness landscapes"
+  authors: "A. Kirjner, J. Yim, R. Samusevich, T. Jaakkola, R. Barzilay, I. R. Fiete"
+  year: 2024
+  venue: "ICLR"
+  citation: "ICLR (2024)"
+  link: "https://openreview.net/pdf?id=rxlF2Zv8x0"
+
+# ============================================================
+# 2023
+# ============================================================
+
+neuro-fragmentation-2023:
+  title: "Neuro-Inspired Fragmentation and Recall to Overcome Catastrophic Forgetting in Curiosity"
+  authors: "J. D. Hwang, Z. W. Hong, E. Chen, A. Boopathy, P. Agrawal, I. R. Fiete"
+  year: 2023
+  venue: "arXiv preprint"
+  citation: "arXiv:2310.17537 (2023)"
+  link: "https://arxiv.org/abs/2310.17537"
+
+double-descent-2023:
+  title: "Double Descent Demystified: Identifying, Interpreting & Ablating the Sources of a Deep Learning Puzzle"
+  authors: "R. Schaeffer, M. Khona, Z. Robertson, A. Boopathy, K. Pistunova, J. W. Rocks, I. R. Fiete, S. Koyejo"
+  year: 2023
+  venue: "arXiv preprint"
+  citation: "arXiv:2303.14151 (2023)"
+  link: "https://arxiv.org/abs/2303.14151"
+
+noisy-ecc-2023:
+  title: "Noisy dynamical systems evolve error-correcting codes and modularity"
+  authors: "T. McCourt, I. R. Fiete, I. L. Chuang"
+  year: 2023
+  venue: "bioRxiv"
+  citation: "bioRxiv 2022.12.15.520640 (2023)"
+  link: "https://www.biorxiv.org/content/10.1101/2022.12.15.520640v1"
+
+relational-inference-2023:
+  title: "Generalizable Relational Inference with Cognitive Maps in a Hippocampal Model and in Primates"
+  authors: "J. Hwang, S. Neupane, M. Jazayeri, I. R. Fiete"
+  year: 2023
+  venue: "NeurIPS Workshop on Associative Memory & Hopfield Networks"
+  citation: "NeurIPS Workshop (2023)"
+  link: "https://amhn.quest/"
+
+growing-brains-2023:
+  title: "Growing Brains: Co-emergence of Anatomical and Functional Modularity in Recurrent Neural Networks"
+  authors: "Z. Liu, M. Khona, I. R. Fiete, M. Tegmark"
+  year: 2023
+  venue: "NeurIPS Workshop on Symmetry and Geometry in Neural Representations"
+  citation: "arXiv:2310.07711 (2023) and NeurIPS Workshop (2023)"
+  link: "https://arxiv.org/abs/2310.07711"
+
+dsa-2023:
+  title: "Beyond Geometry: Comparing the Temporal Structure of Computation in Neural Circuits with Dynamical Similarity Analysis"
+  authors: "M. Ostrow, A. Eisen, L. Kozachkov, I. R. Fiete"
+  year: 2023
+  venue: "NeurIPS"
+  citation: "arXiv:2306.10168 (2023) and NeurIPS (2023)"
+  link: "https://openreview.net/pdf?id=7blSUMwe7R"
+
+generalization-difficulty-2023:
+  title: "Model-agnostic measure of generalization difficulty"
+  authors: "A. Boopathy, K. Liu, J. Hwang, S. Ge, A. Mohammedsaleh, I. R. Fiete"
+  year: 2023
+  venue: "ICML"
+  citation: "ICML, 2857-2884 (2023)"
+  link: "https://proceedings.mlr.press/v202/boopathy23a.html"
+
+ssl-grid-cells-2023:
+  title: "Self-Supervised Learning of Representations for Space Generates Multi-Modular Grid Cells"
+  authors: "R. Schaeffer*, M. Khona*, T. Ma, C. Eyzaguirre, S. Koyejo, I. R. Fiete"
+  year: 2023
+  venue: "NeurIPS"
+  citation: "arXiv:2311.02316 (2023) and NeurIPS (2023)"
+  link: "https://openreview.net/pdf?id=8ox2vrQiTF"
+  annotation: "* co-first authors"
+
+primate-amplification-2023:
+  title: "Primate neocortex performs balanced sensory amplification"
+  authors: "J. J. Pattadkal, B. V. Zemelman, I. R. Fiete, N. Priebe"
+  year: 2023
+  venue: "Neuron"
+  citation: "bioRxiv (2022) and Neuron (2023)"
+  link: "https://www.biorxiv.org/content/10.1101/2022.06.23.497220v1"
+
+grid-place-scaffold-2023:
+  title: "A Grid Cell-Place Cell Scaffold Allows Rapid Learning and Generalization at Multiple Levels on Mental Navigation Tasks"
+  authors: "J. Hwang, S. Neupane, M. Jazayeri, I. R. Fiete"
+  year: 2023
+  venue: "Conference on Cognitive Computational Neuroscience"
+  citation: "Conference on Cognitive Computational Neuroscience (2023)"
+  link: "https://2023.ccneuro.org/"
+
+interpolation-threshold-2023:
+  title: "Divergence at the Interpolation Threshold: Identifying, Interpreting & Ablating the Sources of a Deep Learning Puzzle"
+  authors: "R. Schaeffer, Z. Robertson, A. Boopathy, M. Khona, I. R. Fiete, A. Gromov, S. Koyejo"
+  year: 2023
+  venue: "NeurIPS Workshop on Mathematics of Modern Machine Learning"
+  citation: "NeurIPS Workshop (2023)"
+  link: "https://m3l-workshop.github.io/"
+
+see-and-copy-2023:
+  title: "See and Copy: Generation of complex compositional movements from modular and geometric RNN representations"
+  authors: "S. Duan, M. Khona, A. Bertagnoli, S. Chandra, I. R. Fiete"
+  year: 2023
+  venue: "NeurIPS Workshop on Symmetry and Geometry in Neural Representations, PMLR"
+  citation: "PMLR (2023) and arXiv:2210.02521 (2022)"
+  link: "https://proceedings.mlr.press/v197/duan23a/duan23a.pdf"
+
+testing-grid-theory-2023:
+  title: "Testing Assumptions Underlying a Unified Theory for the Origin of Grid Cells"
+  authors: "R. Schaeffer, M. Khona, A. Bertagnoli, S. Koyejo, I. R. Fiete"
+  year: 2023
+  venue: "NeurIPS 2023 AI for Science Workshop"
+  citation: "arXiv:2311.16295 (2023) and NeurIPS Workshop (2023)"
+  link: "https://arxiv.org/abs/2311.16295"
+
+winning-lottery-2023:
+  title: "Winning the lottery with neurobiology: faster learning on many cognitive tasks with fixed sparse RNNs"
+  authors: "M. Khona*, S. Chandra*, J. J. Ma, I. R. Fiete"
+  year: 2023
+  venue: "Neural Computation"
+  citation: "Neural Computation (2023)"
+  link: "https://arxiv.org/pdf/2207.03523.pdf"
+  annotation: "* co-first authors"
+
+# ============================================================
+# 2022
+# ============================================================
+
+no-free-lunch-2022:
+  title: "No free lunch with deep learning in Neuroscience: A case study through models of the entorhinal-hippocampal circuit"
+  authors: "R. Schaeffer, M. Khona, I. R. Fiete"
+  year: 2022
+  venue: "NeurIPS"
+  citation: "NeurIPS (2022)"
+  link: "https://openreview.net/forum?id=syU-XvinTI1"
+
+attractor-integrator-2022:
+  title: "Attractor and integrator networks in the brain"
+  authors: "M. Khona, I. R. Fiete"
+  year: 2022
+  venue: "Nature Reviews Neuroscience"
+  citation: "Nature Reviews Neuroscience (2022)"
+  link: "https://www.nature.com/articles/s41583-022-00642-0"
+
+wide-no-backprop-2022:
+  title: "How to Train Your Wide Neural Network Without Backprop: An Input-Weight Alignment Perspective"
+  authors: "A. Boopathy, I. R. Fiete"
+  year: 2022
+  venue: "ICML, PMLR"
+  citation: "ICML, PMLR (2022)"
+  link: "https://proceedings.mlr.press/v162/boopathy22a.html"
+
+content-addressable-2022:
+  title: "Content-addressable memory without catastrophic forgetting by heteroassociation with a fixed scaffold"
+  authors: "S. Sharma, S. Chandra, I. R. Fiete"
+  year: 2022
+  venue: "ICML, PMLR"
+  citation: "ICML, PMLR (2022)"
+  link: "https://proceedings.mlr.press/v162/sharma22b.html"
+
+streaming-inference-2022:
+  title: "Streaming Inference for Infinite Feature Models"
+  authors: "R. Schaeffer, Y. Du, G. K. Liu, I. R. Fiete"
+  year: 2022
+  venue: "ICML, PMLR"
+  citation: "ICML, PMLR (2022)"
+  link: "https://proceedings.mlr.press/v161/schaeffer21a.html"
+
+map-induction-2022:
+  title: "Map Induction: Compositional spatial submap learning for efficient exploration in novel environments"
+  authors: "S. Sharma, A. Curtis, M. Kryven, J. Tenenbaum, I. R. Fiete"
+  year: 2022
+  venue: "ICLR"
+  citation: "ICLR (2022)"
+  link: "https://openreview.net/forum?id=1NUsBU-7HAL"
+
+neurotensin-2022:
+  title: "Neurotensin orchestrates valence assignment in the amygdala"
+  authors: "H. Li, et al."
+  year: 2022
+  venue: "Nature"
+  citation: "Nature (2022)"
+  link: "https://pubmed.ncbi.nlm.nih.gov/35859170/"
+
+cortical-social-2022:
+  title: "Cortical ensembles orchestrate social competition through hypothalamic outputs"
+  authors: "N. Padilla-Coreano, et al."
+  year: 2022
+  venue: "Nature"
+  citation: "Nature (2022)"
+  link: "https://pubmed.ncbi.nlm.nih.gov/35296862/"
+
+# ============================================================
+# 2021
+# ============================================================
+
+mulders-2021:
+  title: "A structured scaffold underlies activity in the hippocampus"
+  authors: "D. Mulders, M. Yim, J. S. Lee, A. K. Lee, T. Taillefumier, I. R. Fiete"
+  year: 2021
+  venue: "bioRxiv"
+  citation: "bioRxiv (2021)"
+  link: "https://www.biorxiv.org/content/10.1101/2021.11.20.469406v1"
+
+fragmented-maps-2021:
+  title: "Fragmented spatial maps: state abstraction and efficient planning from surprisal"
+  authors: "M. Klukas, S. Sharma, Y. Du, T. Lozano-Perez, L. Kaelbling, I. R. Fiete"
+  year: 2021
+  venue: "bioRxiv"
+  citation: "bioRxiv (2021)"
+  link: "https://www.biorxiv.org/content/10.1101/2021.10.29.466499v1"
+
+theoretical-decipher-2021:
+  title: "Theoretical and computational approaches to decipher brain function from molecules to behavior"
+  authors: "J. Gjorgjieva, I. R. Fiete"
+  year: 2021
+  venue: "Curr. Op. Neurobiology"
+  citation: "Curr. Op. Neurobiology (2021)"
+  link: "https://www.sciencedirect.com/science/article/abs/pii/S0959438821001379"
+
+online-mixture-2021:
+  title: "Efficient online inference for nonparametric mixture models"
+  authors: "R. Schaeffer, B. Bordelon, M. Khona, W. Pan, I. R. Fiete"
+  year: 2021
+  venue: "PMLR (Conference on Uncertainty in AI)"
+  citation: "Conference on Uncertainty in AI, PMLR (2021)"
+  link: "https://proceedings.mlr.press/v161/schaeffer21a.html"
+
+place-cell-capacity-2021:
+  title: "Place cell capacity and volatility with grid-like inputs"
+  authors: "M. Yim, L. Sadun, I. R. Fiete, T. Taillefumier"
+  year: 2021
+  venue: "eLife"
+  citation: "eLife (2021)"
+  link: "https://elifesciences.org/articles/62702"
+
+ibl-decision-making-2021:
+  title: "Standardized and reproducible measurement of decision-making in mice"
+  authors: "The International Brain Laboratory, et al."
+  year: 2021
+  venue: "eLife"
+  citation: "eLife 10:e63711 (2021)"
+  link: "https://elifesciences.org/articles/63711"
+
+gradient-trained-2021:
+  title: "Gradient-trained weights in wide neural networks align layerwise to error-scaled input correlations"
+  authors: "A. Boopathy, I. R. Fiete"
+  year: 2021
+  venue: "arXiv preprint"
+  citation: "arXiv:2106.08453 (2021)"
+  link: "https://arxiv.org/abs/2106.08453"
+
+# ============================================================
+# 2020
+# ============================================================
+
+superlinear-precision-2020:
+  title: "Superlinear precision and memory in simple population codes"
+  authors: "J. H. J. Kim, I. R. Fiete, D. Schwab"
+  year: 2020
+  venue: "arXiv preprint"
+  citation: "arXiv:2008.00629 (2020)"
+  link: "https://arxiv.org/abs/2008.00629"
+
+efficient-inference-2020:
+  title: "Efficient Inference in Structured Spaces"
+  authors: "H. Sanders, M. Wilson, M. Klukas, S. Sharma, I. R. Fiete"
+  year: 2020
+  venue: "Cell"
+  citation: "Cell 183(5):1147-1148 (2020)"
+  link: "https://www.cell.com/cell/fulltext/S0092-8674(20)31519-1"
+
+reverse-engineering-rnn-2020:
+  title: "Reverse-engineering Recurrent Neural Network solutions to a hierarchical inference task for mice"
+  authors: "R. Schaeffer, M. Khona, L. Meshulam, The International Brain Laboratory, I. R. Fiete"
+  year: 2020
+  venue: "NeurIPS"
+  citation: "NeurIPS (2020)"
+  link: "https://papers.nips.cc/paper/2020/hash/30f0641c041f03d94e95a76b9d8bd58f-Abstract.html"
+
+mind-of-a-mouse-2020:
+  title: "The mind of a mouse"
+  authors: "L. F. Abbott, et al."
+  year: 2020
+  venue: "Cell"
+  citation: "Cell 182(6) (2020)"
+  link: "https://www.sciencedirect.com/science/article/abs/pii/S0092867420310011"
+
+parallel-decision-2020:
+  title: "Robust parallel decision-making in neural circuits with nonlinear inhibition"
+  authors: "B. Kriener*, R. Chaudhuri*, I. R. Fiete"
+  year: 2020
+  venue: "PNAS"
+  citation: "PNAS (2020)"
+  link: "https://www.pnas.org/content/early/2020/09/29/1917551117"
+  annotation: "* co-first authors"
+
+systematic-errors-2020:
+  title: "Systematic errors in connectivity inferred from activity in strongly coupled recurrent circuits"
+  authors: "A. Das, I. R. Fiete"
+  year: 2020
+  venue: "Nature Neurosci."
+  citation: "Nature Neurosci. (2020)"
+  link: "https://www.nature.com/articles/s41593-020-0699-2"
+
+path-integration-aging-2020:
+  title: "Sources of path integration error in young and aging humans"
+  authors: "M. Stangl*, I. Kanitscheider*, M. Riemer, I. R. Fiete, T. Wolbers"
+  year: 2020
+  venue: "Nature Communications"
+  citation: "Nature Communications (2020)"
+  link: "https://www.nature.com/articles/s41467-020-15805-9"
+  annotation: "* co-first; + co-senior authors"
+
+flexible-grid-2020:
+  title: "Flexible representation and memory of higher-dimensional cognitive variables with grid cells"
+  authors: "M. Klukas, M. Lewis, I. R. Fiete"
+  year: 2020
+  venue: "PLoS Comp. Biol."
+  citation: "PLoS Comp. Biol. (2020)"
+  link: "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007796"
+
+# ============================================================
+# 2019
+# ============================================================
+
+bipartite-hopfield-2019:
+  title: "Bipartite expander Hopfield networks as self-decoding high-capacity error correcting codes"
+  authors: "R. Chaudhuri, I. R. Fiete"
+  year: 2019
+  venue: "Proc. NeurIPS"
+  citation: "Proc. NeurIPS (2019)"
+  link: "https://papers.nips.cc/paper/8985-bipartite-expander-hopfield-networks-as-self-decoding-high-capacity-error-correcting-codes"
+
+intrinsic-dynamics-2019:
+  title: "The intrinsic population dynamics of a canonical cognitive circuit"
+  authors: "R. Chaudhuri, B. Gercek*, B. Pandey*, A. Peyrache, I. R. Fiete"
+  year: 2019
+  venue: "Nature Neurosci."
+  citation: "Nature Neurosci. (2019)"
+  link: "https://www.nature.com/articles/s41593-019-0460-x"
+  annotation: "* co-second authors"
+
+grid-coactivity-2019:
+  title: "Grid cell co-activity patterns during sleep reflect spatial overlap of grid fields during active behaviors"
+  authors: "S. G. Trettel*, J. B. Trimper*, E. Hwaun, I. R. Fiete, L. L. Colgin"
+  year: 2019
+  venue: "Nature Neurosci."
+  citation: "Nature Neurosci. 22, 609-617 (2019)"
+  link: "https://www.nature.com/articles/s41593-019-0359-6"
+  annotation: "* co-first authors"
+
+kernl-2019:
+  title: "Kernel RNN Learning (KeRNL)"
+  authors: "C. Roth, I. Kanitscheider, I. R. Fiete"
+  year: 2019
+  venue: "Proceedings of ICLR"
+  citation: "Proceedings of ICLR (2019)"
+  link: "https://openreview.net/forum?id=ryGfnoC5KQ"
+
+# ============================================================
+# 2018
+# ============================================================
+
+map-like-grid-2018:
+  title: "A map-like micro-organization of grid cells in the medial entorhinal cortex"
+  authors: "Y. Gu, S. Lewallen, A. Kinkhabwala, C. Domnisoru, K. Yoon, J. Gauthier, I. R. Fiete, D. W. Tank"
+  year: 2018
+  venue: "Cell"
+  citation: "Cell 175, 736-750 (2018)"
+  link: "https://www.cell.com/cell/pdf/S0092-8674(18)31167-X.pdf"
+
+inferring-circuit-2018:
+  title: "Inferring circuit mechanisms from sparse neural recording and global perturbation in grid cells"
+  authors: "J. Widloski, M. Marder, I. R. Fiete"
+  year: 2018
+  venue: "eLife"
+  citation: "eLife (2018)"
+  link: "https://elifesciences.org/articles/33503"
+
+# ============================================================
+# 2017
+# ============================================================
+
+reconfigurable-hippocampal-2017:
+  title: "Emergence of dynamically reconfigurable hippocampal responses by learning to perform probabilistic spatial reasoning"
+  authors: "I. Kanitscheider, I. R. Fiete"
+  year: 2017
+  venue: "bioRxiv"
+  citation: "bioRxiv (2017)"
+  link: "https://www.biorxiv.org/content/early/2017/12/08/231159"
+
+ibl-2017:
+  title: "An International Laboratory for Systems and Computational Neuroscience"
+  authors: "The International Brain Laboratory"
+  year: 2017
+  venue: "Neuron"
+  citation: "Neuron (2017)"
+  link: "http://www.cell.com/neuron/fulltext/S0896-6273(17)31136-4"
+
+training-rnn-nav-2017:
+  title: "Training recurrent networks to generate hypotheses about how the brain solves hard navigation problems"
+  authors: "I. Kanitscheider, I. R. Fiete"
+  year: 2017
+  venue: "Advances in NIPS"
+  citation: "In Advances in NIPS (2017)"
+  link: "http://papers.nips.cc/paper/7039-training-recurrent-networks-to-generate-hypotheses-about-how-the-brain-solves-hard-navigation-problems"
+
+short-term-memory-bound-2017:
+  title: "Fundamental bound on the persistence and capacity of short-term memory stored as graded persistent activity"
+  authors: "O. O. Koyluoglu, Y. Pertzov, S. Manohar, M. Husain, I. R. Fiete"
+  year: 2017
+  venue: "eLife"
+  citation: "eLife 6:e22225 (2017)"
+  link: "https://elifesciences.org/articles/22225"
+
+nav-systems-2017:
+  title: "Toward a comprehensive functional understanding of the brain's spatial navigation system"
+  authors: "I. Kanitscheider, I. R. Fiete"
+  year: 2017
+  venue: "Curr. Opinion in Systems Biol."
+  citation: "Curr. Opinion in Systems Biol. 3, 186-194 (2017)"
+  link: "http://www.sciencedirect.com/science/article/pii/S2452310017300549"
+
+# ============================================================
+# 2016
+# ============================================================
+
+memory-principles-2016:
+  title: "Computational principles of memory"
+  authors: "R. Chaudhuri, I. R. Fiete"
+  year: 2016
+  venue: "Nature Neurosci."
+  citation: "Nature Neurosci. 19, 394-403 (2016)"
+  link: "http://www.nature.com/neuro/journal/v19/n3/full/nn.4237.html"
+
+grid-1d-2016:
+  title: "Grid cell responses in 1D environments assessed as slices through a 2D lattice"
+  authors: "K. Yoon*, S. Lewallen*, A. Kinkhabwalla, D. W. Tank, I. R. Fiete"
+  year: 2016
+  venue: "Neuron"
+  citation: "Neuron 89(5), 1086-1099 (2016)"
+  link: "http://www.cell.com/neuron/abstract/S0896-6273(16)00064-7"
+  annotation: "* co-first; + co-senior authors"
+
+multi-periodic-2016:
+  title: "Multi-periodic neural coding for adaptive information transfer"
+  authors: "Y. Yoo, O. O. Koyluoglu, S. Vishwanath, I. R. Fiete"
+  year: 2016
+  venue: "Theoretical Computer Science"
+  citation: "Theoretical Computer Science 633, 37-53 (2016)"
+  link: "http://www.sciencedirect.com/science/article/pii/S0304397516001572"
+
+# ============================================================
+# 2015
+# ============================================================
+
+human-path-bias-2015:
+  title: "Bias in human path integration is predicted by properties of grid cells"
+  authors: "X. Chen, Q. He, J. W. Kelly, I. R. Fiete, T. P. McNamara"
+  year: 2015
+  venue: "Current Biology"
+  citation: "Current Biology 25, 1771-1776 (2015)"
+  link: "http://www.cell.com/current-biology/abstract/S0960-9822(15)00605-3"
+
+# ============================================================
+# 2014
+# ============================================================
+
+hopfield-grid-2014:
+  title: "A binary Hopfield network with 1/log(n) information rate and applications to grid cell decoding"
+  authors: "I. Fiete, D. Schwab, N. M. Tran"
+  year: 2014
+  venue: "Biological Distributed Algorithms (Workshop), Austin TX"
+  citation: "Workshop paper (2014)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/Ngoc_BDA_2014.pdf"
+
+grid-development-2014:
+  title: "A Model of Grid Cell Development through Spatial Exploration and Spike Time-Dependent Plasticity"
+  authors: "J. Widloski, I. R. Fiete"
+  year: 2014
+  venue: "Neuron"
+  citation: "Neuron 83(2), 481-495 (2014)"
+  link: "http://www.cell.com/neuron/abstract/S0896-6273(14)00540-6"
+
+# ============================================================
+# 2013
+# ============================================================
+
+low-dim-attractor-2013:
+  title: "Specific evidence of low dimensional continuous attractor dynamics in grid cells"
+  authors: "K. Yoon, M. Buice, C. Barry, N. Burgess, I. R. Fiete"
+  year: 2013
+  venue: "Nature Neurosci."
+  citation: "Nature Neurosci. 16, 1077-1084 (2013)"
+  link: "http://www.nature.com/neuro/journal/vaop/ncurrent/full/nn.3450.html"
+
+nav-bookchapter-2013:
+  title: "How does the brain solve the computational problems of spatial navigation?"
+  authors: "J. Widloski, I. R. Fiete"
+  year: 2013
+  venue: "Space, Time, and Memory in the Hippocampal Formation (book chapter)"
+  citation: "Springer-Verlag (2013)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/WidloskiFiete_bookchapter_13.pdf"
+
+# ============================================================
+# 2012
+# ============================================================
+
+persistent-bound-2012:
+  title: "Fundamental limits on persistent activity in networks of noisy neurons"
+  authors: "Y. Burak, I. R. Fiete"
+  year: 2012
+  venue: "PNAS"
+  citation: "PNAS 109(43), 17645-17650 (2012)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/infodiff_PNAS.pdf"
+
+shift-map-2012:
+  title: "Dynamic shift-map coding with side information at the decoder"
+  authors: "Y. Yoo, O. O. Koyluoglu, S. Vishwanath, I. R. Fiete"
+  year: 2012
+  venue: "50th Allerton Conf. on Communication, Control, and Computing"
+  citation: "Allerton (2012)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/Allerton_sideinfo_Yongseok12.pdf"
+
+# ============================================================
+# 2011
+# ============================================================
+
+analog-ecc-grid-2011:
+  title: "Grid cells generate an analog error-correcting code for singularly precise neural computation"
+  authors: "S. Sreenivasan, I. R. Fiete"
+  year: 2011
+  venue: "Nature Neurosci."
+  citation: "Nature Neurosci. 14, 1330-1337 (2011)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/nn.2901.pdf"
+
+# ============================================================
+# 2010
+# ============================================================
+
+losing-phase-2010:
+  title: "Losing phase"
+  authors: "I. R. Fiete"
+  year: 2010
+  venue: "Neuron"
+  citation: "Neuron 66(3), 331-334 (2010)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/Preview_losingphase_neuron10.pdf"
+
+stdp-sequences-2010:
+  title: "Spike time-dependent plasticity and heterosynaptic competition organize networks to produce long scale-free sequences of neural activity"
+  authors: "I. R. Fiete, W. Senn, C. Wang, R. H. R. Hahnloser"
+  year: 2010
+  venue: "Neuron"
+  citation: "Neuron 65(4), 563-576 (2010)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/sequence_formation_neuron10.pdf"
+
+# ============================================================
+# 2009
+# ============================================================
+
+path-integration-2009:
+  title: "Accurate path integration in continuous attractor network models of grid cells"
+  authors: "Y. Burak, I. R. Fiete"
+  year: 2009
+  venue: "PLoS Comp. Biol."
+  citation: "PLoS Comp. Biol. 5(2) (2009)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/gcdynamics_burakfiete09_plos.pdf"
+
+birdsong-encyc-2009:
+  title: "Birdsong Learning"
+  authors: "I. R. Fiete, H. S. Seung"
+  year: 2009
+  venue: "Encyclopedia of Neuroscience (book chapter)"
+  citation: "Elsevier Academic Press, 227-239 (2009)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/birdsong_review_topost.pdf"
+
+# ============================================================
+# 2008
+# ============================================================
+
+drosophila-stereotypy-2008:
+  title: "Testing odor response stereotypy in the Drosophila mushroom body"
+  authors: "M. Murthy, I. R. Fiete, G. Laurent"
+  year: 2008
+  venue: "Neuron"
+  citation: "Neuron 59(6), 1009-1023 (2008)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/Murthy08_Neuron.pdf"
+
+drosophila-preview-2008:
+  title: "Drosophila olfaction: The end of stereotypy?"
+  authors: "S. Cachero, G. Jefferis"
+  year: 2008
+  venue: "Neuron"
+  citation: "Neuron 59(6), 843-845 (2008)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/Murthy08_Neuron_preview.pdf"
+  annotation: "Related preview"
+
+grid-review-2008:
+  title: "Grid cells: The position code, neural network models of activity, and the problem of learning"
+  authors: "P. E. Welinder, Y. Burak, I. R. Fiete"
+  year: 2008
+  venue: "Hippocampus"
+  citation: "Hippocampus 18(12), 1283-1300 (2008)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/Review_gridcells_hippocampus08.pdf"
+
+what-grid-encode-2008:
+  title: "What grid cells encode about rat position"
+  authors: "I. R. Fiete, Y. Burak, T. Brookings"
+  year: 2008
+  venue: "J. Neuroscience"
+  citation: "J. Neuroscience 28, 6856-6871 (2008)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/rns_fieteetal08_jneurosci.pdf"
+
+# ============================================================
+# 2007
+# ============================================================
+
+birdsong-gradient-2007:
+  title: "Model of birdsong learning based on gradient estimation by dynamic perturbation of neural conductances"
+  authors: "I. R. Fiete, M. S. Fee, H. S. Seung"
+  year: 2007
+  venue: "J. Neurophysiology"
+  citation: "J. Neurophysiology 98, 2038-2057 (2007)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/Fiete_etal_08_postpreprint-1.pdf"
+
+# ============================================================
+# 2006
+# ============================================================
+
+emergent-grid-2006:
+  title: "Do we understand the emergent dynamics of grid cell activity?"
+  authors: "Y. Burak, I. R. Fiete"
+  year: 2006
+  venue: "J. Neuroscience"
+  citation: "J. Neuroscience 26, 9352-9354 (2006)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/gridcell_jneurosci-1.pdf"
+
+gradient-spiking-2006:
+  title: "Gradient learning in spiking neural networks by dynamic perturbation of conductances"
+  authors: "I. R. Fiete, H. S. Seung"
+  year: 2006
+  venue: "Physical Review Letters"
+  citation: "Physical Review Letters 97, 048104 (2006)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/spike_learning_theory-1.pdf"
+
+# ============================================================
+# 2004
+# ============================================================
+
+sparseness-birdsong-2004:
+  title: "Temporal sparseness of the premotor drive is important for rapid learning in a neural network model of birdsong"
+  authors: "I. R. Fiete, R. H. R. Hahnloser, M. S. Fee, H. S. Seung"
+  year: 2004
+  venue: "J. Neurophysiology"
+  citation: "J. Neurophysiology 92, 2274 (2004)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/sparseness_reprint-1.pdf"
+
+# ============================================================
+# 2000
+# ============================================================
+
+eub6-2000a:
+  title: "Metallization and magnetic order in EuB_6"
+  authors: "S. Sullow, I. R. Prasad, M. C. Aronson, et al."
+  year: 2000
+  venue: "Physical Review B"
+  citation: "Physical Review B 62, 11626 (2000)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/sullow_prb_00-1.pdf"
+
+eub6-2000b:
+  title: "Magnetotransport in the low carrier density ferromagnet EuB_6"
+  authors: "S. Sullow, I. R. Prasad, S. Bogdanovich, et al."
+  year: 2000
+  venue: "J. Applied Physics"
+  citation: "J. Applied Physics 87, 5591 (2000)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/sullow_jap_00.pdf"
+
+# ============================================================
+# 1998
+# ============================================================
+
+eub6-1998:
+  title: "Magnetic order of EuB_6"
+  authors: "S. Sullow, I. R. Prasad, M. C. Aronson, et al."
+  year: 1998
+  venue: "Physical Review B"
+  citation: "Physical Review B 57, 5860 (1998)"
+  link: "https://fietelab.mit.edu/wp-content/uploads/2018/12/sullow_prb_98.pdf"

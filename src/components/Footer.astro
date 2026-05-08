@@ -1,0 +1,25 @@
+---
+import { SOCIAL_LINKS } from '@/consts'
+---
+
+<footer class="mt-16 bg-[color:var(--color-bg-dark)] text-white/75">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-start justify-between gap-6 px-6 py-10 text-sm">
+    <div>
+      <div class="text-base font-semibold text-white">The Fiete Lab</div>
+      <div class="mt-1">
+        MIT Department of Brain and Cognitive Sciences<br />
+        Building 46, Suite 5065 · 43 Vassar St., Cambridge, MA 02139
+      </div>
+    </div>
+    <div class="flex flex-col gap-1">
+      <a href="/contact" class="text-[color:#cfe0ff]">Contact</a>
+      {
+        SOCIAL_LINKS.map((s) => (
+          <a href={s.href} class="text-[color:#cfe0ff]" target="_blank" rel="noopener">
+            {s.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</footer>

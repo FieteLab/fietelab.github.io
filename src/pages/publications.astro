@@ -1,0 +1,58 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { getPublicationsByYear } from '@/lib/data'
+
+const byYear = await getPublicationsByYear()
+---
+
+<Layout title="Papers">
+  <section class="mx-auto max-w-5xl px-6 py-12">
+    <h1 class="text-3xl font-semibold">Papers</h1>
+    <p class="mt-2 max-w-2xl text-[color:var(--color-text-muted)]">
+      All publications and preprints from the lab. For citation counts and
+      complete coverage, see
+      <a
+        href="https://scholar.google.com/citations?user=uE-CihIAAAAJ"
+        target="_blank"
+        rel="noopener">Google Scholar</a
+      >.
+    </p>
+
+    {
+      [...byYear.entries()].map(([year, pubs]) => (
+        <div class="mt-12">
+          <h2 class="border-b border-[color:var(--color-border)] pb-2 text-xl font-semibold">
+            {year}
+          </h2>
+          <ul class="divide-y divide-[color:var(--color-border)]">
+            {pubs.map((pub) => (
+              <li class="py-4">
+                <div class="font-medium leading-snug text-[color:var(--color-text)]">
+                  {pub.data.link ? (
+                    <a href={pub.data.link} target="_blank" rel="noopener">
+                      {pub.data.title}
+                    </a>
+                  ) : (
+                    pub.data.title
+                  )}
+                </div>
+                <div class="mt-1 text-sm text-[color:var(--color-text-muted)]">
+                  {pub.data.authors}
+                </div>
+                <div class="mt-1 text-xs italic text-[color:var(--color-text-soft)]">
+                  <span class="not-italic font-semibold text-[color:var(--color-accent)]">
+                    {pub.data.venue}
+                  </span>
+                  {pub.data.citation && <span> · {pub.data.citation}</span>}
+                  {pub.data.annotation && (
+                    <span class="not-italic font-medium"> · {pub.data.annotation}</span>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </section>
+</Layout>

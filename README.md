@@ -1,49 +1,53 @@
-# Fiete Lab — Website
+# Fiete Lab — website
 
-Static site for the [Fiete Lab](https://fietelab.mit.edu/) at MIT, designed to
-be hosted on GitHub Pages.
+Static site for the [Fiete Lab](https://fietelab.mit.edu/) at MIT.
+Built with [Astro 5](https://astro.build/) + Tailwind 4. Deployed to
+GitHub Pages at `fietelab.github.io`.
 
-## Structure
+## How it's organized
 
 ```
-.
-├── index.html          # Home
-├── people.html         # PI, postdocs, students, alumni
-├── publications.html   # Recent papers
-├── code.html           # Open-source repos
-├── contact.html        # Contact info
-├── assets/
-│   ├── css/style.css
-│   └── js/nav.js
-└── .nojekyll           # Disable Jekyll processing on GitHub Pages
+src/
+├── content/                    ← all editable content lives here
+│   ├── people/                  PI, postdocs, students, affiliates (one .md per person)
+│   ├── people/images/           headshots
+│   ├── alumni/content.yaml      group alumni
+│   ├── undergrads/content.yaml  undergraduate researchers
+│   ├── publications/content.yaml  full paper list
+│   ├── projects/content.yaml    open-source code releases
+│   └── news/content.yaml        homepage announcements
+├── content.config.ts            collection schemas (don't edit unless you know Zod)
+├── components/                  reusable Astro components
+├── layouts/Layout.astro         shared page shell (header + footer)
+├── pages/                       one .astro file per route (/, /people, /publications, ...)
+├── lib/data.ts                  helpers for sorting people / grouping papers
+├── consts.ts                    site name, nav links, social links
+└── styles/global.css            Tailwind + theme tokens
 ```
 
-Plain HTML/CSS — no build step.
+**Editing content?** See **[CONTENT.md](CONTENT.md)** — non-coder friendly.
 
-## Local preview
+## Develop locally
 
 ```bash
-python3 -m http.server 8000
-# then open http://localhost:8000
+npm install
+npm run dev          # http://localhost:4321
+npm run build        # produces dist/
+npm run preview      # serves dist/ for a final check
 ```
 
-## Deploy to GitHub Pages
+## Deploy
 
-This repo is intended to live at
-[`FieteLab/fietelab.github.io`](https://github.com/FieteLab/fietelab.github.io),
-which is a *user/organization* Pages repo — anything pushed to the default
-branch is served at <https://fietelab.github.io/>.
+The repo is intended to live at
+[`FieteLab/fietelab.github.io`](https://github.com/FieteLab/fietelab.github.io).
 
-```bash
-git remote add origin https://github.com/FieteLab/fietelab.github.io.git
-git push -u origin main
-```
+Pushes to `main` are built and deployed automatically by the GitHub Actions
+workflow at [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
+The first time you deploy, go to **Settings → Pages** on the GitHub repo
+and set "Source" to "GitHub Actions".
 
-In the repo's **Settings → Pages**, set the source to the `main` branch root.
+## Stack
 
-## Editing content
-
-- **People:** edit [people.html](people.html). Each member is a `<div class="person">` block.
-- **Papers:** edit [publications.html](publications.html). Each paper is a `<li class="pub">` block.
-- **News:** edit the `.news-list` block in [index.html](index.html).
-- **Styles:** [assets/css/style.css](assets/css/style.css).
+- [Astro 5](https://astro.build/) — content collections, MDX, image optimization via `sharp`.
+- [Tailwind CSS 4](https://tailwindcss.com/) — styling via `@tailwindcss/vite`.
+- [astro-icon](https://www.astroicon.dev/) — Lucide icons (currently unused; ready when needed).

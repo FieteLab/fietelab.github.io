@@ -1,0 +1,68 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { getCollection } from 'astro:content'
+const projects = await getCollection('projects')
+---
+
+<Layout title="Code">
+  <section class="mx-auto max-w-5xl px-6 py-12">
+    <h1 class="text-3xl font-semibold">Code</h1>
+    <p class="mt-2 max-w-2xl text-[color:var(--color-text-muted)]">
+      Open-source code accompanying our papers. Each block links to the
+      associated repository or download.
+    </p>
+
+    <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+      {
+        projects.map((p) => (
+          <article class="flex flex-col gap-3 rounded-xl border border-[color:var(--color-border)] bg-white p-6">
+            <h2 class="text-lg font-semibold leading-tight">
+              {p.data.githubUrl ? (
+                <a href={p.data.githubUrl} target="_blank" rel="noopener">
+                  {p.data.name}
+                </a>
+              ) : (
+                p.data.name
+              )}
+            </h2>
+            <p class="text-sm whitespace-pre-line text-[color:var(--color-text-muted)]">
+              {p.data.description}
+            </p>
+            {p.data.paperLink && (
+              <p class="text-xs italic text-[color:var(--color-text-soft)]">
+                Paper:{' '}
+                <a href={p.data.paperLink} target="_blank" rel="noopener">
+                  {p.data.paperTitle ?? p.data.paperLink}
+                </a>
+              </p>
+            )}
+            {p.data.otherLinks && p.data.otherLinks.length > 0 && (
+              <div class="mt-1 flex flex-wrap gap-2 text-xs">
+                {p.data.otherLinks.map((l) => (
+                  <a
+                    href={l.url}
+                    target="_blank"
+                    rel="noopener"
+                    class="rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-bg-alt)] px-3 py-1 text-[color:var(--color-text)] hover:bg-white"
+                  >
+                    {l.label}
+                  </a>
+                ))}
+              </div>
+            )}
+            {p.data.githubUrl && (
+              <a
+                href={p.data.githubUrl}
+                target="_blank"
+                rel="noopener"
+                class="text-xs"
+              >
+                {p.data.githubUrl}
+              </a>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

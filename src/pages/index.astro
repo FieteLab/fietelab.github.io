@@ -1,0 +1,132 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import PersonCard from '@/components/PersonCard.astro'
+import { getCollection } from 'astro:content'
+import { getAllPeople } from '@/lib/data'
+import { AFFILIATIONS } from '@/consts'
+
+const allPeople = await getAllPeople()
+const pi = allPeople.find((p) => p.data.role === 'PI')
+const newsItems = await getCollection('news')
+newsItems.sort((a, b) => b.data.date.localeCompare(a.data.date))
+---
+
+<Layout>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-[color:var(--color-bg-dark)] py-24 text-white">
+    <div
+      class="absolute inset-0 opacity-70"
+      style="background:
+        radial-gradient(circle at 20% 20%, rgba(138,21,56,.32), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(11,95,255,.22), transparent 45%);"
+    >
+    </div>
+    <div class="relative mx-auto max-w-5xl px-6">
+      <h1 class="animate-fade-in text-4xl font-semibold leading-tight md:text-5xl">
+        The Fiete Lab
+      </h1>
+      <p class="animate-fade-in mt-5 max-w-3xl font-serif text-xl italic text-white/85 md:text-2xl">
+        Our goal is to better understand the dynamics and coding principles
+        that underlie computation in the brain.
+      </p>
+      <p class="animate-fade-in mt-8 text-sm text-white/65">
+        {AFFILIATIONS.map((a, i) => (
+          <>
+            <a class="text-[color:#cfe0ff]" href={a.href} target="_blank" rel="noopener">{a.name}</a>
+            {i < AFFILIATIONS.length - 1 && <span class="mx-2 text-white/40">·</span>}
+          </>
+        ))}
+      </p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="mx-auto max-w-5xl px-6 py-16">
+    <h2 class="text-2xl font-semibold">About the lab</h2>
+    <div class="prose-bio mt-4 max-w-3xl">
+      <p>
+        Our group develops and adapts cutting-edge approaches from mathematics,
+        machine learning, and physics to analyze learning, dynamics,
+        computation, efficiency, and robustness of computation in the brain.
+      </p>
+      <p>
+        We wish to uncover how high-level cognitive function <em>emerges</em>
+        from the bottom up. What aspects of circuit architecture drive the
+        emergence of function from simple constituents? What are the
+        properties of memory systems constructed from noisy, leaky neurons,
+        and how are limitations of the building blocks overcome? What are the
+        structural biases — such as modularity — in brains that make them
+        efficient and robust learners?
+      </p>
+      <p>
+        We find that the brain contains neural circuits with invariant
+        low-dimensional dynamics that underlie fundamental computations like
+        integration, surprising new analog error-correcting codes that enable
+        fault-tolerant computation, and ways in which the brain outperforms
+        modern AI in learning speed, data efficiency, and robustness — and we
+        seek to transfer these insights to build better machine intelligence.
+      </p>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="bg-[color:var(--color-bg-alt)] py-16">
+    <div class="mx-auto max-w-5xl px-6">
+      <h2 class="text-2xl font-semibold">Recent news</h2>
+      <ul class="mt-6 divide-y divide-[color:var(--color-border)]">
+        {
+          newsItems.map((item) => (
+            <li class="grid grid-cols-1 gap-2 py-4 md:grid-cols-[110px_1fr]">
+              <div class="text-sm font-semibold tracking-tight text-[color:var(--color-accent)]">
+                {item.data.date}
+              </div>
+              <p class="m-0 text-[color:var(--color-text)]">
+                {item.data.link ? (
+                  <a href={item.data.link} target="_blank" rel="noopener">
+                    {item.data.text}
+                  </a>
+                ) : (
+                  item.data.text
+                )}
+              </p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- PI strip -->
+  {pi && (
+    <section class="mx-auto max-w-5xl px-6 py-16">
+      <h2 class="text-2xl font-semibold">Principal Investigator</h2>
+      <div class="mt-6 grid max-w-2xl gap-6 md:grid-cols-[200px_1fr]">
+        <PersonCard person={pi} size="lg" />
+      </div>
+    </section>
+  )}
+
+  <!-- Quick links -->
+  <section class="bg-[color:var(--color-bg-alt)] py-16">
+    <div class="mx-auto grid max-w-5xl gap-4 px-6 md:grid-cols-3">
+      <a href="/people" class="group rounded-xl border border-[color:var(--color-border)] bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-md no-underline hover:no-underline">
+        <h3 class="text-lg font-semibold text-[color:var(--color-text)]">
+          People <span class="ml-1 transition-transform group-hover:translate-x-1 inline-block">&rarr;</span>
+        </h3>
+        <p class="mt-1 text-sm text-[color:var(--color-text-soft)]">PI, postdocs, students, alumni.</p>
+      </a>
+      <a href="/publications" class="group rounded-xl border border-[color:var(--color-border)] bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-md no-underline hover:no-underline">
+        <h3 class="text-lg font-semibold text-[color:var(--color-text)]">
+          Papers <span class="ml-1 transition-transform group-hover:translate-x-1 inline-block">&rarr;</span>
+        </h3>
+        <p class="mt-1 text-sm text-[color:var(--color-text-soft)]">Full list of publications and preprints.</p>
+      </a>
+      <a href="/code" class="group rounded-xl border border-[color:var(--color-border)] bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-md no-underline hover:no-underline">
+        <h3 class="text-lg font-semibold text-[color:var(--color-text)]">
+          Code <span class="ml-1 transition-transform group-hover:translate-x-1 inline-block">&rarr;</span>
+        </h3>
+        <p class="mt-1 text-sm text-[color:var(--color-text-soft)]">Open-source code released with our papers.</p>
+      </a>
+    </div>
+  </section>
+</Layout>

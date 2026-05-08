@@ -1,0 +1,178 @@
+# Group alumni — copied from fietelab.mit.edu/people/.
+# To add or update an entry: just add another `- name: ...` block below.
+sarthak-chandra:
+  name: "Sarthak Chandra"
+  wasA: "Postdoc"
+  now: "Assistant Professor, ICTS India"
+  website: "https://www.icts.res.in/people/sarthak-chandra"
+
+laureline-logiaco:
+  name: "Laureline Logiaco"
+  wasA: "Postdoc and Simons Fellow"
+  now: "Assistant Professor, University of Colorado Anschutz School of Medicine"
+  website: "https://www.necolelab.com/"
+
+akhilan-boopathy:
+  name: "Akhilan Boopathy"
+  wasA: "Graduate Student"
+  now: "Research Scientist, Amazon"
+
+federico-claudi:
+  name: "Federico Claudi"
+  wasA: "Postdoc"
+  now: "Staff Scientist, Precision Neuroscience"
+
+mikail-khona:
+  name: "Mikail Khona"
+  wasA: "Graduate Student"
+  now: "Research Scientist, NVIDIA"
+
+rylan-schaeffer:
+  name: "Rylan Schaeffer"
+  wasA: "Masters student"
+  now: "Staff Scientist, Meta (previously Stanford, Google)"
+
+abhi-iyer:
+  name: "Abhi Iyer"
+  wasA: "Graduate student + ICoN Fellow"
+  now: "Graduate student, MIT"
+
+sugandha-sharma:
+  name: "Sugandha Sharma"
+  wasA: "Graduate Student"
+  now: "Staff Scientist, NVIDIA"
+
+alex-negron:
+  name: "Alex Negron"
+  wasA: "PostBacc"
+  now: "Graduate student, Princeton University"
+
+leo-kozachkov:
+  name: "Leo Kozachkov"
+  wasA: "Postdoc + ICoN Fellow"
+  now: "Assistant Professor, Brown University"
+
+mingye-wang:
+  name: "Mingye (Christina) Wang"
+  wasA: "Undergrad researcher"
+  now: "Graduate student, Columbia"
+
+aaditya-singh:
+  name: "Aaditya Singh"
+  wasA: "M.Eng."
+  now: "Graduate student, UCL"
+
+dounia-mulders:
+  name: "Dounia Mulders"
+  wasA: "Postdoc"
+  now: null
+
+mirko-klukas:
+  name: "Mirko Klukas"
+  wasA: "Postdoc"
+  now: null
+
+leenoy-meshulam:
+  name: "Leenoy Meshulam"
+  wasA: "Postdoc"
+  now: "Assistant Professor, Brown University (previously Swartz Fellow, U. Washington)"
+
+manyi-yim:
+  name: "Manyi Yim"
+  wasA: "Postdoc"
+  now: "AI industry (previously Instructor, SMU)"
+
+tzuhsuan-ma:
+  name: "Tzuhsuan Ma"
+  wasA: "Graduate Student"
+  now: "Postdoc, HHMI/Janelia"
+
+rishidev-chaudhuri:
+  name: "Rishidev Chaudhuri"
+  wasA: "Postdoc"
+  now: "Assistant Professor, UC Davis"
+
+ingmar-kanitscheider:
+  name: "Ingmar Kanitscheider"
+  wasA: "Postdoc"
+  now: "Research Scientist, OpenAI"
+
+christopher-roth:
+  name: "Christopher Roth"
+  wasA: "Graduate Student"
+  now: "Graduate student, UT Austin"
+
+berk-gercek:
+  name: "Berk Gercek"
+  wasA: "Undergrad"
+  now: "Graduate student, University of Geneva"
+
+biraj-pandey:
+  name: "Biraj Pandey"
+  wasA: "Undergrad"
+  now: "Graduate student, University of Washington"
+
+maxwell-gray:
+  name: "Maxwell Gray"
+  wasA: "Undergrad"
+  now: "Graduate student, University of Washington"
+
+abhranil-das:
+  name: "Abhranil Das"
+  wasA: "Graduate Student"
+  now: "Graduate student, UT Austin"
+
+birgit-kriener:
+  name: "Birgit Kriener"
+  wasA: "Postdoc"
+  now: "Research scientist, University of Oslo, Norway"
+
+kijung-yoon:
+  name: "Kijung Yoon"
+  wasA: "Graduate Student"
+  now: "Associate Professor, Hanyang University, Korea"
+
+john-widloski:
+  name: "John Widloski"
+  wasA: "Graduate Student"
+  now: "Postdoctoral researcher, UC Berkeley"
+
+michael-buice:
+  name: "Michael Buice"
+  wasA: "Postdoc"
+  now: "Senior scientist, Allen Institute"
+
+yongseok-yoo:
+  name: "Yongseok Yoo"
+  wasA: "Graduate Student"
+  now: "Assistant Professor, Incheon National University, Korea"
+
+abhinav-singh:
+  name: "Abhinav Singh"
+  wasA: "Postdoc"
+  now: "Data scientist, Peak, UK"
+
+daniel-robles-llana:
+  name: "Daniel Robles Llana"
+  wasA: "Postdoc"
+  now: "Postdoc, University of Geneva"
+
+ila-varma:
+  name: "Ila Varma"
+  wasA: "Undergrad"
+  now: "Assistant Professor, UC San Diego"
+
+prashant-joshi:
+  name: "Prashant Joshi"
+  wasA: "Postdoc"
+  now: "Head, AI/ML group, Fractal Analytics, India"
+
+ni-ji:
+  name: "Ni Ji"
+  wasA: "Undergrad"
+  now: "Principal Investigator/Faculty, Chinese Institute for Brain Research"
+
+peter-welinder:
+  name: "Peter Welinder"
+  wasA: "Undergrad"
+  now: "VP, OpenAI"

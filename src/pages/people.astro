@@ -1,0 +1,107 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import PersonCard from '@/components/PersonCard.astro'
+import { getPeopleByRole } from '@/lib/data'
+import { getCollection } from 'astro:content'
+
+const peopleByRole = await getPeopleByRole()
+const pi = peopleByRole.get('PI') ?? []
+const admin = peopleByRole.get('Administrative Assistant') ?? []
+const postdocs = peopleByRole.get('Postdoc') ?? []
+const grads = peopleByRole.get('Graduate Student') ?? []
+const affiliates = peopleByRole.get('Affiliate') ?? []
+
+const undergrads = (await getCollection('undergrads')).sort((a, b) =>
+  a.data.years === b.data.years ? a.data.name.localeCompare(b.data.name) : b.data.years.localeCompare(a.data.years),
+)
+const alumni = (await getCollection('alumni')).sort((a, b) => a.data.name.localeCompare(b.data.name))
+---
+
+<Layout title="People">
+  <section class="mx-auto max-w-6xl px-6 py-12">
+    <h1 class="text-3xl font-semibold">People</h1>
+    <p class="mt-2 max-w-2xl text-[color:var(--color-text-muted)]">
+      The Fiete Lab brings together researchers from neuroscience, physics,
+      mathematics, and computer science.
+    </p>
+
+    {pi.length > 0 && (
+      <div class="mt-12">
+        <h2 class="text-xl font-semibold">Principal Investigator</h2>
+        <div class="mt-4 grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-5">
+          {pi.map((p) => <PersonCard person={p} size="md" />)}
+        </div>
+      </div>
+    )}
+
+    {admin.length > 0 && (
+      <div class="mt-12">
+        <h2 class="text-xl font-semibold">Administrative Staff</h2>
+        <div class="mt-4 grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-5">
+          {admin.map((p) => <PersonCard person={p} size="md" />)}
+        </div>
+      </div>
+    )}
+
+    {postdocs.length > 0 && (
+      <div class="mt-12">
+        <h2 class="text-xl font-semibold">Postdocs</h2>
+        <div class="mt-4 grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-5">
+          {postdocs.map((p) => <PersonCard person={p} size="md" />)}
+        </div>
+      </div>
+    )}
+
+    {grads.length > 0 && (
+      <div class="mt-12">
+        <h2 class="text-xl font-semibold">Graduate Students</h2>
+        <div class="mt-4 grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-5">
+          {grads.map((p) => <PersonCard person={p} size="md" />)}
+        </div>
+      </div>
+    )}
+
+    {affiliates.length > 0 && (
+      <div class="mt-12">
+        <h2 class="text-xl font-semibold">Affiliates</h2>
+        <div class="mt-4 grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-5">
+          {affiliates.map((p) => <PersonCard person={p} size="md" />)}
+        </div>
+      </div>
+    )}
+
+    <div class="mt-16">
+      <h2 class="text-xl font-semibold">Undergraduate Researchers</h2>
+      <ul class="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+        {undergrads.map((u) => (
+          <li class="rounded-lg border border-[color:var(--color-border)] bg-white p-4 text-sm">
+            <div class="font-semibold text-[color:var(--color-text)]">{u.data.name}</div>
+            <div class="text-xs text-[color:var(--color-text-soft)]">
+              {u.data.years}{u.data.now && <> · now {u.data.now}</>}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="mt-16">
+      <h2 class="text-xl font-semibold">Group Alumni</h2>
+      <ul class="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
+        {alumni.map((a) => (
+          <li class="rounded-lg border border-[color:var(--color-border)] bg-white p-4 text-sm">
+            <div class="font-semibold text-[color:var(--color-text)]">
+              {a.data.website ? (
+                <a href={a.data.website} target="_blank" rel="noopener">{a.data.name}</a>
+              ) : (
+                a.data.name
+              )}
+            </div>
+            <div class="text-xs text-[color:var(--color-text-soft)]">
+              {a.data.wasA}{a.data.now && <> → {a.data.now}</>}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Layout>

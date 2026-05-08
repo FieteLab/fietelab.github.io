@@ -1,0 +1,27 @@
+# Lab news / announcements shown on the homepage.
+# To add an item, copy a block below and edit. `link` is optional.
+
+ila-swartz-prize:
+  date: "2022-10"
+  text: "Ila Fiete receives the Society for Neuroscience Swartz Prize for Theoretical and Computational Neuroscience."
+  link: "https://www.sfn.org/about/awards/swartz-prize-for-theoretical-and-computational-neuroscience"
+
+scaling-laws-2024:
+  date: "2024-10"
+  text: "New papers on neural network scaling laws and modularity from Boopathy et al. accepted at top ML venues."
+
+new-members-2025:
+  date: "2025-09"
+  text: "Welcome to new lab members joining across postdoc, graduate, and affiliate roles."
+
+modular-2025:
+  date: "2025-12"
+  text: "New preprints on modular connectivity, control between subsystems, and brain-wide processing loops are out — see the Papers page."
+
+hertz-2021:
+  date: "2021-02"
+  text: "Congrats to Akhilan and Aaditya — 2021 Hertz finalists."
+
+nsf-2021:
+  date: "2021-04"
+  text: "NSF Graduate Research Fellowship awarded to Akhilan."

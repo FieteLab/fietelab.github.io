@@ -1,0 +1,53 @@
+# Lab code releases — copied from fietelab.mit.edu/code/.
+# To add a project, copy a block below and edit. `paperLink`, `paperTitle`,
+# `githubUrl`, and `otherLinks` are all optional.
+
+spud:
+  name: "SPUD — Manifold structure in head direction data"
+  description: |
+    Code to characterize manifolds and perform unsupervised decoding in the
+    head direction system, as described in Chaudhuri et al. (2019). Code may
+    be used freely; please cite the associated paper. Python 2.7 code with a
+    readme file in a single zipped folder.
+  paperLink: "https://www.nature.com/articles/s41593-019-0460-x"
+  paperTitle: "R. Chaudhuri, B. Gercek*, B. Pandey*, A. Peyrache, I.R. Fiete. The intrinsic population dynamics of a canonical cognitive circuit. Nature Neurosci. (2019)."
+  otherLinks:
+    - { label: "SPUD code (.zip)", url: "https://fietelab.mit.edu/wp-content/uploads/2019/08/spud_code.zip" }
+    - { label: "Readme (.docx)", url: "https://fietelab.mit.edu/wp-content/uploads/2019/08/spudreadme.docx" }
+
+grid-cell-attractor:
+  name: "Grid cell continuous attractor models"
+  description: |
+    Simulation code for grid cell activity based on continuous attractor
+    dynamics in neural networks, with periodic or aperiodic boundary
+    conditions. The code can be run with random or recorded trajectory data
+    from rats (included in download).
+  paperLink: "https://fietelab.mit.edu/wp-content/uploads/2018/12/gcdynamics_burakfiete09_plos.pdf"
+  paperTitle: "Y. Burak and I. R. Fiete. Accurate path integration in continuous attractor network models of grid cells. PLoS Comp. Biol. 5(2) (2009)."
+  otherLinks:
+    - { label: "Matlab GC Dynamics", url: "https://www.dropbox.com/sh/ird9hnh8xbh76m8/AADIvXSqkUsWsVrUAoJFOU23a?dl=0" }
+    - { label: "Matlab Readme", url: "https://www.dropbox.com/s/1t73nvw4y10cve3/README_GC_Dynamics2009.txt?dl=0" }
+    - { label: "C GC Dynamics", url: "https://www.dropbox.com/sh/x1bkd10aqjxsisy/AAAxxgbpWIy78XQB2bDl_QXxa?dl=0" }
+    - { label: "C code Readme", url: "https://www.dropbox.com/s/xtmp9376iv7nlhl/README_GC_Dynamics2009c.txt?dl=0" }
+
+stdp-sequences:
+  name: "Neural sequences via STDP and heterosynaptic competition"
+  description: |
+    Simulations showing how spike time dependent plasticity and
+    heterosynaptic competition spontaneously organize networks to produce
+    long, sparse neural activity sequences, whether the training inputs are
+    sequential or not. Aligns with Figure 2 of the associated paper (summed
+    weight bound). Matlab simulation file.
+  paperLink: "https://fietelab.mit.edu/wp-content/uploads/2018/12/sequence_formation_neuron10.pdf"
+  paperTitle: "I. R. Fiete, W. Senn, C. Wang, R. H. R. Hahnloser. Spike time-dependent plasticity and heterosynaptic competition organize networks to produce long scale-free sequences of neural activity. Neuron 65(4): 563-576 (2010)."
+  otherLinks:
+    - { label: "Sequence formation code", url: "https://www.dropbox.com/sh/bv4q14hur1ty7no/AADkJZWIkcRznR_g8cdj6Cs4a?dl=0" }
+    - { label: "Readme", url: "https://www.dropbox.com/s/0ig4aw5fc16htrk/README_LCN.txt?dl=0" }
+
+github-org:
+  name: "FieteLab on GitHub"
+  description: |
+    Lab GitHub organization with all newer open-source releases tied to
+    individual papers. Each repo contains its own README with run
+    instructions.
+  githubUrl: "https://github.com/FieteLab"

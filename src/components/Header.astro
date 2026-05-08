@@ -1,0 +1,58 @@
+---
+import { NAV_LINKS } from '@/consts'
+
+const path = Astro.url.pathname
+const isActive = (href: string) =>
+  href === '/' ? path === '/' : path.startsWith(href)
+---
+
+<header class="sticky top-0 z-50 border-b border-[color:var(--color-border)] bg-white/90 backdrop-blur">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+    <a href="/" class="flex items-baseline gap-2 font-bold text-[color:var(--color-text)] no-underline hover:no-underline">
+      <span class="font-serif italic text-[color:var(--color-accent)] text-xl">Fiete</span>
+      <span>Lab</span>
+    </a>
+
+    <button
+      id="nav-toggle"
+      class="md:hidden rounded p-2 text-2xl leading-none hover:bg-[color:var(--color-bg-alt)]"
+      aria-label="Toggle menu"
+    >
+      &#9776;
+    </button>
+
+    <ul
+      id="nav-links"
+      class="hidden md:flex md:items-center md:gap-7 md:static md:flex-row md:bg-transparent md:border-0
+             absolute left-0 right-0 top-full flex-col gap-3 border-b
+             border-[color:var(--color-border)] bg-white px-6 py-4"
+    >
+      {
+        NAV_LINKS.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class:list={[
+                'text-sm font-medium no-underline hover:no-underline',
+                isActive(link.href)
+                  ? 'text-[color:var(--color-accent)] border-b-2 border-[color:var(--color-accent)]'
+                  : 'text-[color:var(--color-text)] hover:text-[color:var(--color-accent)]',
+              ]}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle')
+  const links = document.getElementById('nav-links')
+  toggle?.addEventListener('click', () => {
+    links?.classList.toggle('hidden')
+    links?.classList.toggle('flex')
+  })
+</script>
