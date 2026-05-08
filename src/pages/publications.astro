@@ -165,12 +165,25 @@ if (newestOld >= oldestYear) {
     </div>
 
     {
-      years.map((year) => (
+      years.map((year, idx) => (
         <div class="year-section mt-12" data-year={year}>
-          <h2 class="border-b border-[color:var(--color-border)] pb-2 text-xl font-semibold">
-            {year}
-          </h2>
-          <ul class="divide-y divide-[color:var(--color-border)]">
+          <button
+            type="button"
+            class="year-toggle flex w-full items-center justify-between border-b border-[color:var(--color-border)] pb-2 text-left text-xl font-semibold hover:text-[color:var(--color-accent)]"
+            aria-expanded={idx === 0 ? 'true' : 'false'}
+          >
+            <span>
+              {year}
+              <span class="ml-2 text-sm font-normal text-[color:var(--color-text-soft)]">
+                ({byYear.get(year)!.length})
+              </span>
+            </span>
+            <span class="year-caret transition-transform" aria-hidden="true">▾</span>
+          </button>
+          <ul
+            class="year-list divide-y divide-[color:var(--color-border)]"
+            data-collapsed={idx === 0 ? 'false' : 'true'}
+          >
             {byYear.get(year)!.map((pub) => {
               const link = pub.data.link
               const label = linkLabel(link)
@@ -257,14 +270,38 @@ if (newestOld >= oldestYear) {
   </section>
 </Layout>
 
+<style>
+  .year-list[data-collapsed='true'] { display: none; }
+  .year-toggle[aria-expanded='false'] .year-caret { transform: rotate(-90deg); }
+</style>
+
 <script>
   const filterBar = document.getElementById('topic-filter')
   const topicPills = document.querySelectorAll<HTMLButtonElement>('.topic-pill')
   const yearPills = document.querySelectorAll<HTMLButtonElement>('.year-pill')
   const tagButtons = document.querySelectorAll<HTMLButtonElement>('.topic-tag')
+  const yearToggles = document.querySelectorAll<HTMLButtonElement>('.year-toggle')
   const items = document.querySelectorAll<HTMLLIElement>('.pub-item')
   const yearSections = document.querySelectorAll<HTMLDivElement>('.year-section')
   const emptyState = document.getElementById('empty-state')
+
+  // Year-section fold/unfold
+  yearToggles.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const list = btn.parentElement?.querySelector<HTMLUListElement>('.year-list')
+      const expanded = btn.getAttribute('aria-expanded') === 'true'
+      btn.setAttribute('aria-expanded', String(!expanded))
+      if (list) list.dataset.collapsed = expanded ? 'true' : 'false'
+    })
+  })
+
+  function expandAllYears() {
+    yearToggles.forEach((btn) => {
+      btn.setAttribute('aria-expanded', 'true')
+      const list = btn.parentElement?.querySelector<HTMLUListElement>('.year-list')
+      if (list) list.dataset.collapsed = 'false'
+    })
+  }
 
   let activeTopic = '__all'
   let activeYear = '__all' // '__all' | a 4-digit year | a "low-high" bucket id
@@ -339,6 +376,11 @@ if (newestOld >= oldestYear) {
       sec.style.display = visibleInYear > 0 ? '' : 'none'
     })
     emptyState?.classList.toggle('hidden', visibleCount > 0)
+    // When any filter is active, expand every year section so the
+    // matches don't hide inside a collapsed year.
+    if (activeTopic !== '__all' || activeYear !== '__all') {
+      expandAllYears()
+    }
     syncHash()
   }
 
