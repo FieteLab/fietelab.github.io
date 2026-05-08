@@ -29,7 +29,7 @@ mccourt2026noisy:
 
 liang2026blessing:
   title: "The Blessing of Dimensionality in LLM Fine-tuning: A Variance-Curvature Perspective"
-  topics: ["Theoretical ML"]
+  topics: ["Theoretical ML", "LLM"]
   authors: "Qiyao (Catherine) Liang, Jinyeop Song, Yizhou Liu, Jeff Gore, Ila Fiete, Risto Miikkulainen, Xin Qiu"
   year: 2026
   venue: "arXiv preprint"
@@ -79,7 +79,7 @@ schartner2025spatially:
 
 hwang2025learn:
   title: "Learn globally, speak locally: Bridging the gaps in multilingual reasoning"
-  topics: ["Theoretical ML_Claude"]
+  topics: ["LLM"]
   authors: "Jaedong Hwang, T. Kumar, Seung‐Koo Lee, Ayush Agrawal, Hamid Palangi, A. Kumar, Ila Fiete+, Paul Liang+"
   year: 2025
   venue: "arXiv preprint"
@@ -214,7 +214,7 @@ xie2025multiregion:
 
 duan2025uncovering:
   title: "Uncovering Latent Memories in Large Language Models"
-  topics: ["Memory_Claude", "Theoretical ML_Claude"]
+  topics: ["Memory_Claude", "Theoretical ML_Claude", "LLM"]
   authors: "Sunny Duan, Mikail Khona, Abhi Iyer, Rylan Schaeffer, Ila Fiete"
   year: 2025
   venue: "ICLR"
@@ -374,7 +374,7 @@ liang2024how:
 
 hwang2024grid:
   title: "Grid Cell-Inspired Fragmentation and Recall for Efficient Map Building"
-  topics: ["Navigation circuits and spatial cognition", "Memory"]
+  topics: ["Navigation circuits and spatial cognition", "Memory", "Neuro-Inspired AI"]
   authors: "Jaedong Hwang, Zhang-Wei Hong, Eric Chen, Akhilan Boopathy, Pulkit Agrawal, Ila Fiete"
   year: 2024
   venue: "TMLR"
@@ -434,7 +434,7 @@ yi2024multiregion:
 
 wang2024rapid:
   title: "Rapid Learning without Catastrophic Forgetting in the Morris Water Maze"
-  topics: ["Memory", "Navigation circuits and spatial cognition"]
+  topics: ["Memory", "Navigation circuits and spatial cognition", "Neuro-Inspired AI"]
   authors: "Raymond L. Wang, Jaedong Hwang, Akhilan Boopathy, Ila Fiete"
   year: 2024
   venue: "ICML"
@@ -454,7 +454,7 @@ kirjner2024improving:
 
 hwang2023neuroinspired:
   title: "Neuro-Inspired Fragmentation and Recall to Overcome Catastrophic Forgetting in Curiosity"
-  topics: ["Memory", "Navigation circuits and spatial cognition"]
+  topics: ["Memory", "Neuro-Inspired AI"]
   authors: "Jaedong Hwang, Zhang-Wei Hong, Eric Chen, Akhilan Boopathy, Pulkit Agrawal, Ila Fiete"
   year: 2023
   venue: "arXiv preprint"
