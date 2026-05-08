@@ -40,24 +40,38 @@ for (const p of allPubs) {
 }
 const years = [...byYear.keys()].sort((a, b) => b - a)
 
-// Year filter: most recent 5 years individually, then 5-year calendar
-// buckets going back ("2021–2017", "2016–2012", …). Bucket id encodes
-// the high+low year so the JS can match items by year.
+// Year filter:
+//   most recent 5 years individually (2026, 2025, 2024, 2023, 2022)
+//   ↓
+//   ONE 5-year bucket   (e.g. 2021–2017)
+//   ↓
+//   ONE catchall bucket (e.g. 2016–1998) for everything older
 const RECENT_N = 5
+const BUCKET_SIZE = 5
 const allYearsSorted = [...byYear.keys()].sort((a, b) => b - a)
 const recentYears = allYearsSorted.slice(0, RECENT_N).filter((y) => (byYear.get(y)?.length ?? 0) > 0)
 
 const oldestYear = allYearsSorted.length ? allYearsSorted[allYearsSorted.length - 1] : 0
-const newestOld = recentYears.length ? Math.min(...recentYears) - 1 : 0  // first old year
+const newestOld = recentYears.length ? Math.min(...recentYears) - 1 : 0
 
 interface Bucket { id: string; high: number; low: number; count: number }
 const buckets: Bucket[] = []
+
+// First 5-year bucket (2021–2017 when recent ends at 2022)
 if (newestOld >= oldestYear) {
-  for (let high = newestOld; high >= oldestYear; high -= 5) {
-    const low = Math.max(oldestYear, high - 4)
-    let count = 0
-    for (let y = low; y <= high; y++) count += byYear.get(y)?.length ?? 0
-    if (count > 0) buckets.push({ id: `${low}-${high}`, high, low, count })
+  const high = newestOld
+  const low = Math.max(oldestYear, high - BUCKET_SIZE + 1)
+  let count = 0
+  for (let y = low; y <= high; y++) count += byYear.get(y)?.length ?? 0
+  if (count > 0) buckets.push({ id: `${low}-${high}`, high, low, count })
+
+  // Catchall bucket (everything below `low - 1`, e.g. 2016–1998)
+  if (low > oldestYear) {
+    const cHigh = low - 1
+    const cLow = oldestYear
+    let cCount = 0
+    for (let y = cLow; y <= cHigh; y++) cCount += byYear.get(y)?.length ?? 0
+    if (cCount > 0) buckets.push({ id: `${cLow}-${cHigh}`, high: cHigh, low: cLow, count: cCount })
   }
 }
 ---
