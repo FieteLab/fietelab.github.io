@@ -2,6 +2,76 @@
 # To add a project, copy a block below and edit. `paperLink`, `paperTitle`,
 # `githubUrl`, and `otherLinks` are all optional.
 
+farmap:
+  name: "FARMap — Grid Cell-Inspired Fragmentation and Recall for Map Building"
+  description: |
+    Reference implementation of the Fragmentation-and-Recall (FAR) map
+    for efficient exploration of large spaces, drawing on observed
+    fragmentation of grid-cell maps in compartmentalized environments.
+  githubUrl: "https://github.com/FieteLab/FARMap"
+  paperLink: "https://openreview.net/forum?id=cT8oOJ6Q6F"
+  paperTitle: "J. Hwang, Z. W. Hong, E. Chen, A. Boopathy, P. Agrawal, I. R. Fiete. Grid Cell-Inspired Fragmentation and Recall for Efficient Map Building. TMLR (2024)."
+
+farcuriosity:
+  name: "FARCuriosity — Fragmentation and Recall for Curiosity-Driven RL"
+  description: |
+    Companion code applying the FAR fragmentation-and-recall idea to
+    curiosity-driven exploration in reinforcement learning, mitigating
+    catastrophic forgetting in long-horizon tasks.
+  githubUrl: "https://github.com/FieteLab/FARCuriosity"
+  paperLink: "https://arxiv.org/abs/2310.17537"
+  paperTitle: "J. D. Hwang, Z. W. Hong, E. Chen, A. Boopathy, P. Agrawal, I. R. Fiete. Neuro-Inspired Fragmentation and Recall to Overcome Catastrophic Forgetting in Curiosity (2023)."
+
+m2a:
+  name: "M2A — Bridging the Gap in Multilingual Reasoning"
+  description: |
+    Implementation of the Multi-step Multilingual Adaptation method that
+    closes the reasoning-quality gap between an LLM's training language
+    and lower-resource target languages.
+  githubUrl: "https://github.com/jd730/M2A"
+  paperLink: "https://arxiv.org/abs/2507.05418"
+  paperTitle: "J. D. Hwang, T. Kumar, S. J. Lee, A. Agrawal, H. Palangi, A. Kumar, I. R. Fiete, P. P. Liang. Learn globally, speak locally: Bridging the gaps in multilingual reasoning (2025)."
+
+multiregion-brain-model:
+  name: "Multi-Region Brain Model — Hippocampus in Spatial Decision-Making"
+  description: |
+    PyTorch model of multiple interacting brain regions used to study
+    how the hippocampus supports spatially-embedded decision making in
+    rodents and primates.
+  githubUrl: "https://github.com/FieteLab/multiregion-brain-model"
+  paperLink: "https://www.biorxiv.org/content/10.1101/2025.05.29.656671"
+  paperTitle: "Y. Xie, J. Hwang, C. Brody, D. Tank, I. R. Fiete. A Multi-Region Brain Model to Elucidate the Role of Hippocampus in Spatially Embedded Decision-Making. ICML (2025)."
+
+seq-wm:
+  name: "seq-WM — Sequential Morris Water Maze"
+  description: |
+    A sequential variant of the Morris water-maze task for studying rapid
+    learning without catastrophic forgetting in artificial agents,
+    paired with reference RL agents that solve it.
+  githubUrl: "https://github.com/raymondw2/seq-wm"
+  paperLink: "https://proceedings.mlr.press/v235/wang24ab.html"
+  paperTitle: "R. L. Wang, J. Hwang, A. Boopathy, I. R. Fiete. Rapid Learning without Catastrophic Forgetting in the Morris Water Maze. ICML (2024)."
+
+inductive-bias-complexity:
+  name: "Inductive Bias Complexity — Generalization-difficulty measure"
+  description: |
+    Reference code for a model-agnostic measure of how hard a learning
+    task is for a given hypothesis class, derived from the Kolmogorov
+    complexity of the optimal predictor relative to the inductive bias.
+  githubUrl: "https://github.com/FieteLab/inductive-bias-complexity"
+  paperLink: "https://proceedings.mlr.press/v202/boopathy23a.html"
+  paperTitle: "A. Boopathy, K. Liu, J. Hwang, S. Ge, A. Mohammedsaleh, I. R. Fiete. Model-agnostic measure of generalization difficulty. ICML (2023)."
+
+exact-inductive-bias:
+  name: "Exact Inductive Bias — Closed-form computation"
+  description: |
+    Companion code computing the exact inductive bias of common ML
+    architectures, building on the Boopathy & Fiete generalization-
+    difficulty framework.
+  githubUrl: "https://github.com/FieteLab/Exact-Inductive-Bias"
+  paperLink: "https://arxiv.org/abs/2406.15941"
+  paperTitle: "A. Boopathy, W. Yue, J. Hwang, A. Iyer, I. R. Fiete. Towards Exact Computation of Inductive Bias (2024)."
+
 dsa:
   name: "Dynamical Similarity Analysis"
   description: |
