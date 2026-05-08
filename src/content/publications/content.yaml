@@ -205,7 +205,7 @@ chandra2025episodic:
 
 xie2025multiregion:
   title: "A Multi-Region Brain Model to Elucidate the Role of Hippocampus in Spatially Embedded Decision-Making"
-  topics: ["Decision making_Claude", "Memory_Claude", "Navigation circuits and spatial cognition_Claude"]
+  topics: ["Decision making", "Memory", "Navigation circuits and spatial cognition"]
   authors: "Y. Xie, Jaedong Hwang, C. Brody, D. Tank, Ila Fiete"
   year: 2025
   venue: "ICML"
@@ -321,7 +321,7 @@ boopathy2024permutation:
 
 hwang2024imagenetrib:
   title: "ImageNet-RIB Benchmark: Large Pre-Training Datasets Don't Guarantee Robustness after Fine-Tuning"
-  topics: ["Theoretical ML_Claude"]
+  topics: ["Theoretical ML"]
   authors: "Jaedong Hwang, B. Cheung, Z. W. Hong, Akhilan Boopathy, P. Agrawal, Ila Fiete"
   year: 2024
   venue: "arXiv preprint"
@@ -374,7 +374,7 @@ liang2024how:
 
 hwang2024grid:
   title: "Grid Cell-Inspired Fragmentation and Recall for Efficient Map Building"
-  topics: ["Navigation circuits and spatial cognition_Claude", "Memory_Claude"]
+  topics: ["Navigation circuits and spatial cognition", "Memory"]
   authors: "Jaedong Hwang, Z. W. Hong, E. Chen, Akhilan Boopathy, P. Agrawal, Ila Fiete"
   year: 2024
   venue: "TMLR"
@@ -426,7 +426,7 @@ neupane2024mental:
 
 yi2024multiregion:
   title: "A Multi-Region Brain Model to Shed Light on the Role of Hippocampus in Spatially Embedded Decision Tasks"
-  topics: ["Decision making_Claude", "Memory_Claude", "Navigation circuits and spatial cognition_Claude"]
+  topics: ["Decision making", "Memory", "Navigation circuits and spatial cognition"]
   authors: "X. Yi, Jaedong Hwang, C. Brody, D. Tank, Ila Fiete"
   year: 2024
   venue: "CCN"
@@ -434,7 +434,7 @@ yi2024multiregion:
 
 wang2024rapid:
   title: "Rapid Learning without Catastrophic Forgetting in the Morris Water Maze"
-  topics: ["Memory_Claude", "Navigation circuits and spatial cognition_Claude"]
+  topics: ["Memory", "Navigation circuits and spatial cognition"]
   authors: "Raymond L. Wang, Jaedong Hwang, Akhilan Boopathy, Ila Fiete"
   year: 2024
   venue: "ICML"
@@ -454,7 +454,7 @@ kirjner2024improving:
 
 hwang2023neuroinspired:
   title: "Neuro-Inspired Fragmentation and Recall to Overcome Catastrophic Forgetting in Curiosity"
-  topics: ["Memory_Claude", "Navigation circuits and spatial cognition_Claude"]
+  topics: ["Memory", "Navigation circuits and spatial cognition"]
   authors: "Jaedong Hwang, Z. W. Hong, E. Chen, Akhilan Boopathy, P. Agrawal, Ila Fiete"
   year: 2023
   venue: "arXiv preprint"
@@ -472,7 +472,7 @@ schaeffer2023double:
 
 hwang2023generalizable:
   title: "Generalizable Relational Inference with Cognitive Maps in a Hippocampal Model and in Primates"
-  topics: ["Memory_Claude", "Navigation circuits and spatial cognition_Claude"]
+  topics: ["Memory", "Navigation circuits and spatial cognition"]
   authors: "Jaedong Hwang, S. Neupane, M. Jazayeri, Ila Fiete"
   year: 2023
   venue: "NeurIPS Workshop (AMHN)"
@@ -527,7 +527,7 @@ pattadkal2023primate:
 
 hwang2023grid:
   title: "A Grid Cell-Place Cell Scaffold Allows Rapid Learning and Generalization at Multiple Levels on Mental Navigation Tasks"
-  topics: ["Navigation circuits and spatial cognition_Claude", "Memory_Claude"]
+  topics: ["Navigation circuits and spatial cognition", "Memory"]
   authors: "Jaedong Hwang, S. Neupane, M. Jazayeri, Ila Fiete"
   year: 2023
   venue: "CCN"
