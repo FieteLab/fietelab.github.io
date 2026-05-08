@@ -55,13 +55,14 @@ qian2025modular:
   citation: "arXiv:2512.13707 (2025)"
   link: "https://arxiv.org/abs/2512.13707"
 
-huang2025inputdsa:
+huangostrow2025inputdsa:
   title: "InputDSA: Demixing then Comparing Recurrent and Externally Driven Dynamics"
-  authors: "A. Huang, Mitchell Ostrow, S. H. Singh, Leo Kozachkov, Ila Fiete, K. Rajan"
+  authors: "A. Huang*, Mitchell Ostrow*, S. H. Singh, Leo Kozachkov, Ila Fiete, K. Rajan"
   year: 2025
-  venue: "arXiv preprint"
+  venue: "ICLR"
   citation: "arXiv:2510.25943 (2025)"
-  link: "https://arxiv.org/abs/2510.25943"
+  link: "https://openreview.net/forum?id=2FrAvRz1E7"
+  annotation: "* co-first authors"
 
 schartner2025spatially:
   title: "Spatially distributed and regionally unbound cellular resolution brain-wide processing loops in mice"
