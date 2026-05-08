@@ -25,31 +25,66 @@ const byYear = await getPublicationsByYear()
             {year}
           </h2>
           <ul class="divide-y divide-[color:var(--color-border)]">
-            {pubs.map((pub) => (
-              <li class="py-4">
-                <div class="font-medium leading-snug text-[color:var(--color-text)]">
-                  {pub.data.link ? (
-                    <a href={pub.data.link} target="_blank" rel="noopener">
-                      {pub.data.title}
-                    </a>
-                  ) : (
-                    pub.data.title
-                  )}
-                </div>
-                <div class="mt-1 text-sm text-[color:var(--color-text-muted)]">
-                  {pub.data.authors}
-                </div>
-                <div class="mt-1 text-xs italic text-[color:var(--color-text-soft)]">
-                  <span class="not-italic font-semibold text-[color:var(--color-accent)]">
-                    {pub.data.venue}
-                  </span>
-                  {pub.data.citation && <span> · {pub.data.citation}</span>}
-                  {pub.data.annotation && (
-                    <span class="not-italic font-medium"> · {pub.data.annotation}</span>
-                  )}
-                </div>
-              </li>
-            ))}
+            {pubs.map((pub) => {
+              const link = pub.data.link
+              const linkLabel = link
+                ? /arxiv\.org/.test(link)
+                  ? 'arXiv'
+                  : /biorxiv\.org/.test(link)
+                    ? 'bioRxiv'
+                    : /openreview\.net/.test(link)
+                      ? 'OpenReview'
+                      : /(nature|elifesciences|cell\.com|sciencedirect|nih|pnas|aps\.org|annualreviews|nips|neurips|mlr\.press|proceedings|sfn)/.test(link)
+                        ? 'Journal'
+                        : 'Link'
+                : null
+              return (
+                <li class="py-4">
+                  <div class="font-medium leading-snug">
+                    {link ? (
+                      <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener"
+                        class="text-[color:var(--color-text)] no-underline hover:text-[color:var(--color-accent)] hover:underline"
+                      >
+                        {pub.data.title}
+                      </a>
+                    ) : (
+                      <span class="text-[color:var(--color-text)]">{pub.data.title}</span>
+                    )}
+                  </div>
+                  <div class="mt-1 text-sm text-[color:var(--color-text-muted)]">
+                    {pub.data.authors}
+                  </div>
+                  <div class="mt-1 flex flex-wrap items-center gap-2 text-xs">
+                    <span class="font-semibold text-[color:var(--color-accent)]">
+                      {pub.data.venue}
+                    </span>
+                    {pub.data.citation && (
+                      <span class="italic text-[color:var(--color-text-soft)]">
+                        · {pub.data.citation}
+                      </span>
+                    )}
+                    {pub.data.annotation && (
+                      <span class="font-medium text-[color:var(--color-text-muted)]">
+                        · {pub.data.annotation}
+                      </span>
+                    )}
+                    {link && (
+                      <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener"
+                        class="ml-auto inline-flex items-center gap-1 rounded-full border border-[color:var(--color-border)] bg-white px-2.5 py-0.5 text-[color:var(--color-link)] no-underline hover:bg-[color:var(--color-bg-alt)] hover:no-underline"
+                      >
+                        {linkLabel} <span aria-hidden="true">↗</span>
+                      </a>
+                    )}
+                  </div>
+                </li>
+              )
+            })}
           </ul>
         </div>
       ))
