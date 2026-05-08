@@ -17,8 +17,9 @@ export const NAV_LINKS = [
 ] as const
 
 export const SOCIAL_LINKS = [
-  { href: 'https://github.com/FieteLab', label: 'GitHub' },
-  { href: 'https://scholar.google.com/citations?user=uE-CihIAAAAJ', label: 'Scholar' },
+  { href: 'https://x.com/FieteGroup', label: 'X', icon: 'x' },
+  { href: 'https://github.com/FieteLab', label: 'GitHub', icon: 'github' },
+  { href: 'https://scholar.google.com/citations?user=uE-CihIAAAAJ', label: 'Google Scholar', icon: 'scholar' },
 ] as const
 
 export const AFFILIATIONS = [
