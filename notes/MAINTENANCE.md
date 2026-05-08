@@ -118,7 +118,7 @@ Common drift to look for:
 | Symptom | Fix |
 |---|---|
 | Bio says "PhD student" but person's website now says "Postdoc, X" | They graduated — move them to [`src/content/alumni/content.yaml`](../src/content/alumni/content.yaml), delete their `.md`. |
-| Person mentions "co-advised by X" but `coAdvisor:` field is empty (or vice versa) | Sync the two; ensure X is in `EXTERNAL_AUTHOR_LINKS` (`src/lib/data.ts`) so X's name links from the byline. |
+| Person mentions "co-advised by X" but `coAdvisor:` field is empty (or vice versa) | Sync the two; ensure X has a block in [`src/content/collaborators/content.yaml`](../src/content/collaborators/content.yaml) so X's name links from the byline. |
 | `website:` 404 but person has a new domain | Update the URL. |
 | New affiliation (e.g. fellowship, prize) prominent on their site | Add a sentence to the bio paragraph. |
 
@@ -230,12 +230,16 @@ These are documented in [`PROJECT_NOTES.md`](PROJECT_NOTES.md) under
 - **Slugs:** BibTeX style (`hwang2025learn`). All lowercase, no dashes.
 - **Co-first / co-senior:** `*` / `+` as a trailing marker on the
   name; matching `annotation:` line.
-- **Topics:** must match a key in `src/lib/topics.ts` exactly.
+- **Topics:** any string is accepted; new ones get a stable hashed
+  color and an auto-added filter pill. Pin a curated color/order in
+  [`src/lib/topics.ts`](../src/lib/topics.ts) only if you specifically
+  want one. Don't use the `_Claude` suffix for new tags.
 - **Citations:** never repeat just `venue + year` — leave the field
   out. Only fill it for DOI / volume / page / preprint history.
 - **Author-link map:** lab members → `/people/<slug>/` (maroon),
-  alumni → `website ?? scholar` (gray), known external collaborators
-  in `EXTERNAL_AUTHOR_LINKS` (gray), everyone else → plain text.
+  alumni → `website ?? scholar` (gray), external collaborators listed
+  in [`src/content/collaborators/content.yaml`](../src/content/collaborators/content.yaml)
+  (gray), everyone else → plain text.
 - **Group photo:** lives only on `/people/`. Capped at `max-w-3xl` and
   16:9 aspect ratio.
 

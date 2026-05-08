@@ -200,7 +200,7 @@ If a paper is missing or extra, add `authorAliases: ["J. Hwang", "JD Hwang"]` to
 
 | Callout | What | File |
 |---|---|---|
-| ① | Topic filter pills (sticky at top) | Auto-generated from `topics:` field on each paper. To recolor a topic, edit [`src/lib/topics.ts`](src/lib/topics.ts). |
+| ① | Topic filter pills + Year filter row + Search box | Auto-generated. New tags in `topics:` on a paper get a stable hash-based color and a filter pill automatically; no code edit required. To recolor or pin a topic position, edit [`src/lib/topics.ts`](src/lib/topics.ts). |
 | ② | Paper title (linked) | YAML `title:` and `link:` on each entry in [`src/content/publications/content.yaml`](src/content/publications/content.yaml) |
 | ③ | Venue / citation | YAML `venue:` and (optional) `citation:` |
 | ④ | Topic tags | YAML `topics: ["Memory", "Theoretical ML"]` (see allowed list below) |
@@ -253,19 +253,21 @@ entries from Ila's OpenAlex profile. Review, copy good ones into
 
 ![code](docs/screenshots/code.png)
 
-Each card is one entry in [`src/content/projects/content.yaml`](src/content/projects/content.yaml):
+Each card is one entry in [`src/content/projects/content.yaml`](src/content/projects/content.yaml). Cards are sorted newest-first; the year pill in the corner comes from the `year:` field.
 
 ```yaml
 my-project:
   name: "My Project"
+  year: 2026
   description: |
     Multi-line description of what the code does.
-  githubUrl: "https://github.com/FieteLab/my-project"   # optional
-  paperLink: "https://arxiv.org/abs/2601.00001"         # optional
-  paperTitle: "Doe & Fiete (2026)"                      # optional
+  githubUrl: "https://github.com/FieteLab/my-project"
+  paperSlug: "doe2026myproject"     # references publications/content.yaml
   otherLinks:
     - { label: "Demo", url: "https://example.com" }
 ```
+
+**`paperSlug:`** points at the matching entry in `publications/content.yaml`. The `/code` page pulls authors / title / venue / year / link from there, so a citation never needs to be retyped.
 
 ---
 

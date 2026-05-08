@@ -208,14 +208,18 @@ Open [src/content/projects/content.yaml](src/content/projects/content.yaml). Add
 ```yaml
 my-project:
   name: "My Project"
+  year: 2026                                            # optional, used for sort + year pill
   description: |
-    Multi-line description of what the code does and how to cite it.
+    Multi-line description of what the code does.
   githubUrl: "https://github.com/FieteLab/my-project"   # optional
-  paperLink: "https://arxiv.org/abs/2601.00001"         # optional
-  paperTitle: "Doe & Fiete (2026)"                      # optional
+  paperSlug: "doe2026myproject"                         # references publications/content.yaml
   otherLinks:                                            # optional
     - { label: "Demo", url: "https://example.com" }
 ```
+
+**`paperSlug:`** is the key idea. Instead of restating the paper's authors / venue / year on the code card, just point at the matching entry in [`src/content/publications/content.yaml`](src/content/publications/content.yaml) by its slug. The `/code` page renders the citation through the same abbreviation pipeline as `/publications`, so the two stay in sync automatically.
+
+If the project has no associated paper (e.g. the GitHub-org link), omit `paperSlug`.
 
 ---
 

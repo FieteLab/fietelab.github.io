@@ -72,11 +72,18 @@ Visual differentiation matters — without it, a Nature paper byline is
 12 identical blue links and you can't scan for who's a member. See
 `src/components/AuthorList.astro`.
 
-### Topic categorization came from the original WordPress page
+### Topic categorization started from the original WordPress page
 
-10 topics, not invented — copied from fietelab.mit.edu/publications/'s
-"Categorized by topic" section. 64 of 111 papers tagged. The rest show
-only under "All". Each topic has a stable color (`src/lib/topics.ts`).
+10 base topics, not invented — copied from fietelab.mit.edu/publications/'s
+"Categorized by topic" section. Lab members later added more
+("Neural Dynamics", "LLM", "Neuro-Inspired AI", "Altered Brain States",
+…). The 10 originals have curated color triplets in
+[`src/lib/topics.ts`](../src/lib/topics.ts); any new tag string gets a
+stable hash-derived color automatically — no `topics.ts` edit required.
+
+A one-time bulk pass tagged 52 historically-untagged papers with a
+`_Claude` postfix to mark them for human review. Going forward, drop the
+suffix when accepting and use canonical names directly.
 
 ### Redundant citations stripped from YAML, not just hidden
 

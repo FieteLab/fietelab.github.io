@@ -32,9 +32,11 @@ src/
 ├── lib/data.ts                helpers (author abbreviation, link map, OpenAlex dedupe)
 └── consts.ts                  site name, nav items, affiliation logos
 scripts/
-├── sync_publications.py       OpenAlex paper sync
+├── sync_publications.py       OpenAlex paper sync (fetch new papers from Ila's profile)
+├── check_published.py         scan preprints for journal/conference acceptances
+├── expand_author_names.py     replace abbreviated co-author tokens with full names
 ├── requirements.txt           Python deps (requests, PyYAML)
-└── sync-state.yaml            persistent state for the sync (created on first run)
+└── sync-state.yaml            persistent state for sync_publications.py
 ```
 
 ## Develop locally
