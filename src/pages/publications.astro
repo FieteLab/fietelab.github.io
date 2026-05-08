@@ -186,12 +186,12 @@ if (newestOld >= oldestYear) {
     </div>
 
     {
-      years.map((year, idx) => (
+      years.map((year) => (
         <div class="year-section mt-12" data-year={year}>
           <button
             type="button"
             class="year-toggle flex w-full items-center justify-between border-b border-[color:var(--color-border)] pb-2 text-left text-xl font-semibold hover:text-[color:var(--color-accent)]"
-            aria-expanded={idx === 0 ? 'true' : 'false'}
+            aria-expanded="true"
           >
             <span>
               {year}
@@ -203,7 +203,7 @@ if (newestOld >= oldestYear) {
           </button>
           <ul
             class="year-list divide-y divide-[color:var(--color-border)]"
-            data-collapsed={idx === 0 ? 'false' : 'true'}
+            data-collapsed="false"
           >
             {byYear.get(year)!.map((pub) => {
               const link = pub.data.link
