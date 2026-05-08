@@ -1,0 +1,101 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import { getCollection, render, type CollectionEntry } from 'astro:content'
+
+export async function getStaticPaths() {
+  const people = await getCollection('people')
+  return people.map((person) => ({
+    params: { id: person.id },
+    props: { person },
+  }))
+}
+
+interface Props {
+  person: CollectionEntry<'people'>
+}
+
+const { person } = Astro.props
+const data = person.data
+const { Content } = await render(person)
+
+const initials = data.name
+  .split(/\s+/)
+  .filter(Boolean)
+  .map((p) => p[0])
+  .slice(0, 2)
+  .join('')
+  .toUpperCase()
+---
+
+<Layout title={data.name} description={`Profile of ${data.name}, ${data.title} in the Fiete Lab at MIT.`}>
+  <section class="mx-auto max-w-4xl px-6 py-10">
+    <a
+      href="/people/"
+      class="inline-flex items-center gap-1 text-sm text-[color:var(--color-text-soft)] hover:text-[color:var(--color-accent)] no-underline hover:no-underline"
+    >
+      <span aria-hidden="true">&larr;</span> All people
+    </a>
+
+    <header class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-[200px_1fr] sm:items-start">
+      <div class="relative h-48 w-48 overflow-hidden rounded-2xl bg-gradient-to-br from-[color:var(--color-accent)] to-[color:var(--color-accent-soft)] text-white">
+        {
+          data.avatar ? (
+            <Image
+              src={data.avatar}
+              alt={data.name}
+              width={400}
+              height={400}
+              class="h-full w-full object-cover"
+            />
+          ) : (
+            <div class="flex h-full w-full items-center justify-center text-5xl font-semibold">
+              {initials}
+            </div>
+          )
+        }
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <div class="text-xs font-semibold uppercase tracking-wide text-[color:var(--color-text-soft)]">
+          {data.role}
+        </div>
+        <h1 class="text-3xl font-semibold leading-tight">{data.name}</h1>
+        <div class="text-sm font-medium text-[color:var(--color-accent)]">
+          {data.title}{data.coAdvisor && <span class="font-normal text-[color:var(--color-text-soft)]"> · co-advised with {data.coAdvisor}</span>}
+        </div>
+        <div class="mt-2 flex flex-wrap gap-2 text-xs">
+          {data.website && (
+            <a href={data.website} target="_blank" rel="noopener" class="rounded-full border border-[color:var(--color-border)] bg-white px-3 py-1">
+              Website
+            </a>
+          )}
+          {data.email && (
+            <a href={`mailto:${data.email}`} class="rounded-full border border-[color:var(--color-border)] bg-white px-3 py-1">
+              Email
+            </a>
+          )}
+          {data.scholar && (
+            <a href={data.scholar} target="_blank" rel="noopener" class="rounded-full border border-[color:var(--color-border)] bg-white px-3 py-1">
+              Google Scholar
+            </a>
+          )}
+          {data.github && (
+            <a href={data.github} target="_blank" rel="noopener" class="rounded-full border border-[color:var(--color-border)] bg-white px-3 py-1">
+              GitHub
+            </a>
+          )}
+          {data.linkedin && (
+            <a href={data.linkedin} target="_blank" rel="noopener" class="rounded-full border border-[color:var(--color-border)] bg-white px-3 py-1">
+              LinkedIn
+            </a>
+          )}
+        </div>
+      </div>
+    </header>
+
+    <article class="prose-bio mt-10 max-w-2xl text-[color:var(--color-text-muted)]">
+      <Content />
+    </article>
+  </section>
+</Layout>

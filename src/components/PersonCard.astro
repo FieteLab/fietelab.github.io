@@ -5,9 +5,11 @@ import type { CollectionEntry } from 'astro:content'
 interface Props {
   person: CollectionEntry<'people'>
   size?: 'sm' | 'md' | 'lg'
+  /** When true, render as a link to /people/<slug>. Default true. */
+  link?: boolean
 }
 
-const { person, size = 'md' } = Astro.props
+const { person, size = 'md', link = true } = Astro.props
 const data = person.data
 
 const sizeMap = {
@@ -24,10 +26,14 @@ const initials = data.name
   .slice(0, 2)
   .join('')
   .toUpperCase()
+
+const Tag = link ? 'a' : 'article'
+const linkProps = link ? { href: `/people/${person.id}/` } : {}
 ---
 
-<article
-  class={`group flex flex-col items-start gap-3 rounded-xl border border-[color:var(--color-border)] bg-white ${s.wrapper} transition hover:-translate-y-0.5 hover:shadow-md`}
+<Tag
+  {...linkProps}
+  class={`group flex flex-col items-start gap-3 rounded-xl border border-[color:var(--color-border)] bg-white ${s.wrapper} no-underline transition hover:no-underline hover:-translate-y-0.5 hover:shadow-md ${link ? 'cursor-pointer' : ''}`}
 >
   <div class={`relative ${s.avatar} overflow-hidden rounded-full bg-gradient-to-br from-[color:var(--color-accent)] to-[color:var(--color-accent-soft)] text-white`}>
     {
@@ -47,17 +53,21 @@ const initials = data.name
     }
   </div>
   <div class="flex flex-col gap-1">
-    <h3 class={`${s.name} font-semibold leading-tight text-[color:var(--color-text)]`}>
+    <h3 class={`${s.name} font-semibold leading-tight text-[color:var(--color-text)] group-hover:text-[color:var(--color-accent)]`}>
       {data.name}
     </h3>
     <div class="text-xs font-semibold text-[color:var(--color-accent)]">
       {data.title}{data.coAdvisor && <span class="font-normal text-[color:var(--color-text-soft)]"> · w/ {data.coAdvisor}</span>}
     </div>
-    <div class="mt-1 flex flex-wrap gap-3 text-xs">
-      {data.website && <a href={data.website} target="_blank" rel="noopener">website</a>}
-      {data.email && <a href={`mailto:${data.email}`}>email</a>}
-      {data.scholar && <a href={data.scholar} target="_blank" rel="noopener">scholar</a>}
-      {data.github && <a href={data.github} target="_blank" rel="noopener">github</a>}
-    </div>
+    {
+      !link && (
+        <div class="mt-1 flex flex-wrap gap-3 text-xs">
+          {data.website && <a href={data.website} target="_blank" rel="noopener">website</a>}
+          {data.email && <a href={`mailto:${data.email}`}>email</a>}
+          {data.scholar && <a href={data.scholar} target="_blank" rel="noopener">scholar</a>}
+          {data.github && <a href={data.github} target="_blank" rel="noopener">github</a>}
+        </div>
+      )
+    }
   </div>
-</article>
+</Tag>
