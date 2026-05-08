@@ -1,64 +1,69 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import { getCollection } from 'astro:content'
+
 const projects = await getCollection('projects')
+
+// Newest year first; entries without a year (e.g. the GitHub-org link)
+// fall to the end.
+projects.sort((a, b) => {
+  const ya = a.data.year ?? -Infinity
+  const yb = b.data.year ?? -Infinity
+  return yb - ya
+})
 ---
 
 <Layout title="Code">
-  <section class="mx-auto max-w-5xl px-6 py-12">
+  <section class="mx-auto max-w-6xl px-6 py-12">
     <h1 class="text-3xl font-semibold">Code</h1>
     <p class="mt-2 max-w-2xl text-[color:var(--color-text-muted)]">
-      Open-source code accompanying our papers. Each block links to the
-      associated repository or download.
+      Open-source code accompanying our papers, newest first. Each card
+      links to the associated repository or download.
     </p>
 
-    <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+    <div class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
       {
         projects.map((p) => (
-          <article class="flex flex-col gap-3 rounded-xl border border-[color:var(--color-border)] bg-white p-6">
-            <h2 class="text-lg font-semibold leading-tight">
-              {p.data.githubUrl ? (
-                <a href={p.data.githubUrl} target="_blank" rel="noopener">
-                  {p.data.name}
-                </a>
-              ) : (
-                p.data.name
+          <article class="flex h-full flex-col gap-3 rounded-xl border border-[color:var(--color-border)] bg-white p-5">
+            <div class="flex items-start justify-between gap-2">
+              <h2 class="text-base font-semibold leading-tight">
+                {p.data.githubUrl ? (
+                  <a href={p.data.githubUrl} target="_blank" rel="noopener">
+                    {p.data.name}
+                  </a>
+                ) : (
+                  p.data.name
+                )}
+              </h2>
+              {p.data.year && (
+                <span class="shrink-0 rounded-full bg-[color:var(--color-bg-alt)] px-2 py-0.5 text-xs font-medium text-[color:var(--color-text-soft)]">
+                  {p.data.year}
+                </span>
               )}
-            </h2>
+            </div>
             <p class="text-sm whitespace-pre-line text-[color:var(--color-text-muted)]">
               {p.data.description}
             </p>
             {p.data.paperLink && (
               <p class="text-xs italic text-[color:var(--color-text-soft)]">
-                Paper:{' '}
                 <a href={p.data.paperLink} target="_blank" rel="noopener">
                   {p.data.paperTitle ?? p.data.paperLink}
                 </a>
               </p>
             )}
             {p.data.otherLinks && p.data.otherLinks.length > 0 && (
-              <div class="mt-1 flex flex-wrap gap-2 text-xs">
+              <div class="mt-auto flex flex-wrap gap-1.5 pt-1 text-xs">
                 {p.data.otherLinks.map((l) => (
                   <a
                     href={l.url}
                     target="_blank"
                     rel="noopener"
-                    class="rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-bg-alt)] px-3 py-1 text-[color:var(--color-text)] hover:bg-white"
+                    class="rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-bg-alt)] px-2.5 py-0.5 text-[color:var(--color-text)] hover:bg-white"
                   >
                     {l.label}
                   </a>
                 ))}
               </div>
-            )}
-            {p.data.githubUrl && (
-              <a
-                href={p.data.githubUrl}
-                target="_blank"
-                rel="noopener"
-                class="text-xs"
-              >
-                {p.data.githubUrl}
-              </a>
             )}
           </article>
         ))
