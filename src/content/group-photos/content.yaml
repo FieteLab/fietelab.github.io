@@ -2,7 +2,7 @@
 # To add a new photo: drop the file into images/ and append a block below.
 # The most recent photo (top of the list) becomes the hero on the home page.
 
-lab-outing-2025-07:
-  image: "./images/lab-outing-2025-07.jpg"
-  caption: "Fiete Lab outing — July 2025"
-  date: "2025-07"
+outdoor-lab-meeting:
+  image: "./images/IMG_3795.jpg"
+  caption: "Outdoor lab meeting April 2026"
+  date: "2026-04"
