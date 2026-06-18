@@ -35,8 +35,7 @@ const groupPhotos = (await getCollection('groupPhotos')).sort((a, b) =>
           src={groupPhotos[0].data.image}
           alt={groupPhotos[0].data.caption}
           width={1600}
-          height={900}
-          class="aspect-[16/9] w-full object-cover"
+          class="h-auto w-full"
         />
         <figcaption class="border-t border-[color:var(--color-border)] bg-[color:var(--color-bg-alt)] px-4 py-2 text-xs italic text-[color:var(--color-text-muted)]">
           {groupPhotos[0].data.caption}
