@@ -81,3 +81,10 @@ seen:
     year: 2025
     status: imported
     slug: behrad2025fast
+  W7170063547:
+    title: A metric for comparing complex systems by their dynamics
+    doi: 10.64898/2026.07.16.738953
+    arxiv: null
+    year: 2026
+    status: pending
+    slug: ostrow2026metric

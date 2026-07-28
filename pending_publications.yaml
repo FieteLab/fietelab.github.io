@@ -1,0 +1,18 @@
+# Proposed new publications from OpenAlex (Ila Fiete's profile).
+# Review each block; copy the ones you want into
+# src/content/publications/content.yaml. The next sync run will
+# detect them as imported and stop proposing them. To explicitly
+# drop a candidate forever, delete this whole pending file after
+# any genuinely-wanted entries have been merged — the script will
+# remember the rest as `dropped` in scripts/sync-state.yaml.
+
+# OpenAlex W7170063547; first author Mitchell Ostrow
+ostrow2026metric:
+  title: A metric for comparing complex systems by their dynamics
+...
+  authors: Mitchell Ostrow, Adam Eisen, Leo Kozachkov, William T. Redman, Ila Fiete
+...
+  year: 2026
+  venue: bioRxiv (Cold Spring Harbor Laboratory)
+...
+  link: "https://doi.org/10.64898/2026.07.16.738953"
