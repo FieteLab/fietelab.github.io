@@ -16,3 +16,14 @@ ostrow2026metric:
   venue: bioRxiv (Cold Spring Harbor Laboratory)
 ...
   link: "https://doi.org/10.64898/2026.07.16.738953"
+
+# OpenAlex W7172382413; first author Adam Eisen
+eisen2026disruption:
+  title: Disruption of interareal control during propofol anesthesia
+...
+  authors: "Adam Eisen, Andr\xE9 M. Bastos, Jacob A. Donoghue, Scott L. Brincat, Emery N. Brown,\
+  \ Ila Fiete, Earl K. Miller"
+  year: 2026
+  venue: bioRxiv (Cold Spring Harbor Laboratory)
+...
+  link: "https://doi.org/10.64898/2026.07.28.741350"
