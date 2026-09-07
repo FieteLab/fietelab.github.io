@@ -95,3 +95,11 @@ seen:
     year: 2026
     status: pending
     slug: eisen2026disruption
+  W7204780873:
+    title: Structural generalization and continual learning enabled by factorized
+      entorhinal-hippocampal memory and entorhinal-parietal action circuits
+    doi: 10.64898/2026.08.25.747129
+    arxiv: null
+    year: 2026
+    status: pending
+    slug: hwang2026structural
