@@ -27,3 +27,15 @@ eisen2026disruption:
   venue: bioRxiv (Cold Spring Harbor Laboratory)
 ...
   link: "https://doi.org/10.64898/2026.07.28.741350"
+
+# OpenAlex W7204780873; first author Jaedong Hwang
+hwang2026structural:
+  title: Structural generalization and continual learning enabled by factorized entorhinal-hippocampal
+  memory and entorhinal-parietal action circuits
+...
+  authors: Jaedong Hwang, Sujaya Neupane, Mehrdad Jazayeri, Ila Fiete
+...
+  year: 2026
+  venue: bioRxiv (Cold Spring Harbor Laboratory)
+...
+  link: "https://doi.org/10.64898/2026.08.25.747129"
