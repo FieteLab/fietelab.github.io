@@ -7,8 +7,11 @@ import { getCollection, type CollectionEntry } from 'astro:content'
  *   "Qiyao (Catherine) Liang" → "Q. Liang"
  *   "I. R. Fiete"             → "I. R. Fiete"   (already abbreviated, untouched)
  *   "S. J. Lee"               → "S. J. Lee"
+ *   "Maarten De Vos"          → "M. De Vos"   (surname particles kept)
  *   "International Brain Laboratory" → unchanged
  */
+const SURNAME_PARTICLES = new Set(['da', 'de', 'del', 'della', 'den', 'der', 'di', 'du', 'la', 'le', 'van', 'von'])
+
 export function abbreviateAuthor(author: string): string {
   // Preserve trailing markers like "*", "+" that denote co-first / co-senior
   const trailingMatch = author.match(/^(.*?)([\*\+]+)\s*$/)
@@ -26,7 +29,11 @@ export function abbreviateAuthor(author: string): string {
   const looksFull = first.length >= 3 && /[a-z]/.test(first) && !first.endsWith('.')
   if (!looksFull) return author
 
-  const last = tokens[tokens.length - 1]
+  // Extend the surname leftward over particles ("van den Bosch"), never
+  // consuming the first name.
+  let start = tokens.length - 1
+  while (start > 1 && SURNAME_PARTICLES.has(tokens[start - 1].toLowerCase())) start--
+  const last = tokens.slice(start).join(' ')
   return `${first[0]}. ${last}${trailing}`
 }
 
