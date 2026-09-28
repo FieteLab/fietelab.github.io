@@ -8,6 +8,60 @@
 # 2026
 # ============================================================
 
+hwang2026structural:
+  title: "Structural generalization and continual learning enabled by factorized entorhinal-hippocampal memory and entorhinal-parietal action circuits"
+  topics: ["Memory", "Navigation circuits and spatial cognition"]
+  authors: "Jaedong Hwang, Sujaya Neupane, Mehrdad Jazayeri, Ila Fiete"
+  year: 2026
+  venue: "bioRxiv"
+  citation: "bioRxiv 10.64898/2026.08.25.747129 (2026)"
+  link: "https://www.biorxiv.org/content/10.64898/2026.08.25.747129"
+
+eisen2026disruption:
+  title: "Disruption of interareal control during propofol anesthesia"
+  topics: ["Neural Dynamics", "Altered Brain States"]
+  authors: "Adam Joseph Eisen, André M. Bastos, Jacob Donoghue, Scott L. Brincat, Emery N. Brown, Ila Fiete, Earl Miller"
+  year: 2026
+  venue: "bioRxiv"
+  citation: "bioRxiv 10.64898/2026.07.28.741350 (2026)"
+  link: "https://www.biorxiv.org/content/10.64898/2026.07.28.741350"
+
+ostrow2026metric:
+  title: "A metric for comparing complex systems by their dynamics"
+  topics: ["Neural Dynamics"]
+  authors: "Mitchell Ostrow, Adam Joseph Eisen, Leo Kozachkov, W. T. Redman, Ila Fiete"
+  year: 2026
+  venue: "bioRxiv"
+  citation: "bioRxiv 10.64898/2026.07.16.738953 (2026)"
+  link: "https://www.biorxiv.org/content/10.64898/2026.07.16.738953"
+
+zheng2026meanfield:
+  title: "Mean-field theory of rich oscillatory dynamics in low-rank recurrent networks with activity-dependent adaptation"
+  topics: ["Neural Dynamics"]
+  authors: "B. W. Zheng, Earl Miller, Ila Fiete"
+  year: 2026
+  venue: "arXiv preprint"
+  citation: "arXiv:2606.30366 (2026)"
+  link: "https://arxiv.org/abs/2606.30366"
+
+zang2026agerelated:
+  title: "Age-related changes in behavioural and neural variability in a decision-making task"
+  topics: ["Decision making"]
+  authors: "F. Zang, et al. (International Brain Laboratory)"
+  year: 2026
+  venue: "Nature Communications"
+  citation: "Nature Communications 17, 8156 (2026)"
+  link: "https://www.nature.com/articles/s41467-026-74227-1"
+
+liang2026attractor:
+  title: "Attractor Geometry of Transformer Memory: From Conflict Arbitration to Confident Hallucination"
+  topics: ["Theoretical ML", "LLM", "Memory"]
+  authors: "Qiyao (Catherine) Liang, Risto Miikkulainen, Ila Fiete"
+  year: 2026
+  venue: "arXiv preprint"
+  citation: "arXiv:2605.05686 (2026)"
+  link: "https://arxiv.org/abs/2605.05686"
+
 hwang2026bfm:
   title: "B[FM]^2: Brain Foundation Model via Flow Matching with SplitUNet"
   topics: ["Brain Foundation Model"]
