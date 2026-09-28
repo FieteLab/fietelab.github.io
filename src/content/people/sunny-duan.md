@@ -1,7 +1,7 @@
 ---
 name: "Sunny Duan"
 role: "Graduate Student"
-title: "PhD, BCS"
+title: "PhD student, BCS"
 avatar: "./images/sunny-duan.jpeg"
 scholar: "https://scholar.google.com/citations?user=BT2OfOMAAAAJ"
 order: 24
