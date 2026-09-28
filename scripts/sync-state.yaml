@@ -86,14 +86,14 @@ seen:
     doi: 10.64898/2026.07.16.738953
     arxiv: null
     year: 2026
-    status: pending
+    status: imported
     slug: ostrow2026metric
   W7172382413:
     title: Disruption of interareal control during propofol anesthesia
     doi: 10.64898/2026.07.28.741350
     arxiv: null
     year: 2026
-    status: pending
+    status: imported
     slug: eisen2026disruption
   W7204780873:
     title: Structural generalization and continual learning enabled by factorized
@@ -101,7 +101,7 @@ seen:
     doi: 10.64898/2026.08.25.747129
     arxiv: null
     year: 2026
-    status: pending
+    status: imported
     slug: hwang2026structural
   W7134928545:
     title: Data supporting "Cortical ensembles orchestrate social competition through
@@ -109,7 +109,7 @@ seen:
     doi: 10.48324/dandi.001749/0.260311.1727
     arxiv: null
     year: 2026
-    status: pending
+    status: dropped
     slug: keyes2026data
   W7160635115:
     title: 'Attractor Geometry of Transformer Memory: From Conflict Arbitration to
@@ -117,7 +117,7 @@ seen:
     doi: 10.48550/arxiv.2605.05686
     arxiv: '2605.05686'
     year: 2026
-    status: pending
+    status: imported
     slug: liang2026attractor
   W7166668010:
     title: Age-related changes in behavioural and neural variability in a decision-making
@@ -125,7 +125,7 @@ seen:
     doi: 10.1038/s41467-026-74227-1
     arxiv: null
     year: 2026
-    status: pending
+    status: imported
     slug: zang2026agerelated
   W7166707155:
     title: Mean-field theory of rich oscillatory dynamics in low-rank recurrent networks
@@ -133,5 +133,5 @@ seen:
     doi: 10.48550/arxiv.2606.30366
     arxiv: '2606.30366'
     year: 2026
-    status: pending
+    status: imported
     slug: zheng2026meanfield
