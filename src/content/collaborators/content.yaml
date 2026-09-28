@@ -28,3 +28,11 @@ fan-wang:
 earl-miller:
   name: "Earl Miller"
   url: "https://ekmillerlab.mit.edu/"
+
+daniela-rus:
+  name: "Daniela Rus"
+  url: "https://danielarus.csail.mit.edu/"
+
+phillip-isola:
+  name: "Phillip Isola"
+  url: "https://web.mit.edu/phillipi/"

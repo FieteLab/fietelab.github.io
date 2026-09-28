@@ -2,6 +2,7 @@
 name: "Nathan Cloos"
 role: "Graduate Student"
 title: "PhD, BCS"
+coAdvisor: ["Daniela Rus", "Phillip Isola"]
 avatar: "./images/nathan-cloos.jpg"
 scholar: "https://scholar.google.com/citations?user=AYBWN0gAAAAJ"
 website: "https://nacloos.github.io/"
