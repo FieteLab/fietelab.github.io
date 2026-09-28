@@ -46,24 +46,38 @@ export function formatAuthors(authors: string): string {
 }
 
 /**
- * Build a map from canonical author full-name to a link target. Includes
- * (1) current lab members (→ /people/<slug>/), (2) alumni who have a
- * personal website on record (→ external URL), and (3) named external
- * collaborators from the `collaborators` content collection.
+ * A person is an alumnus with a kept profile page when an `alumni` entry
+ * shares the id (filename) of a `people` entry.
  */
-export async function getAuthorLinkMap(): Promise<
-  Map<string, { href: string; external: boolean }>
-> {
-  const map = new Map<string, { href: string; external: boolean }>()
+export async function getAlumniIds(): Promise<Set<string>> {
+  return new Set((await getCollection('alumni')).map((a) => a.id))
+}
+
+/** `alumni` marks an internal /people/ link that should render as an alumnus. */
+export type AuthorLink = { href: string; external: boolean; alumni?: boolean }
+
+/**
+ * Build a map from canonical author full-name to a link target. Includes
+ * (1) everyone with a profile page (→ /people/<slug>/, flagged `alumni` if
+ * they graduated), (2) other alumni with a personal website on record
+ * (→ external URL), and (3) named external collaborators from the
+ * `collaborators` content collection.
+ */
+export async function getAuthorLinkMap(): Promise<Map<string, AuthorLink>> {
+  const map = new Map<string, AuthorLink>()
+  const alumniIds = await getAlumniIds()
   const people = await getCollection('people')
+  const peopleIds = new Set(people.map((p) => p.id))
   for (const p of people) {
-    map.set(p.data.name, { href: `/people/${p.id}/`, external: false })
+    const link = { href: `/people/${p.id}/`, external: false, alumni: alumniIds.has(p.id) }
+    map.set(p.data.name, link)
     for (const alias of p.data.authorAliases ?? []) {
-      map.set(alias, { href: `/people/${p.id}/`, external: false })
+      map.set(alias, link)
     }
   }
   const alumni = await getCollection('alumni')
   for (const a of alumni) {
+    if (peopleIds.has(a.id)) continue
     const target = a.data.website ?? a.data.scholar
     if (target) {
       map.set(a.data.name, { href: target, external: true })
@@ -181,8 +195,10 @@ const ROLE_ORDER: Record<CollectionEntry<'people'>['data']['role'], number> = {
   Affiliate: 4,
 }
 
+/** Current members only — people who also have an `alumni` entry are excluded. */
 export async function getAllPeople(): Promise<CollectionEntry<'people'>[]> {
-  const people = await getCollection('people')
+  const alumniIds = await getAlumniIds()
+  const people = (await getCollection('people')).filter((p) => !alumniIds.has(p.id))
   return people.sort((a, b) => {
     const ra = ROLE_ORDER[a.data.role] ?? 99
     const rb = ROLE_ORDER[b.data.role] ?? 99

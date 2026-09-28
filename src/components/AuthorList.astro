@@ -1,5 +1,5 @@
 ---
-import { abbreviateAuthor } from '@/lib/data'
+import { abbreviateAuthor, type AuthorLink } from '@/lib/data'
 
 interface Props {
   /** Raw `authors` string from the YAML, comma-separated. */
@@ -8,7 +8,7 @@ interface Props {
    * Map from canonical author full-name → link target.
    * Built once via getAuthorLinkMap() in lib/data.ts.
    */
-  linkMap: Map<string, { href: string; external: boolean }>
+  linkMap: Map<string, AuthorLink>
   /**
    * Optional canonical full-name to render in bold (used on a person's
    * own /people/<slug>/ page so their entry stands out).
@@ -42,11 +42,11 @@ const tokens = authors.split(',').map((t) => t.trim())
 
       // Style differs by link type so a reader can scan for lab members:
       //   internal (current member)  → maroon accent, no decoration
-      //   external (alumni, etc.)    → standard gray with hover underline
+      //   external or alumni page    → standard gray with hover underline
       //   plain (unknown coauthor)   → just text
       let inner: any
       if (link) {
-        const cls = link.external
+        const cls = link.external || link.alumni
           ? 'text-[color:var(--color-text-muted)] no-underline hover:text-[color:var(--color-text)] hover:underline'
           : 'text-[color:var(--color-accent)] no-underline hover:underline'
         inner = (

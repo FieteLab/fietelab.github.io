@@ -23,6 +23,8 @@ const data = person.data
 const { Content } = await render(person)
 const personPubs = await getPublicationsByPerson(person)
 const linkMap = await getAuthorLinkMap()
+// Graduated members keep their page; the alumni entry supplies role + next position.
+const alum = (await getCollection('alumni')).find((a) => a.id === person.id)
 
 function linkLabel(link?: string) {
   if (!link) return null
@@ -77,9 +79,12 @@ const initials = data.name
 
       <div class="flex flex-col gap-2">
         <div class="text-xs font-semibold uppercase tracking-wide text-[color:var(--color-text-soft)]">
-          {data.role}
+          {alum ? `Alumni · ${alum.data.wasA}` : data.role}
         </div>
         <h1 class="text-3xl font-semibold leading-tight">{data.name}</h1>
+        {alum?.data.now && (
+          <div class="text-sm text-[color:var(--color-text-muted)]">Now: {alum.data.now}</div>
+        )}
         <div class="text-sm font-medium text-[color:var(--color-accent)]">
           {data.title}
           {data.coAdvisor && (() => {

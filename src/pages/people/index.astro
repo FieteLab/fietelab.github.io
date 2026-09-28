@@ -15,7 +15,9 @@ const affiliates = peopleByRole.get('Affiliate') ?? []
 const undergrads = (await getCollection('undergrads')).sort((a, b) =>
   a.data.years === b.data.years ? a.data.name.localeCompare(b.data.name) : b.data.years.localeCompare(a.data.years),
 )
-const alumni = (await getCollection('alumni')).sort((a, b) => a.data.name.localeCompare(b.data.name))
+// Alumni keep their file order: newest first, matching the original site.
+const alumni = await getCollection('alumni')
+const profileIds = new Set((await getCollection('people')).map((p) => p.id))
 const groupPhotos = (await getCollection('groupPhotos')).sort((a, b) =>
   (b.data.date ?? '').localeCompare(a.data.date ?? ''),
 )
@@ -109,6 +111,7 @@ const groupPhotos = (await getCollection('groupPhotos')).sort((a, b) =>
           <li class="rounded-lg border border-[color:var(--color-border)] bg-white p-4 text-sm">
             <div class="font-semibold text-[color:var(--color-text)]">
               {(() => {
+                if (profileIds.has(a.id)) return <a href={`/people/${a.id}/`}>{a.data.name}</a>
                 const primary = a.data.website ?? a.data.scholar
                 return primary ? (
                   <a href={primary} target="_blank" rel="noopener">{a.data.name}</a>

@@ -19,7 +19,7 @@ under each section — the markdown image links are already wired up.
 | Affiliation logos in the banner | [`src/consts.ts`](src/consts.ts) (logo files in [`public/`](public/)) |
 | Add / remove a news item on the home page | [`src/content/news/content.yaml`](src/content/news/content.yaml) |
 | Add / remove a current member | new `.md` file in [`src/content/people/`](src/content/people/) |
-| Move someone from current → alumni | delete their `.md`, add a YAML block in [`src/content/alumni/content.yaml`](src/content/alumni/content.yaml) |
+| Move someone from current → alumni | add a YAML block in [`src/content/alumni/content.yaml`](src/content/alumni/content.yaml) with the same id as their `.md` (keeps their profile page) |
 | Link a co-advisor or external collaborator from paper bylines | YAML block in [`src/content/collaborators/content.yaml`](src/content/collaborators/content.yaml) |
 | Add a paper | YAML block in [`src/content/publications/content.yaml`](src/content/publications/content.yaml) |
 | Add a code release | YAML block in [`src/content/projects/content.yaml`](src/content/projects/content.yaml) |
@@ -148,8 +148,11 @@ Three hex colors: deep base → mid → bright accent. Pick from
 
 ### Move someone to alumni
 
-1. Delete (or move out of) their `.md` file in [`src/content/people/`](src/content/people/).
-2. Add a block at the top of [`src/content/alumni/content.yaml`](src/content/alumni/content.yaml):
+1. Add a block at the top of [`src/content/alumni/content.yaml`](src/content/alumni/content.yaml).
+   Use the same id as their `.md` file in [`src/content/people/`](src/content/people/)
+   and keep that file: their profile page stays live (labelled "Alumni"),
+   the alumni list links to it, and they drop out of the current-member
+   sections. Delete the `.md` only if you don't want a page for them.
 
    ```yaml
    jane-doe:

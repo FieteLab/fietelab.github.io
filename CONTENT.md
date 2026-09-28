@@ -68,9 +68,10 @@ authorAliases:
 
 Move them to **alumni** instead of deleting:
 
-1. Delete (or move out of `people/`) their `.md` file.
-2. Open [src/content/alumni/content.yaml](src/content/alumni/content.yaml)
-   and add a new block at the top:
+1. Open [src/content/alumni/content.yaml](src/content/alumni/content.yaml)
+   and add a new block at the top. Use the same id as their
+   `people/<id>.md` file and keep that file — their profile page stays
+   live, labelled "Alumni", and they leave the current-member sections:
 
    ```yaml
    jane-doe:

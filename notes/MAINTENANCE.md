@@ -148,9 +148,8 @@ When a new member joins:
 
 When a current member graduates / leaves:
 
-1. Add an `alumni` entry with `wasA:` (former role) and `now:` (next position).
-2. Delete their `.md` file from `src/content/people/`.
-3. Their headshot in `images/` can stay or be moved to a `images/_alumni/` subfolder if the file gets crowded.
+1. Add an `alumni` entry with `wasA:` (former role) and `now:` (next position), using the same id as their `src/content/people/<id>.md`.
+2. Keep the `.md` and headshot: the matching id keeps their profile page live (labelled "Alumni"), links it from the alumni list, and removes them from the current-member sections. Delete the `.md` only if they shouldn't have a page.
 
 ---
 
