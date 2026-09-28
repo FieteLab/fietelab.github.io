@@ -117,7 +117,7 @@ hwang2026myamazing:                    # firstauthor + year + first-word
   year: 2026
   venue: "Nature"
   link: "https://arxiv.org/abs/2601.00001"
-  topics: ["Memory", "Theoretical ML"]
+  topics: ["Memory", "Machine Learning"]
 ```
 
 That's it. Authors auto-link to their `/people/` page. Topic tags

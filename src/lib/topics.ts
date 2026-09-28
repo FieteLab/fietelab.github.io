@@ -6,7 +6,7 @@
  * curated palette for it.
  */
 const TOPIC_COLORS: Record<string, { bg: string; text: string; ring: string }> = {
-  'Theoretical ML': { bg: '#dbeafe', text: '#1e40af', ring: '#93c5fd' },
+  'Machine Learning': { bg: '#dbeafe', text: '#1e40af', ring: '#93c5fd' },
   'Biologically plausible gradient learning': { bg: '#ede9fe', text: '#6d28d9', ring: '#c4b5fd' },
   'Module/structure emergence': { bg: '#fef3c7', text: '#92400e', ring: '#fcd34d' },
   'Continuous attractors in the brain': { bg: '#e0e7ff', text: '#3730a3', ring: '#a5b4fc' },
@@ -46,7 +46,7 @@ export function topicColor(name: string) {
  * still appear — they slot in alphabetically after the curated ones.
  */
 export const TOPIC_ORDER = [
-  'Theoretical ML',
+  'Machine Learning',
   'Biologically plausible gradient learning',
   'Module/structure emergence',
   'Continuous attractors in the brain',

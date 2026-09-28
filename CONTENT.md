@@ -90,7 +90,7 @@ Add a block at the top of the relevant year section:
 ```yaml
 my-paper-2026:                        # any unique slug, lowercase + dashes
   title: "My Amazing Paper"
-  topics: ["Memory", "Theoretical ML"]   # optional — see allowed topics below
+  topics: ["Memory", "Machine Learning"]   # optional — see allowed topics below
   authors: "Jane Doe, Ila Fiete"      # FULL names for lab members; abbreviated OK for others
   year: 2026
   venue: "Nature"                     # journal name or "arXiv preprint" or "NeurIPS"
@@ -112,7 +112,7 @@ a "Filter by topic" bar at the top — pick a topic to show only matching
 papers.
 
 **Allowed topics** (must match exactly, capitalization included):
-- `Theoretical ML`
+- `Machine Learning`
 - `Biologically plausible gradient learning`
 - `Module/structure emergence`
 - `Continuous attractors in the brain`

@@ -58,14 +58,13 @@ re-check Scholar directly.
      Use multiple tags when genuinely multidisciplinary (e.g.
      `["Memory", "Navigation circuits and spatial cognition"]`). If
      nothing fits, invent a new short topic name (e.g.
-     `"Altered brain states"`) — it will auto-color and auto-slot
+     `"Altered Brain States"`) — it will auto-color and auto-slot
      into the filter row, no `topics.ts` edit required.
 
      **Do NOT use the `_Claude` suffix.** That postfix was a
-     one-time marker for the bulk-tagging audit; ongoing edits should
-     use canonical topic names directly. If you want to convert an
-     existing `Foo_Claude` tag to canonical, just delete the suffix in
-     the YAML.
+     one-time marker for the bulk-tagging audit; all existing
+     `_Claude` tags were converted to canonical names on 2026-09-28.
+     Use canonical topic names directly.
 4. **If a preprint we have is now journal-published:**
    *Update the existing entry, don't add a duplicate.* Rename slug to
    the new publication year, change `year` / `venue` / `link`, and

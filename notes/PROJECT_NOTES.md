@@ -82,8 +82,9 @@ Visual differentiation matters — without it, a Nature paper byline is
 stable hash-derived color automatically — no `topics.ts` edit required.
 
 A one-time bulk pass tagged 52 historically-untagged papers with a
-`_Claude` postfix to mark them for human review. Going forward, drop the
-suffix when accepting and use canonical names directly.
+`_Claude` postfix to mark them for human review. The suffix was removed
+from all tags on 2026-09-28 (and `Theoretical ML` renamed to
+`Machine Learning`); use canonical names directly.
 
 ### Redundant citations stripped from YAML, not just hidden
 

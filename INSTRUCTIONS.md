@@ -184,7 +184,7 @@ If a paper is missing or extra, add `authorAliases: ["J. Hwang", "JD Hwang"]` to
 ```
  ┌────────────────────────────────────────────────────────────────────┐
  │  Papers                                                             │
- │  ① Filter by topic:  [All]  [Theoretical ML]  [Memory]  …            │
+ │  ① Filter by topic:  [All]  [Machine Learning]  [Memory]  …          │
  ├────────────────────────────────────────────────────────────────────┤
  │  2025                                                               │
  │  ② Title (linked)                                                   │
@@ -203,7 +203,7 @@ If a paper is missing or extra, add `authorAliases: ["J. Hwang", "JD Hwang"]` to
 | ① | Topic filter pills + Year filter row + Search box | Auto-generated. New tags in `topics:` on a paper get a stable hash-based color and a filter pill automatically; no code edit required. To recolor or pin a topic position, edit [`src/lib/topics.ts`](src/lib/topics.ts). |
 | ② | Paper title (linked) | YAML `title:` and `link:` on each entry in [`src/content/publications/content.yaml`](src/content/publications/content.yaml) |
 | ③ | Venue / citation | YAML `venue:` and (optional) `citation:` |
-| ④ | Topic tags | YAML `topics: ["Memory", "Theoretical ML"]` (see allowed list below) |
+| ④ | Topic tags | YAML `topics: ["Memory", "Machine Learning"]` (see allowed list below) |
 | ⑤ | Link pill (auto-labeled arXiv / bioRxiv / Journal etc.) | Inferred from `link:` URL — no separate field needed |
 
 ### Add a paper manually
@@ -213,7 +213,7 @@ In [`src/content/publications/content.yaml`](src/content/publications/content.ya
 ```yaml
 hwang2026myamazing:                # firstauthor + year + first-significant-word
   title: "My Amazing Paper"
-  topics: ["Memory", "Theoretical ML"]   # optional; see list below
+  topics: ["Memory", "Machine Learning"]   # optional; see list below
   authors: "Jane Doe, Ila Fiete"   # FULL names for lab members; abbreviated forms ok for externals
   year: 2026
   venue: "Nature"
@@ -223,7 +223,7 @@ hwang2026myamazing:                # firstauthor + year + first-significant-word
 ```
 
 **Allowed topic strings** (case-sensitive):
-- `Theoretical ML`
+- `Machine Learning`
 - `Biologically plausible gradient learning`
 - `Module/structure emergence`
 - `Continuous attractors in the brain`
