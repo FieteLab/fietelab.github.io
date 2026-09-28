@@ -30,7 +30,7 @@ GitHub repo to see the build error.
    name: "Jane Doe"
    role: "Graduate Student"      # PI | Administrative Assistant | Postdoc | Graduate Student | Affiliate
    title: "PhD, EECS"            # one short line shown under the name
-   coAdvisor: "Josh McDermott"   # optional — delete this line if not co-advised
+   coAdvisor: "Josh McDermott"   # optional — delete this line if not co-advised; list several as ["A", "B"]
    avatar: "./images/jane-doe.jpg"
    website: "https://janedoe.io" # optional
    email: "jane@mit.edu"         # optional

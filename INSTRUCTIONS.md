@@ -135,7 +135,7 @@ Three hex colors: deep base → mid → bright accent. Pick from
    name: "Jane Doe"
    role: "Graduate Student"      # PI | Administrative Assistant | Postdoc | Graduate Student | Affiliate
    title: "PhD, EECS"
-   coAdvisor: "Josh McDermott"   # optional, delete the line if none
+   coAdvisor: "Josh McDermott"   # optional, delete the line if none; several: ["A", "B"]
    avatar: "./images/jane-doe.jpg"
    website: "https://janedoe.io"
    scholar: "https://scholar.google.com/citations?user=ABC123"

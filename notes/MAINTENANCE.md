@@ -123,7 +123,8 @@ Common drift to look for:
 
 ### c. Co-advisor links
 
-Every value of `coAdvisor:` in any person's frontmatter must appear as a
+Every value of `coAdvisor:` in any person's frontmatter (a single name or a
+`["A", "B"]` list) must appear as a
 `name:` in [`src/content/collaborators/content.yaml`](../src/content/collaborators/content.yaml).
 Quick audit:
 

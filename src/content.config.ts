@@ -14,7 +14,8 @@ const people = defineCollection({
         'Affiliate',
       ]),
       title: z.string(),
-      coAdvisor: z.string().optional(),
+      // One name, or a list for several co-advisors.
+      coAdvisor: z.union([z.string(), z.array(z.string())]).optional(),
       avatar: image().optional(),
       website: z.string().url().optional(),
       email: z.string().email().optional(),

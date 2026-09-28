@@ -25,6 +25,7 @@ const personPubs = await getPublicationsByPerson(person)
 const linkMap = await getAuthorLinkMap()
 // Graduated members keep their page; the alumni entry supplies role + next position.
 const alum = (await getCollection('alumni')).find((a) => a.id === person.id)
+const coAdvisors = [data.coAdvisor ?? []].flat()
 
 function linkLabel(link?: string) {
   if (!link) return null
@@ -87,26 +88,33 @@ const initials = data.name
         )}
         <div class="text-sm font-medium text-[color:var(--color-accent)]">
           {data.title}
-          {data.coAdvisor && (() => {
-            const link = linkMap.get(data.coAdvisor)
-            return (
-              <span class="font-normal text-[color:var(--color-text-soft)]">
-                {' · co-advised with '}
-                {link ? (
-                  <a
-                    href={link.href}
-                    target={link.external ? '_blank' : undefined}
-                    rel={link.external ? 'noopener' : undefined}
-                    class="text-[color:var(--color-text-soft)] hover:text-[color:var(--color-accent)] hover:underline"
-                  >
-                    {data.coAdvisor}
-                  </a>
-                ) : (
-                  data.coAdvisor
-                )}
-              </span>
-            )
-          })()}
+          {coAdvisors.length > 0 && (
+            <span class="font-normal text-[color:var(--color-text-soft)]">
+              {' · co-advised with '}
+              {coAdvisors.map((name, i) => {
+                const link = linkMap.get(name)
+                // "A", "A and B", "A, B, and C"
+                const sep = i === 0 ? '' : i === coAdvisors.length - 1 ? (coAdvisors.length > 2 ? ', and ' : ' and ') : ', '
+                return (
+                  <>
+                    {sep}
+                    {link ? (
+                      <a
+                        href={link.href}
+                        target={link.external ? '_blank' : undefined}
+                        rel={link.external ? 'noopener' : undefined}
+                        class="text-[color:var(--color-text-soft)] hover:text-[color:var(--color-accent)] hover:underline"
+                      >
+                        {name}
+                      </a>
+                    ) : (
+                      name
+                    )}
+                  </>
+                )
+              })}
+            </span>
+          )}
         </div>
         <div class="mt-2 flex flex-wrap gap-2 text-xs">
           {data.website && (
