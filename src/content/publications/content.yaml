@@ -9,12 +9,12 @@
 # ============================================================
 
 hwang2026bfm:
-  title: "B[FM]$^2$: Brain Foundation Model via Flow Matching with SplitUNet"
+  title: "B[FM]^2: Brain Foundation Model via Flow Matching with SplitUNet"
   topics: ["Brain Foundation Model"]
   authors: "Jaedong Hwang, Kathleen Zhang, Wei Dai, Konstantinos Kontras, Maarten Vanmarcke, Maarten De Vos, Ila Fiete, Paul Pu Liang"
   year: 2026
-  venue: "arXiv preprint"
-  citation: "arXiv:2606.20812 (2026)"
+  venue: "NeurIPS"
+  citation: "NeurIPS (2026)"
   link: "https://arxiv.org/abs/2606.20812"
 
 eisen2026similar:
@@ -328,14 +328,14 @@ boopathy2024permutation:
   citation: "arXiv:2410.22695 (2024)"
   link: "https://arxiv.org/abs/2410.22695"
 
-hwang2024imagenetrib:
-  title: "ImageNet-RIB Benchmark: Large Pre-Training Datasets Don't Guarantee Robustness after Fine-Tuning"
+hwang2026large:
+  title: "Large Pre-Training Datasets Don't Guarantee Robustness after Fine-Tuning in Image Classification"
   topics: ["Theoretical ML"]
   authors: "Jaedong Hwang, Brian Cheung, Zhang-Wei Hong, Akhilan Boopathy, Pulkit Agrawal, Ila Fiete"
-  year: 2024
-  venue: "arXiv preprint"
-  citation: "arXiv:2410.21582 (2024)"
-  link: "https://arxiv.org/abs/2410.21582"
+  year: 2026
+  venue: "TMLR"
+  citation: "TMLR (2026)"
+  link: "https://openreview.net/pdf?id=VyVkIucjWU"
 
 boopathy2024unified:
   title: "Unified Neural Network Scaling Laws and Scale-time Equivalence"
