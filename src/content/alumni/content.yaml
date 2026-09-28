@@ -1,5 +1,36 @@
 # Group alumni — copied from fietelab.mit.edu/people/.
-# To add or update an entry: just add another `- name: ...` block below.
+# Listed newest first and shown in this order — add new alumni at the top.
+# If the id matches a file in src/content/people/ (e.g. `adam-eisen`), that
+# profile page stays live, the name links to it, and the person is no
+# longer listed as a current member.
+adam-eisen:
+  name: "Adam Joseph Eisen"
+  wasA: "Graduate Student"
+  now: "Machine Learning Research Scientist, Alljoined"
+  website: "https://adamjeisen.com/"
+  scholar: "https://scholar.google.com/citations?user=pEJ4yfIAAAAJ"
+ling-liang-dong:
+  name: "Ling Liang Dong"
+  wasA: "Graduate Student"
+  now: "Senior Machine Learning Scientist, Precision Neuroscience"
+  scholar: "https://scholar.google.com/citations?user=zsWwT3IAAAAJ"
+bryan-medina:
+  name: "Bryan Medina"
+  wasA: "Graduate Student"
+  now: "Postdoc, Basis Research Institute"
+  website: "https://bjmedina.github.io"
+  scholar: "https://scholar.google.com/citations?user=md-luCIAAAAJ"
+sunny-duan:
+  name: "Sunny Duan"
+  wasA: "Graduate Student"
+  now: "Anthropic"
+  scholar: "https://scholar.google.com/citations?user=BT2OfOMAAAAJ"
+andrii-zahorodnii:
+  name: "Andrii Zahorodnii"
+  wasA: "M.Eng."
+  now: "Member of Technical Staff, Merge Labs"
+  website: "https://azaho.org/"
+  scholar: "https://scholar.google.com/citations?user=je-fgs8AAAAJ"
 sarthak-chandra:
   name: "Sarthak Chandra"
   wasA: "Postdoc"
