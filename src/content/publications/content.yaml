@@ -71,6 +71,16 @@ hwang2026bfm:
   citation: "NeurIPS (2026)"
   link: "https://arxiv.org/abs/2606.20812"
 
+kontras2026neuroatlas:
+  title: "NeuroAtlas: Benchmarking Foundation Models for Clinical EEG and Brain-Computer Interfaces"
+  topics: ["Brain Foundation Model"]
+  authors: "Konstantinos Kontras*, Trui Osselaer*, Stylianos G. Mouslech*, Angeliki-Ilektra Karaiskou*, Guido Gagliardi*, Thomas Strypsteen, Mohammad Hossein Badiei, Anku Rani, Maarten Vanmarcke, Miguel Bhagubai, Chanakya Ekbote, Jaedong Hwang, Christos Chatzichristos, Paul Liang, Maarten De Vos"
+  year: 2026
+  venue: "NeurIPS"
+  citation: "arXiv:2605.14698 (2026) and NeurIPS Evaluations and Datasets Track (2026)"
+  link: "https://arxiv.org/abs/2605.14698"
+  annotation: "* co-first authors"
+
 eisen2026similar:
   title: "Similar destabilization of neural dynamics under different general anesthetics"
   topics: ["Altered Brain States", "Neural Dynamics"]
