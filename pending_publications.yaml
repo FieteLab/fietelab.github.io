@@ -6,22 +6,93 @@
 # any genuinely-wanted entries have been merged — the script will
 # remember the rest as `dropped` in scripts/sync-state.yaml.
 
+# OpenAlex W7134928545; first author Laurel R. Keyes
+keyes2026data:
+  title: Data supporting "Cortical ensembles orchestrate social competition through hypothalamic
+  outputs" (Padilla-Correano, et al., Nature 2022)
+...
+  authors: Laurel R. Keyes, Nancy Padilla-Coreano, Kanha Batra, Makenzie Patarino, Zexin Chen,
+  Rachel R. Rock, Ruihan Zhang, Sebastien B Hausmann, Javier Weddington, Reesha R.
+  Patel, Yu E. Zhang, Fang, Hao-Shu, Srishti Mishra, Deryn O. LeDuke, Jasmin Revanna,
+  Hao Li, Matilde Borio, Rachelle Pamintuan, Aneesh Bal, Avraham Libster, Romy Wichmann,
+  Fergil Mills, Felix Taschbach, Gillian A. Matthews, James P. Curley, Ila Fiete,
+  Cewu Lu, Kay M. Tye
+...
+  year: 2026
+  venue: dataset
+...
+  link: "https://doi.org/10.48324/dandi.001749/0.260311.1727"
+
+# OpenAlex W7160635115; first author Qiyao Liang
+liang2026attractor:
+  title: 'Attractor Geometry of Transformer Memory: From Conflict Arbitration to Confident
+  Hallucination'
+  authors: Qiyao Liang, Risto Miikkulainen, Ila Fiete
+...
+  year: 2026
+  venue: arXiv (Cornell University)
+...
+  link: "https://doi.org/10.48550/arxiv.2605.05686"
+
+# OpenAlex W7166668010; first author Fenying Zang
+zang2026agerelated:
+  title: Age-related changes in behavioural and neural variability in a decision-making task
+...
+  authors: "Fenying Zang, Anup Khanal, Sonja F\xF6rster, L. F. Abbott, Luigi Acerbi, Valeria\
+  \ Aguillon-Rodriguez, Mandana Ahmadi, Jaweria Amjad, Dora E. Angelaki, Jaime Arlandis,\
+  \ Zoe C. Ashwood, Kush Banga, Hailey Barrell, Hannah M. Bayer, Brandon Benson, Julius\
+  \ Benson, Jai Bhagat, Dan Birman, Niccol\xF2 Bonacchi, Kc\xE9nia Bougrova, Julien\
+  \ Boussard, Sebastian A. Bruijns, E. Kelly Buchanan, Robert A. A. Campbell, Matteo\
+  \ Carandini, Joana A. Catarino, Fanny Cazettes, Gaelle A. Chapuis, Davide Crombie,\
+  \ Yang Dan, M. Felicia Davatolhagh, Peter Dayan, Sophie Den\xE8ve, Eric E. J. DeWitt,\
+  \ Tatiana A. Engel, Michele Fabbri, Mayo Faulkner, Robert N. Fetcho, Ila Fiete,\
+  \ Charles Findling, Laura Freitas-Silva, Surya Ganguli, Berk Ger\xE7ek, Naureen\
+  \ Ghani, Ivan Gordeliy, Laura M. Haetzel, Kenneth D. Harris, Michael H\xE4usser,\
+  \ Naoki Hiratani, Sonja H\xF6fer, Fei Hu, Felix Huber, Julia M. Huntenburg, Cole\
+  \ Hurwitz, Christopher S. Krasniak, Sanjukta Krishnagopal, Michael Krumin, Debottam\
+  \ Kundu, Agn\xE8s Landemard, Christopher Langdon, Christopher Langfield, In\xEA\
+  s C. Laranjeira, Peter E. Latham, Petrina Lau, Hyun Dong Lee, Ari Liu, Zachary F.\
+  \ Mainen, Amalia Makri-Cottington, Hernando Martinez-Vergara, Brenna McMannon, Isaiah\
+  \ McRoberts, Guido T. Meijer, Maxwell Melin, Leenoy Meshulam, Kim Miller, Nathaniel\
+  \ J Miska, Catalin Mitelut, Zeinab Mohammadi, Thomas D. Mrsic\u2010Flogel, Masayoshi\
+  \ Murakami, Jean\u2010Paul Noel, Kai Nylund, Farideh Oloomi, Alejandro Pan Vazquez,\
+  \ Liam Paninski, Sabrina Perrenoud, Alberto Pezzotta, Samuel Picard, Jonathan W.\
+  \ Pillow, Alexandre Pouget, Carolina Quadrado, Pranav Rai, Georg Raiser, Florian\
+  \ Rau, Cyrille Rossant, Noam Roth, Nicholas Roy, Kamron Saniee, Rylan Schaeffer,\
+  \ Michael M. Schartner"
+  year: 2026
+  venue: Nature Communications
+...
+  link: "https://doi.org/10.1038/s41467-026-74227-1"
+
+# OpenAlex W7166707155; first author Bowen W. Zheng
+zheng2026meanfield:
+  title: Mean-field theory of rich oscillatory dynamics in low-rank recurrent networks with
+  activity-dependent adaptation
+...
+  authors: Bowen W. Zheng, Earl K. Miller, Ila Fiete
+...
+  year: 2026
+  venue: arXiv (Cornell University)
+...
+  link: "https://doi.org/10.48550/arxiv.2606.30366"
+
 # OpenAlex W7170063547; first author Mitchell Ostrow
 ostrow2026metric:
   title: A metric for comparing complex systems by their dynamics
 ...
-  authors: Mitchell Ostrow, Adam Eisen, Leo Kozachkov, William T. Redman, Ila Fiete
+  authors: Mitchell Ostrow, Adam J. Eisen, Leo Kozachkov, William T. Redman, Ila Fiete
 ...
   year: 2026
   venue: bioRxiv (Cold Spring Harbor Laboratory)
 ...
   link: "https://doi.org/10.64898/2026.07.16.738953"
 
-# OpenAlex W7172382413; first author Adam Eisen
+# OpenAlex W7172382413; first author Adam J. Eisen
 eisen2026disruption:
   title: Disruption of interareal control during propofol anesthesia
 ...
-  authors: "Adam Eisen, Andr\xE9 M. Bastos, Jacob A. Donoghue, Scott L. Brincat, Emery N. Brown,\
+  authors: "Adam J. Eisen, Andr\xE9 M. Bastos, Jacob Donoghue, Scott L. Brincat, Emery N. Brown,\
   \ Ila Fiete, Earl K. Miller"
   year: 2026
   venue: bioRxiv (Cold Spring Harbor Laboratory)

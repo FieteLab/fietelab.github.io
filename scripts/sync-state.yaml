@@ -103,3 +103,35 @@ seen:
     year: 2026
     status: pending
     slug: hwang2026structural
+  W7134928545:
+    title: Data supporting "Cortical ensembles orchestrate social competition through
+      hypothalamic outputs" (Padilla-Correano, et al., Nature 2022)
+    doi: 10.48324/dandi.001749/0.260311.1727
+    arxiv: null
+    year: 2026
+    status: pending
+    slug: keyes2026data
+  W7160635115:
+    title: 'Attractor Geometry of Transformer Memory: From Conflict Arbitration to
+      Confident Hallucination'
+    doi: 10.48550/arxiv.2605.05686
+    arxiv: '2605.05686'
+    year: 2026
+    status: pending
+    slug: liang2026attractor
+  W7166668010:
+    title: Age-related changes in behavioural and neural variability in a decision-making
+      task
+    doi: 10.1038/s41467-026-74227-1
+    arxiv: null
+    year: 2026
+    status: pending
+    slug: zang2026agerelated
+  W7166707155:
+    title: Mean-field theory of rich oscillatory dynamics in low-rank recurrent networks
+      with activity-dependent adaptation
+    doi: 10.48550/arxiv.2606.30366
+    arxiv: '2606.30366'
+    year: 2026
+    status: pending
+    slug: zheng2026meanfield
