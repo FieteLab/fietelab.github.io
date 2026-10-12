@@ -135,3 +135,10 @@ seen:
     year: 2026
     status: imported
     slug: zheng2026meanfield
+  W7221028442:
+    title: Fault-tolerant foundation models
+    doi: 10.48550/arxiv.2610.10311
+    arxiv: '2610.10311'
+    year: 2026
+    status: pending
+    slug: mccourt2026faulttolerant
