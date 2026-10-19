@@ -135,3 +135,17 @@ seen:
     year: 2026
     status: imported
     slug: zheng2026meanfield
+  W7115586427:
+    title: How learned expectations shape brain-wide responses
+    doi: 10.64898/2025.12.15.694430
+    arxiv: null
+    year: 2025
+    status: pending
+    slug: liu2025how
+  W7221028442:
+    title: Fault-tolerant foundation models
+    doi: 10.48550/arxiv.2610.10311
+    arxiv: '2610.10311'
+    year: 2026
+    status: pending
+    slug: mccourt2026faulttolerant
